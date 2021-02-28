@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JSyYxqB1MfE/OaGcswFESM5CmexDQmlyXcE/cCleZuZPGM4Bx5MZR5w3QBwQ4I6R3t7Qztil8OsGCQi7LhEQFg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Cidadao.API\\SGM.Cidadao.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
