@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/muhnyrFPN0J9PVKC8fuPP09eVn1daIU2NJhLUbNQPl4oVh3HSEGvSYtotCSl7vuoRhwIcgmGMNXpcZBawhyyQ==",
+  "dgSpecHash": "wbXl0D6VKrDsbbuD40Ij8vZEaQ7NMDvX9CDhAL7ya5WH4RKf/e6M9rC44UNLNW2S3Vqim9+/AJEfyNM9+EysSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.Domain\\SGM.Gestao.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.3\\microsoft.entityframeworkcore.abstractions.5.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

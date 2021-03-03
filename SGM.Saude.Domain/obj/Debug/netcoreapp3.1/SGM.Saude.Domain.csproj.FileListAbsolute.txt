@@ -1,0 +1,12 @@
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\bin\Debug\netcoreapp3.1\SGM.Saude.Domain.deps.json
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\bin\Debug\netcoreapp3.1\SGM.Saude.Domain.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\bin\Debug\netcoreapp3.1\SGM.Saude.Domain.pdb
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.AssemblyInfoInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.AssemblyInfo.cs
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.pdb
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\bin\Debug\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\bin\Debug\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.csprojAssemblyReference.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.csproj.CopyComplete

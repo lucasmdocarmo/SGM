@@ -1,0 +1,9 @@
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\bin\Debug\netcoreapp3.1\SGM.Saude.Infra.deps.json
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\bin\Debug\netcoreapp3.1\SGM.Saude.Infra.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\bin\Debug\netcoreapp3.1\SGM.Saude.Infra.pdb
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\obj\Debug\netcoreapp3.1\SGM.Saude.Infra.csprojAssemblyReference.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\obj\Debug\netcoreapp3.1\SGM.Saude.Infra.AssemblyInfoInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\obj\Debug\netcoreapp3.1\SGM.Saude.Infra.AssemblyInfo.cs
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\obj\Debug\netcoreapp3.1\SGM.Saude.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\obj\Debug\netcoreapp3.1\SGM.Saude.Infra.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Saude.Infra\obj\Debug\netcoreapp3.1\SGM.Saude.Infra.pdb

@@ -1,0 +1,9 @@
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\bin\Debug\netcoreapp3.1\SGM.Auth.Domain.deps.json
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\bin\Debug\netcoreapp3.1\SGM.Auth.Domain.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\bin\Debug\netcoreapp3.1\SGM.Auth.Domain.pdb
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.csprojAssemblyReference.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.AssemblyInfoInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.AssemblyInfo.cs
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SGM.Saude.Application/1.0.0": {
+        "runtime": {
+          "SGM.Saude.Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SGM.Saude.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

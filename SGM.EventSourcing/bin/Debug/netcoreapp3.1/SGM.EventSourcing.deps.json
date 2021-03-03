@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SGM.EventSourcing/1.0.0": {
+        "runtime": {
+          "SGM.EventSourcing.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SGM.EventSourcing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

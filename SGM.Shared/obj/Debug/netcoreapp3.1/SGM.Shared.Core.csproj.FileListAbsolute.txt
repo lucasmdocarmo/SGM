@@ -1,0 +1,9 @@
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\bin\Debug\netcoreapp3.1\SGM.Shared.Core.deps.json
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\bin\Debug\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\bin\Debug\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\obj\Debug\netcoreapp3.1\SGM.Shared.Core.csprojAssemblyReference.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\obj\Debug\netcoreapp3.1\SGM.Shared.Core.AssemblyInfoInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\obj\Debug\netcoreapp3.1\SGM.Shared.Core.AssemblyInfo.cs
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\obj\Debug\netcoreapp3.1\SGM.Shared.Core.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\obj\Debug\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Shared\obj\Debug\netcoreapp3.1\SGM.Shared.Core.pdb

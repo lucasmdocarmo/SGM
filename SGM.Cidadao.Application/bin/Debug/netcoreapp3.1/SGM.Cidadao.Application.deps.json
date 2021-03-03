@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SGM.Cidadao.Application/1.0.0": {
+        "runtime": {
+          "SGM.Cidadao.Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SGM.Cidadao.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
