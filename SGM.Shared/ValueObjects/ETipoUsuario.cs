@@ -4,9 +4,10 @@ using System.Text;
 
 namespace SGM.Shared.Core.ValueObjects
 {
-    public enum ETipoFuncao
+    public enum ETipoUsuario
     {
-        Operacional = 1,
-        Gestao = 2
+        Administrador = 1,
+        Comum = 2,
+        Gerente = 3,
     }
 }

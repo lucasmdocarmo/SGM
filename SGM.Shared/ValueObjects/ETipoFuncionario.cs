@@ -4,9 +4,9 @@ using System.Text;
 
 namespace SGM.Shared.Core.ValueObjects
 {
-    public enum ETipoFuncao
+    public enum ETipoFuncionario
     {
-        Operacional = 1,
+        Clinica = 1,
         Gestao = 2
     }
 }
