@@ -16,7 +16,8 @@ namespace SGM.Cidadao.Domain.Entities
         public string Email { get; private set; }
         public string Profissao { get; private set; }
         public string CodigoCidadao { get; private set; }
-
+        public string Telefone { get; set; }
+        public string Celular { get; set; }
 
     }
 }

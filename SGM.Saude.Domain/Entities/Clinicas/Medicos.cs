@@ -11,8 +11,17 @@ namespace SGM.Saude.Domain.Entities
     {
         public string Nome { get; set; }
         public string Profissao { get; set; }
+        public string CRM { get; set; }
         public string Especialidade { get; set; }
-        public string DiasDisponiveis { get; set; }
+        public bool AtendeSegunda { get; set; }
+        public bool AtendeTerca { get; set; }
+        public bool AtendeQuarta { get; set; }
+        public bool AtendeQuinta { get; set; }
+        public bool AtendeSexta { get; set; }
+        public bool AtendeSSabado { get; set; }
+        public bool AtendeDomingo { get; set; }
+        public DateTime HoraInicio { get; set; }
+        public DateTime HoraFim { get; set; }
         public bool Ativo { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }

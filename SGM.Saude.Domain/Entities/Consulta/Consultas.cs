@@ -11,6 +11,9 @@ namespace SGM.Saude.Domain.Entities
     {
         public decimal CustoTotal { get; set; }
         public string Especialidade { get; set; }
+        public string Descricao { get; set; }
+        public string InformacoesMedicas { get; set; }
+        public DateTime DataConsulta { get; set; }
 
         public Guid ClinicaId { get; set; }
         public Clinica Clinicas { get; set; }
