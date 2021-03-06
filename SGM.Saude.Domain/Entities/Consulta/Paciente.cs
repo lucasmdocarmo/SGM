@@ -15,10 +15,10 @@ namespace SGM.Saude.Domain.Entities
         public string Identidade { get; set; }
         public bool Sexo { get; set; }
         public string CodigoCidadao { get; set; }
-        public string Status { get; set; }
+        public ETipoStatusPaciente Status { get; set; }
         public string DetalhesPaciente { get; set; }
         public string InformacoesMedicas { get; set; }
 
-        public Guid CidadaoId { get; set; }
+        public IReadOnlyCollection<Consultas> Consultas { get; set; }
     }
 }

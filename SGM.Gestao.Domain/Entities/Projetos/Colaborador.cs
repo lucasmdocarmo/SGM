@@ -6,11 +6,13 @@ using System.Text;
 
 namespace SGM.Gestao.Domain.Entities
 {
-    public sealed class Colaborador :BaseEntity
+    public sealed class Colaborador : BaseEntity
     {
         public string Nome { get; set; }
         public ETipoFuncao TipoFuncao { get; set; }
         public ETipoColaborador TipoColaborador { get; set; }
         public CPF CPF { get; set; }
+        public Projetos Projetos { get; set; }
+        public Guid ProjetosId { get; set; }
     }
 }

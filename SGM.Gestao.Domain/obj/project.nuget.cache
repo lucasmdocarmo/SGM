@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GWLW2YOz6QeZ54e+JWQDLRDiVkT/FvQ39YhdhSgiqGblS/T3SY+V2g9fOO4VGW9o81DJ1LZCZ5Es4jNC7H0Xvg==",
+  "dgSpecHash": "ME4GGbDWATZBX/H31g2hovWB7ev2bReo+f3L0Tb6ECl0FS4tl+iFWySc4jl70hOONRxtG8UV4GS8J38ujTvynA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.Domain\\SGM.Gestao.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Gestao.Domain\\SGM.Gestao.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

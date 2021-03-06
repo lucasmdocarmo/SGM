@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FWqKPgZCh4Kht5vsl855EX1CrVq1yxMMgX0s6bdJneLzL941VevQO3QX4x+6UFX34886IyWMhO5793eP/keanA==",
+  "dgSpecHash": "aagmG45oA0SKJLNGBfuXQyYMfSYIegbUOK7GNGceE/+WWXzRP2n7rqWSu4e4LvZhCiipBjtmbXHUjMGoDJWi4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Auth.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Auth.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

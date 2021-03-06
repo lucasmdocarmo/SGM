@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MyUCaIqeWkB4llPVJIIA6ifpI3XgFumwS3SC+vP9RvIQIHteAg+b24dc5vJWtYWCs57s+gsnZV5ZC+t/c0WKIA==",
+  "dgSpecHash": "N/1cQebKdtkDpU7S3OkUbeuRizyhvzDTEzGaZXUSAD4bmzbGbhbXCkOdPY3SY5tg3FajhAPL6u0CS6jE6q/gBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

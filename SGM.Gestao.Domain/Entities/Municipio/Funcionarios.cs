@@ -15,5 +15,7 @@ namespace SGM.Gestao.Domain.Entities.Usuarios
         public bool Ativo { get; set; }
         public ETipoFuncao TipoFuncao { get; set; }
         public CPF CPF { get; private set; }
+        public Instituicoes Instituicao { get; set; }
+        public Guid InstituicaoId { get; set; }
     }
 }

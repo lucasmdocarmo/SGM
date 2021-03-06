@@ -16,20 +16,18 @@ namespace SGM.Saude.Infra.Context
     {
         public SaudeContext(DbContextOptions<SaudeContext> options) : base(options) { }
 
-        private DbSet<Consultas> Consultas { get; set; }
-        private DbSet<Paciente> Paciente { get; set; }
-        private DbSet<Prescricao> Prescricao { get; set; }
-        private DbSet<Atendimentos> Atendimentos { get; set; }
-        private DbSet<Clinica> Clinica { get; set; }
-        private DbSet<Endereco> Endereco { get; set; }
-        private DbSet<Medicos> Medicos { get; set; }
+        public DbSet<Consultas> Consultas { get; set; } 
+        public DbSet<Paciente> Paciente { get; set; }
+        public DbSet<Prescricao> Prescricao { get; set; }
+        public DbSet<Atendimentos> Atendimentos { get; set; }
+        public DbSet<Clinica> Clinica { get; set; }
+        public DbSet<Endereco> Endereco { get; set; }
+        public DbSet<Medicos> Medicos { get; set; }
 
         public void Rollback() => Database.RollbackTransaction();
         public void Begin() => Database.BeginTransaction();
         public async Task<bool> Commit() => await base.SaveChangesAsync() > 0;
         public bool CheckDatabaseStatus() => Database.CanConnect();
-
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

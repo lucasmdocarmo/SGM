@@ -12,5 +12,8 @@ namespace SGM.Auth.Domain.Entities
         public string Senha { get; set; }
         public string Login { get; set; }
         public ETipoUsuario TipoUsuario { get; set; }
+
+        public Departamento Departamento { get; set; }
+        public Guid DepartamentoId { get; set; }
     }
 }

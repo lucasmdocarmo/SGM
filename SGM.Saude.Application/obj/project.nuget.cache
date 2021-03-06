@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fnlRXBZUfSLE+qKpqWMKnfKwpnalcLye7YCqRo/2pYEtN5XupNeFGqpQh9z2V1YnchRlwX2XWjw9+JjOQ/kZog==",
+  "dgSpecHash": "IqK2FO9ZSsMMC+4GJBKMCfc1cIiKMk2QEB147JvWMntwXSJAJlTGbyDfb33UzFdi0Uw5Pn4gJfH0gtdT96CkFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.Application\\SGM.Saude.Application.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Application\\SGM.Saude.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

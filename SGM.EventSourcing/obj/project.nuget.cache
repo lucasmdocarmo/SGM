@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nAqLogTk4e/VlhISLIgOh/3gQJKcvdj2mhG6tCpRe3jeb8a/6X3J+mjG1ynAwaKtEwiuseJXISWezF91cHOPFw==",
+  "dgSpecHash": "ce23jkJ7A/d/g5JA0aiUB6fO+p3Ahl2X4tgjeyoqrXcRh82EXsS089Mfiha+IoXZpMIk6NmIh4HqDUW0JKUsng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.EventSourcing\\SGM.EventSourcing.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.EventSourcing\\SGM.EventSourcing.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -9,7 +9,7 @@ namespace SGM.Saude.Domain.Entities.Clinicas
     public sealed class Endereco :BaseEntity
     {
         internal Endereco() { }
-        public Endereco(string CEP, string logradouro, string numero, string complemento, string cidade, string estado, Guid clienteId)
+        public Endereco(string CEP, string logradouro, string numero, string complemento, string cidade, string estado, Guid clinicaId)
         {
             this.CEP = CEP;
             Logradouro = logradouro;
@@ -17,7 +17,7 @@ namespace SGM.Saude.Domain.Entities.Clinicas
             Complemento = complemento;
             Cidade = cidade;
             Estado = estado;
-            ClienteId = clienteId;
+            ClinicaId = clinicaId;
 
             AddNotifications(new Contract()
                 .Requires()
@@ -33,7 +33,9 @@ namespace SGM.Saude.Domain.Entities.Clinicas
         public string Cidade { get; private set; }
         public string Estado { get; private set; }
 
-        public Clinica Cliente { get; set; }
-        public Guid ClienteId { get; set; }
+        public Clinica Clinica { get; set; }
+        public Guid ClinicaId { get; set; }
+
+        public IReadOnlyCollection<Medicos> Medicos { get; set; }
     }
 }

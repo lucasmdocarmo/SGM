@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZaLrLoKucpWKeLMbC1R1EoB8uwah81j9P3D0A4DNdlu7O7tD1iar4YL8osDsahKrG8VoDm4XDtZsvXQqgJmhcQ==",
+  "dgSpecHash": "V0safnoCEvKko72twfqrrPCI2jqbly+YSo6j9/9c2IASdo3NlRzdWSrNT4LFqRB2jGTo2JWlsIvGd4Z2e9Mhdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.Application\\SGM.Gestao.Application.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Gestao.Application\\SGM.Gestao.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

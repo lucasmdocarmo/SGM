@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SGM.Cidadao.Domain\SGM.Cidadao.Domain.csproj" />
+    <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
+  </ItemGroup>
+
 </Project>

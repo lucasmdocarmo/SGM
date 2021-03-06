@@ -1,4 +1,5 @@
-﻿using SGM.Shared.Core.Entity;
+﻿using SGM.Cidadao.Domain.Entitiy;
+using SGM.Shared.Core.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,9 +12,7 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
         public string TotalImpostos { get; set; }
         public DateTime Pagamento { get; set; }
 
-        public Impostos Impostos { get; set; }
+        public IReadOnlyCollection<Impostos> Impostos { get; set; }
         public Guid ImpostosId { get; set; }
-        public Cidadao Cidadao { get; set; }
-        public Guid CidadaoId { get; set; }
     }
 }

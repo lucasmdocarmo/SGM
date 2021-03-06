@@ -1,12 +1,13 @@
-﻿using SGM.Shared.Core.Entity;
+﻿using SGM.Cidadao.Domain.Entities.Contribuinte;
+using SGM.Shared.Core.Entity;
 using SGM.Shared.Core.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace SGM.Cidadao.Domain.Entities
+using SGM.Cidadao.Domain.Entities;
+namespace SGM.Cidadao.Domain.Entitiy
 {
-    public sealed class Cidadao :BaseEntity
+    public sealed class Cidadaos :BaseEntity
     {
         public string Nome { get; private set; }
         public DateTime DataNascimento { get; private set; }
@@ -18,6 +19,8 @@ namespace SGM.Cidadao.Domain.Entities
         public string CodigoCidadao { get; private set; }
         public string Telefone { get; set; }
         public string Celular { get; set; }
+        public Endereco Endereco { get; set; }
+        public IReadOnlyCollection<Impostos> Impostos { get; set; }
 
     }
 }

@@ -7,6 +7,11 @@ namespace SGM.Auth.Domain.Entities
 {
     public sealed class Departamento : BaseEntity
     {
+        public string Nome { get; set; }
+        public string Codigo { get; set; }
+
+        public IReadOnlyCollection<Funcionario> Funcionario { get; set; }
+        public IReadOnlyCollection<Usuario> Usuario { get; set; }
 
     }
 }

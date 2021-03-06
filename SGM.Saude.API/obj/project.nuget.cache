@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K6wW8uth1qXyDAxMjJrS5wGF1yGQi3CjkTZO3QaFwkq4r7BHXQ3278sSfXFT0BA2tRt7nHZNiK2XTqXd9Yt3Tw==",
+  "dgSpecHash": "yYvxzMNKjThUD5I4Qp8KgiYbtl+t5/QMH8v8KKUhp2OJeIMYWwqi/kH+u4anBsTmC7oAWvv7YxiLl1QCLYZ4eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.API\\SGM.Saude.API.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.API\\SGM.Saude.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
   ],

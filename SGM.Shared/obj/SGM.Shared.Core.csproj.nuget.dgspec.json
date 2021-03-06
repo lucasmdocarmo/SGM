@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {}
+    "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
+    "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj",
         "projectName": "SGM.Shared.Core",
-        "projectPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj",
+        "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj",
         "packagesPath": "C:\\Users\\Lucas Mariano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\obj\\",
+        "outputPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas Mariano\\AppData\\Roaming\\NuGet\\NuGet.Config",

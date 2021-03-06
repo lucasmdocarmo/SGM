@@ -18,7 +18,7 @@ namespace SGM.Saude.Domain.Entities
         public bool AtendeQuarta { get; set; }
         public bool AtendeQuinta { get; set; }
         public bool AtendeSexta { get; set; }
-        public bool AtendeSSabado { get; set; }
+        public bool AtendeSabado { get; set; }
         public bool AtendeDomingo { get; set; }
         public DateTime HoraInicio { get; set; }
         public DateTime HoraFim { get; set; }
@@ -32,5 +32,7 @@ namespace SGM.Saude.Domain.Entities
 
         public Endereco Endereco { get; set; }
         public Guid EnderecoId { get; set; }
+
+        public IReadOnlyCollection<Consultas> Consultas { get; set; }
     }
 }

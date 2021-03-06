@@ -6,13 +6,13 @@ using System.Text;
 
 namespace SGM.Saude.Domain.Entities.Clinicas
 {
-    public sealed class Clinica :BaseEntity, IAggregateRoot
+    public sealed class Clinica : BaseEntity, IAggregateRoot
     {
         public string Nome { get; set; }
         public string Telefone { get; set; }
-        public IReadOnlyCollection<Medicos> Profissionais { get; set; }
 
         public Endereco Endereco { get; set; }
-        public Guid EnderecoId { get; set; }
+        public IReadOnlyCollection<Consultas> Consultas { get; set; }
+        public IReadOnlyCollection<Medicos> Medicos { get; set; }
     }
 }

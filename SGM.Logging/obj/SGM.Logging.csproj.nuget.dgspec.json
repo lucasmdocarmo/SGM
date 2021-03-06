@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj": {}
+    "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj": {
+    "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj",
         "projectName": "SGM.Logging",
-        "projectPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj",
+        "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Logging\\SGM.Logging.csproj",
         "packagesPath": "C:\\Users\\Lucas Mariano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Logging\\obj\\",
+        "outputPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Logging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas Mariano\\AppData\\Roaming\\NuGet\\NuGet.Config",

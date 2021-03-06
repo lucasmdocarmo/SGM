@@ -5770,11 +5770,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj",
       "projectName": "SGM.Saude.Infra",
-      "projectPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj",
+      "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj",
       "packagesPath": "C:\\Users\\Lucas Mariano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.Infra\\obj\\",
+      "outputPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucas Mariano\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5791,11 +5791,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.Domain\\SGM.Saude.Domain.csproj": {
-              "projectPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Saude.Domain\\SGM.Saude.Domain.csproj"
+            "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Domain\\SGM.Saude.Domain.csproj": {
+              "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Domain\\SGM.Saude.Domain.csproj"
             },
-            "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
-              "projectPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj"
+            "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
+              "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj"
             }
           }
         }

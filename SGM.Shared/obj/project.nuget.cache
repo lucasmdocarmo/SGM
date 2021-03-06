@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Eu+HtQn+3l6vWbAenxiXgGYTEH91HrTGVnoCK5eOQSQIaKaaS+gsegAoq13mcuwAnOUKpYeP34nZa81Ufb4MQg==",
+  "dgSpecHash": "gvPawEVeV9KQXBnfV4OHDZ7Ms9e9GErIzZtzQboRbX7CBkjneyg3B9xNZG83aRrbzMjQ4kk3rjjGLCZltYYuUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj",
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

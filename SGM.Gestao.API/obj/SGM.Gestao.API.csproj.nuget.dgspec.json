@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj": {}
+    "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj": {
+    "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj",
         "projectName": "SGM.Gestao.API",
-        "projectPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj",
+        "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Gestao.API\\SGM.Gestao.API.csproj",
         "packagesPath": "C:\\Users\\Lucas Mariano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas Mariano\\Source\\Repos\\SGM.BFF\\SGM.Gestao.API\\obj\\",
+        "outputPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Gestao.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lucas Mariano\\AppData\\Roaming\\NuGet\\NuGet.Config",
