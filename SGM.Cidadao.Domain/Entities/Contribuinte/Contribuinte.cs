@@ -13,6 +13,5 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
         public DateTime Pagamento { get; set; }
 
         public IReadOnlyCollection<Impostos> Impostos { get; set; }
-        public Guid ImpostosId { get; set; }
     }
 }

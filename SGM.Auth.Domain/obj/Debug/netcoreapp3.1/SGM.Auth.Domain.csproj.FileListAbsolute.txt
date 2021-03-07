@@ -7,3 +7,6 @@ C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp
 C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.dll
 C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Auth.Domain\bin\Debug\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Auth.Domain\bin\Debug\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Auth.Domain\obj\Debug\netcoreapp3.1\SGM.Auth.Domain.csproj.CopyComplete

@@ -19,7 +19,6 @@ namespace SGM.Saude.Infra.Context
         public DbSet<Consultas> Consultas { get; set; } 
         public DbSet<Paciente> Paciente { get; set; }
         public DbSet<Prescricao> Prescricao { get; set; }
-        public DbSet<Atendimentos> Atendimentos { get; set; }
         public DbSet<Clinica> Clinica { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Medicos> Medicos { get; set; }

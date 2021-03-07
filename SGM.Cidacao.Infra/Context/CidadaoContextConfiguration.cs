@@ -20,7 +20,6 @@ namespace SGM.Cidadao.Infra.Context
 
             builder.HasMany(c => c.Impostos).WithOne(p => p.Contribuinte)
                 .HasForeignKey(p => p.ContribuinteId);
-           
 
             builder.ToTable("Contribuinte");
         }

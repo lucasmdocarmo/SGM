@@ -5,6 +5,7 @@ using SGM.Gestao.Domain.Entities.Usuarios;
 using SGM.Shared.Core.Contracts.UnitOfWork;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 

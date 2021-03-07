@@ -5750,9 +5750,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Auth.Domain.csproj",
-      "projectName": "SGM.Auth.Domain",
-      "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Auth.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Manager.Domain.csproj",
+      "projectName": "SGM.Manager.Domain",
+      "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Manager.Domain.csproj",
       "packagesPath": "C:\\Users\\Lucas Mariano\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\obj\\",
       "projectStyle": "PackageReference",

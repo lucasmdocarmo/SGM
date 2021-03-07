@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SGM.Auth.API
+namespace SGM.Manager.API
 {
     public class Program
     {

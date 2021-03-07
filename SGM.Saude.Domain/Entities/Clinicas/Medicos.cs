@@ -28,11 +28,8 @@ namespace SGM.Saude.Domain.Entities
         public decimal ValorHora { get; set; }
 
         public Clinica Clinica { get; set; }
-        public Guid ClinicaId { get; set; }
-
         public Endereco Endereco { get; set; }
-        public Guid EnderecoId { get; set; }
-
+        public Guid ClinicaId { get; set; }
         public IReadOnlyCollection<Consultas> Consultas { get; set; }
     }
 }

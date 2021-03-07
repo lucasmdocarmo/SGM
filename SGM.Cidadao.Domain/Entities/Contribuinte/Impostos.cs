@@ -15,8 +15,6 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
         public DateTime DataFinal { get; private set; }
 
         public IReadOnlyCollection<Cidadaos> Cidadao { get; private set; }
-        public Guid CidadaoId { get; private set; }
-
         public Contribuinte Contribuinte { get; set; }
         public Guid ContribuinteId { get; private set; }
 

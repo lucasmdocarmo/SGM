@@ -7,3 +7,8 @@ C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Cidacao.Infra\obj\Debug\netcorea
 C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Cidacao.Infra\obj\Debug\netcoreapp3.1\SGM.Cidadao.Infra.csproj.CoreCompileInputs.cache
 C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Cidacao.Infra\obj\Debug\netcoreapp3.1\SGM.Cidadao.Infra.dll
 C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.Cidacao.Infra\obj\Debug\netcoreapp3.1\SGM.Cidadao.Infra.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidacao.Infra\bin\Debug\netcoreapp3.1\SGM.Cidadao.Domain.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidacao.Infra\bin\Debug\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidacao.Infra\bin\Debug\netcoreapp3.1\SGM.Cidadao.Domain.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidacao.Infra\bin\Debug\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidacao.Infra\obj\Debug\netcoreapp3.1\SGM.Cidadao.Infra.csproj.CopyComplete

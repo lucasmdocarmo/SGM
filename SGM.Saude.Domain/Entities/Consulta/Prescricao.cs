@@ -12,8 +12,8 @@ namespace SGM.Saude.Domain.Entities.Consulta
         public string Resumo { get; set; }
         public DateTime DataInicial { get; set; }
         public DateTime Validade { get; set; }
-        public Atendimentos Atendimentos { get; set; }
-        public Guid AtendimentoId { get; set; }
 
+        public Consultas Consulta { get; set; }
+        public Guid ConsultaId { get; set; }
     }
 }

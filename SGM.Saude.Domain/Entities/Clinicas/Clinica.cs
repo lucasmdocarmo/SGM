@@ -11,8 +11,6 @@ namespace SGM.Saude.Domain.Entities.Clinicas
         public string Nome { get; set; }
         public string Telefone { get; set; }
 
-        public Endereco Endereco { get; set; }
-        public IReadOnlyCollection<Consultas> Consultas { get; set; }
         public IReadOnlyCollection<Medicos> Medicos { get; set; }
     }
 }

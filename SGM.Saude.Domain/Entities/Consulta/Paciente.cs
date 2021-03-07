@@ -14,7 +14,6 @@ namespace SGM.Saude.Domain.Entities
         public CPF CPF { get; set; }
         public string Identidade { get; set; }
         public bool Sexo { get; set; }
-        public string CodigoCidadao { get; set; }
         public ETipoStatusPaciente Status { get; set; }
         public string DetalhesPaciente { get; set; }
         public string InformacoesMedicas { get; set; }

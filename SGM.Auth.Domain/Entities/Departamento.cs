@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SGM.Auth.Domain.Entities
+namespace SGM.Manager.Domain.Entities
 {
     public sealed class Departamento : BaseEntity
     {

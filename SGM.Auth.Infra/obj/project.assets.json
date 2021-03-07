@@ -1492,17 +1492,17 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "SGM.Auth.Domain/1.0.0": {
+      "SGM.Manager.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "SGM.Shared.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/SGM.Auth.Domain.dll": {}
+          "bin/placeholder/SGM.Manager.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SGM.Auth.Domain.dll": {}
+          "bin/placeholder/SGM.Manager.Domain.dll": {}
         }
       },
       "SGM.Shared.Core/1.0.0": {
@@ -5746,10 +5746,10 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "SGM.Auth.Domain/1.0.0": {
+    "SGM.Manager.Domain/1.0.0": {
       "type": "project",
-      "path": "../SGM.Auth.Domain/SGM.Auth.Domain.csproj",
-      "msbuildProject": "../SGM.Auth.Domain/SGM.Auth.Domain.csproj"
+      "path": "../SGM.Auth.Domain/SGM.Manager.Domain.csproj",
+      "msbuildProject": "../SGM.Auth.Domain/SGM.Manager.Domain.csproj"
     },
     "SGM.Shared.Core/1.0.0": {
       "type": "project",
@@ -5759,7 +5759,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "SGM.Auth.Domain >= 1.0.0",
+      "SGM.Manager.Domain >= 1.0.0",
       "SGM.Shared.Core >= 1.0.0"
     ]
   },
@@ -5769,9 +5769,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Infra\\SGM.Auth.Infra.csproj",
-      "projectName": "SGM.Auth.Infra",
-      "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Infra\\SGM.Auth.Infra.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Infra\\SGM.Manager.Infra.csproj",
+      "projectName": "SGM.Manager.Infra",
+      "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Infra\\SGM.Manager.Infra.csproj",
       "packagesPath": "C:\\Users\\Lucas Mariano\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Infra\\obj\\",
       "projectStyle": "PackageReference",
@@ -5790,8 +5790,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Auth.Domain.csproj": {
-              "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Auth.Domain.csproj"
+            "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Manager.Domain.csproj": {
+              "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Domain\\SGM.Manager.Domain.csproj"
             },
             "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
               "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj"
