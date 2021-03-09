@@ -1,5 +1,4 @@
 ﻿using Flunt.Validations;
-using SGM.Cidadao.Domain.Entitiy;
 using SGM.Shared.Core.Entity;
 using System;
 using System.Collections.Generic;
@@ -33,7 +32,7 @@ namespace SGM.Cidadao.Domain.Entities
         public string Cidade { get; private set; }
         public string Estado { get; private set; }
 
-        public Cidadaos Cidadao { get; private set; }
+        public Cidadao Cidadao { get; private set; }
         public Guid CidadaoId { get; private set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SGM.Cidadao.Domain.Entities.Contribuinte;
-using SGM.Cidadao.Domain.Entitiy;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,17 +8,19 @@ using SGM.Cidadao.Domain.Entities;
 
 namespace SGM.Cidadao.Infra.Context
 {
-    public class ContribuinteMapping : IEntityTypeConfiguration<Contribuinte>
+    public class ContribuinteMapping : IEntityTypeConfiguration<Contribuicao>
     {
-        public void Configure(EntityTypeBuilder<Contribuinte> builder)
+        public void Configure(EntityTypeBuilder<Contribuicao> builder)
         {
             builder.HasKey(c => c.Id);
             builder.Property(x => x.AnoFiscal).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
-            builder.Property(x => x.TotalImpostos).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.CodigoGuiaContribuicao).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.TotalImpostos).HasMaxLength(250).HasColumnType("decimal(10,2)").IsRequired();
             builder.Property(x => x.Pagamento).HasColumnType("datetime").IsRequired();
 
-            builder.HasMany(c => c.Impostos).WithOne(p => p.Contribuinte)
-                .HasForeignKey(p => p.ContribuinteId);
+            builder.HasOne(x => x.Impostos).WithMany(x => x.Contribuicao).HasForeignKey(x => x.ImpostoId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Cidadao).WithMany(x => x.Contribuicao).HasForeignKey(x => x.CidadaoId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Contribuinte).WithMany(x => x.Contribuicao).HasForeignKey(x => x.ContribuinteId).OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Contribuinte");
         }
@@ -31,17 +32,28 @@ namespace SGM.Cidadao.Infra.Context
             builder.HasKey(c => c.Id);
             builder.Property(x => x.Tributo).HasColumnType("decimal(10,2)").IsRequired();
             builder.Property(x => x.TipoImposto).HasColumnType("int").IsRequired();
-         
+            builder.Property(x => x.AnoFiscal).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.DataFinal).HasColumnType("datetime").IsRequired();
-
-            builder.HasMany(c => c.Cidadao).WithMany(p => p.Impostos)
-                .UsingEntity(c => c.ToTable("ImpostosCidadao"));
         }
     }
 
-    public class CidadaoMapping : IEntityTypeConfiguration<Cidadaos>
+    public class ContribuicaoMapping : IEntityTypeConfiguration<StatusContribuicao>
     {
-        public void Configure(EntityTypeBuilder<Cidadaos> builder)
+        public void Configure(EntityTypeBuilder<StatusContribuicao> builder)
+        {
+            builder.HasKey(c => c.Id);
+            builder.Property(x => x.CodigoGuiaContribuicao).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.Status).HasColumnType("int").IsRequired();
+            builder.Property(x => x.RegistroFinal).HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.RegistroInicial).HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.Finalizado);
+           
+        }
+    }
+
+    public class CidadaoMapping : IEntityTypeConfiguration<Domain.Entities.Cidadao>
+    {
+        public void Configure(EntityTypeBuilder<Domain.Entities.Cidadao> builder)
         {
             builder.HasKey(c => c.Id);
            
@@ -69,7 +81,7 @@ namespace SGM.Cidadao.Infra.Context
             builder.Property(x => x.Complemento).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Cidade).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Estado).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
-            builder.HasOne(x => x.Cidadao).WithOne(x => x.Endereco).HasForeignKey<Endereco>(x => x.CidadaoId);
+            builder.HasOne(x => x.Cidadao).WithOne(x => x.Endereco).HasForeignKey<Endereco>(x => x.CidadaoId).OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Endereco");
         }

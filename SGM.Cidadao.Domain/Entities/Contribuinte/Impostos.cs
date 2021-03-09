@@ -1,5 +1,4 @@
-﻿using SGM.Cidadao.Domain.Entitiy;
-using SGM.Cidadao.Domain.ValueObjects;
+﻿using SGM.Cidadao.Domain.ValueObjects;
 using SGM.Shared.Core.Entity;
 using System;
 using System.Collections.Generic;
@@ -13,10 +12,8 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
         public decimal Tributo { get; private set; }
         public ETipoImposto TipoImposto { get; private set; }
         public DateTime DataFinal { get; private set; }
-
-        public IReadOnlyCollection<Cidadaos> Cidadao { get; private set; }
-        public Contribuinte Contribuinte { get; set; }
-        public Guid ContribuinteId { get; private set; }
+        public string AnoFiscal { get; private set; }
+        public IReadOnlyCollection<Contribuicao> Contribuicao { get; set; }
 
     }
 }

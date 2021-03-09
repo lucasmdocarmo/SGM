@@ -1,9 +1,8 @@
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\bin\Debug\netcoreapp3.1\SGM.EventSourcing.deps.json
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\bin\Debug\netcoreapp3.1\SGM.EventSourcing.dll
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\bin\Debug\netcoreapp3.1\SGM.EventSourcing.pdb
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.csprojAssemblyReference.cache
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.AssemblyInfoInputs.cache
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.AssemblyInfo.cs
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.csproj.CoreCompileInputs.cache
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.dll
-C:\Users\Lucas Mariano\Source\Repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\bin\Debug\netcoreapp3.1\SGM.EventSourcing.deps.json
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\bin\Debug\netcoreapp3.1\SGM.EventSourcing.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\bin\Debug\netcoreapp3.1\SGM.EventSourcing.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.AssemblyInfoInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.AssemblyInfo.cs
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.EventSourcing\obj\Debug\netcoreapp3.1\SGM.EventSourcing.pdb
