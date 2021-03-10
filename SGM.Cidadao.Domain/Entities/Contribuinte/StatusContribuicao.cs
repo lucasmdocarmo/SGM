@@ -7,6 +7,7 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
 {
     public sealed class StatusContribuicao : BaseEntity
     {
+        internal StatusContribuicao() { }
         public string CodigoGuiaContribuicao { get; set; }
         public ETipoStatusContribuinte Status { get; set; }
         public DateTime RegistroInicial { get; set; }

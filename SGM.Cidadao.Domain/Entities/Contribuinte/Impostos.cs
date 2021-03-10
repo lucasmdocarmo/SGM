@@ -9,6 +9,7 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
 {
     public sealed class Impostos : BaseEntity
     {
+        internal Impostos() { }
         public decimal Tributo { get; private set; }
         public ETipoImposto TipoImposto { get; private set; }
         public DateTime DataFinal { get; private set; }

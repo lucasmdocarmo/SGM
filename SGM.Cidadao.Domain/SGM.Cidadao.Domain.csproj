@@ -8,4 +8,8 @@
     <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+
 </Project>

@@ -8,12 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SGM.Cidadao.API.Extensions;
+using SGM.Cidadao.Application.Commands;
 using SGM.Cidadao.Infra.Context;
+using SGM.Cidadao.Infra.Repositories;
+using SGM.Cidadao.Infra.Repositories.Contracts;
+using SGM.Shared.Core.Commands;
 using SGM.Shared.Core.Contracts.UnitOfWork;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SGM.Cidadao.API
 {
@@ -36,11 +37,24 @@ namespace SGM.Cidadao.API
 
             services.AddCors();
             services.AddControllers();
+            services.AddSwaggerConfig();
 
             services.AddDbContext<CidadaoContext>(db => db.UseSqlServer(Configuration.GetConnectionString("AppConnString")));
             services.AddScoped<CidadaoContext>();
             services.AddScoped<IUnitOfWork, CidadaoContext>();
+
             _unitOfWork = services.BuildServiceProvider().GetRequiredService<IUnitOfWork>();
+
+            //Application
+            services.AddScoped<ICommandResult, CommandResult>();
+
+            //Repos
+            services.AddScoped<ICidadaoRepository, CidadaoRepository>();
+            services.AddScoped<IContribuicaoRepository, ContribuicaoRepository>();
+            services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+            services.AddScoped<IImpostosRepository, ImpostosRepository>();
+            services.AddScoped<IStatusContribuicaoRepository, StatusContribuicaoRepository>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, CidadaoContext appContext)
@@ -54,15 +68,19 @@ namespace SGM.Cidadao.API
                 appContext.Database.EnsureCreated();
             }
             else { appContext.Database.Migrate(); }
-            app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+
+            app.UseAuthentication();
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseCors(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseHsts();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(options => { options.SwaggerEndpoint("/swagger/v1/swagger.json", "SGM.Cidadao"); });
+
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

@@ -21,3 +21,4 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Domain\obj\Debug\netcore
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Domain\obj\Debug\netcoreapp3.1\SGM.Manager.Domain.csproj.CopyComplete
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Domain\obj\Debug\netcoreapp3.1\SGM.Manager.Domain.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Domain\obj\Debug\netcoreapp3.1\SGM.Manager.Domain.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Domain\obj\Debug\netcoreapp3.1\SGM.Manager.Domain.csprojAssemblyReference.cache

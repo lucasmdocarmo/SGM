@@ -1,9 +1,0 @@
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\bin\Debug\netcoreapp3.1\SGM.Gestao.Application.deps.json
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\bin\Debug\netcoreapp3.1\SGM.Gestao.Application.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\bin\Debug\netcoreapp3.1\SGM.Gestao.Application.pdb
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\obj\Debug\netcoreapp3.1\SGM.Gestao.Application.csprojAssemblyReference.cache
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\obj\Debug\netcoreapp3.1\SGM.Gestao.Application.AssemblyInfoInputs.cache
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\obj\Debug\netcoreapp3.1\SGM.Gestao.Application.AssemblyInfo.cs
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\obj\Debug\netcoreapp3.1\SGM.Gestao.Application.csproj.CoreCompileInputs.cache
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\obj\Debug\netcoreapp3.1\SGM.Gestao.Application.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gestao.Application\obj\Debug\netcoreapp3.1\SGM.Gestao.Application.pdb

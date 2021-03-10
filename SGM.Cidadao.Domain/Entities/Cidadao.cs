@@ -10,6 +10,22 @@ namespace SGM.Cidadao.Domain.Entities
 {
     public sealed class Cidadao :BaseEntity
     {
+        internal Cidadao() { }
+        public Cidadao(string nome, DateTime dataNascimento, CPF cPF, string identidade, bool sexo, string email, 
+            string profissao, string telefone, string celular)
+        {
+            Nome = nome;
+            DataNascimento = dataNascimento;
+            CPF = cPF;
+            Identidade = identidade;
+            Sexo = sexo;
+            Email = email;
+            Profissao = profissao;
+            CodigoCidadao = CodigoGenerator.GenerateCodigoCidadao();
+            Telefone = telefone;
+            Celular = celular;
+        }
+
         public string Nome { get; private set; }
         public DateTime DataNascimento { get; private set; }
         public CPF CPF { get; private set; }
@@ -23,5 +39,14 @@ namespace SGM.Cidadao.Domain.Entities
         public Endereco Endereco { get; set; }
         public IReadOnlyCollection<Contribuicao>Contribuicao { get; set; }
 
+    }
+    internal static class CodigoGenerator
+    {
+        private static readonly Random _random = new Random();
+        public static string GenerateCodigoCidadao()
+        {
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            return "SGM" + _random.Next(0, 999999) + _random.Next(0, chars.Length - 1);
+        }
     }
 }

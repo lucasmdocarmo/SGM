@@ -7,6 +7,8 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
 {
     public sealed class Contribuicao : BaseEntity
     {
+        internal Contribuicao() { }
+
         public string CodigoGuiaContribuicao { get; set; }
         public string AnoFiscal { get; set; }
         public decimal TotalImpostos { get; set; }

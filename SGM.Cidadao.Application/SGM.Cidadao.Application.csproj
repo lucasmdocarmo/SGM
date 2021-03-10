@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Endereco\" />
+    <Folder Include="Commands\Contribuinte\" />
+  </ItemGroup>
+
 </Project>

@@ -59,3 +59,10 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\obj\Debug\net5.0\SGM
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\obj\Debug\net5.0\ref\SGM.Cidadao.API.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\obj\Debug\net5.0\SGM.Cidadao.API.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\obj\Debug\net5.0\SGM.Cidadao.API.genruntimeconfig.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\obj\Debug\net5.0\SGM.Cidadao.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
