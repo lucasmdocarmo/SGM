@@ -10,6 +10,6 @@ namespace SGM.Manager.Infra.Repositories
 {
     public class DepartamentoRepository : BaseRepository<Departamento, ManagerContext>, IDepartamentoRepository
     {
-        protected DepartamentoRepository(ManagerContext db) : base(db) { }
+        public DepartamentoRepository(ManagerContext db) : base(db) { }
     }
 }

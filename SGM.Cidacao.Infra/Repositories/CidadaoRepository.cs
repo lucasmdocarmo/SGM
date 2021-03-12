@@ -9,7 +9,7 @@ namespace SGM.Cidadao.Infra.Repositories
 {
     public class CidadaoRepository : BaseRepository<Domain.Entities.Cidadao, CidadaoContext>, ICidadaoRepository
     {
-        protected CidadaoRepository(CidadaoContext db) : base(db) { }
+        public CidadaoRepository(CidadaoContext db) : base(db) { }
 
 
     }

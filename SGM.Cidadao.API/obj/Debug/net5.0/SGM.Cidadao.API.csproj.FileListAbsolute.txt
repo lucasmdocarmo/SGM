@@ -66,3 +66,5 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Mic
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\SGM.Cidadao.Application.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\SGM.Cidadao.Application.pdb

@@ -29,6 +29,7 @@
           "Microsoft.AspNetCore.Mvc.Versioning": "5.0.0",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.0.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.9",
+          "SGM.Cidadao.Application": "1.0.0",
           "SGM.Cidadao.Infra": "1.0.0",
           "SGM.Shared.Core": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "6.1.0",
@@ -1410,6 +1411,17 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "SGM.Cidadao.Application/1.0.0": {
+        "dependencies": {
+          "SGM.Shared.Core": "1.0.0"
+        },
+        "runtime": {
+          "SGM.Cidadao.Application.dll": {}
+        },
+        "compile": {
+          "SGM.Cidadao.Application.dll": {}
+        }
+      },
       "SGM.Cidadao.Domain/1.0.0": {
         "dependencies": {
           "SGM.Shared.Core": "1.0.0"
@@ -1423,6 +1435,7 @@
       },
       "SGM.Cidadao.Infra/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "SGM.Cidadao.Domain": "1.0.0",
           "SGM.Shared.Core": "1.0.0"
         },
@@ -3904,6 +3917,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "SGM.Cidadao.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "SGM.Cidadao.Domain/1.0.0": {
       "type": "project",

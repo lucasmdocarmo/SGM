@@ -24,7 +24,7 @@ namespace SGM.Cidadao.Infra.Context
         public void Rollback() => Database.RollbackTransaction();
         public void Begin() => Database.BeginTransaction();
         public async Task<bool> Commit() => await base.SaveChangesAsync() > 0;
-        public bool CheckDatabaseStatus() => Database.CanConnect();
+        public bool CheckIfDatabaseExists() => Database.CanConnect();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

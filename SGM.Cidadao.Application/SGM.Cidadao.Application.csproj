@@ -9,8 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Endereco\" />
-    <Folder Include="Commands\Contribuinte\" />
+    <Folder Include="Presentation\" />
   </ItemGroup>
 
 </Project>

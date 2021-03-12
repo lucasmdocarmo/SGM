@@ -8,7 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SGM.Saude.API.Extensions;
 using SGM.Saude.Infra.Context;
+using SGM.Saude.Infra.Repositories;
+using SGM.Saude.Infra.Repositories.Contracts;
+using SGM.Shared.Core.Commands;
 using SGM.Shared.Core.Contracts.UnitOfWork;
 using System;
 using System.Collections.Generic;
@@ -20,7 +24,7 @@ namespace SGM.Saude.API
     public class Startup
     {
         private IConfiguration Configuration { get; }
-        public IUnitOfWork _unitOfWork { get; set; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -38,34 +42,44 @@ namespace SGM.Saude.API
 
             services.AddCors();
             services.AddControllers();
+            services.AddSwaggerConfig();
 
             services.AddDbContext<SaudeContext>(db => db.UseSqlServer(Configuration.GetConnectionString("AppConnString")));
             services.AddScoped<SaudeContext>();
             services.AddScoped<IUnitOfWork, SaudeContext>();
-            _unitOfWork = services.BuildServiceProvider().GetRequiredService<IUnitOfWork>();
+
+            //Application
+
+
+            //Repos
+            services.AddScoped<IClinicaRepository, ClinicaRepository>();
+            services.AddScoped<IConsultaRepository, ConsultaRepository>();
+            services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+            services.AddScoped<IMedicosRepository, MedicoRepository>();
+            services.AddScoped<IPacienteRepository, PacienteRepository>();
+            services.AddScoped<IPrescricaoRepository, PrescricaoRepository>();
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SaudeContext appContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            if (!_unitOfWork.CheckDatabaseStatus())
-            {
-                appContext.Database.EnsureCreated();
-            }
-            else { appContext.Database.Migrate(); }
-            app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            app.EnsureMigrationOfContext<SaudeContext>();
+            app.UseAuthentication();
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseCors(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseHsts();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(options => { options.SwaggerEndpoint("/swagger/v1/swagger.json", "SGM.Cidadao"); });
+
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

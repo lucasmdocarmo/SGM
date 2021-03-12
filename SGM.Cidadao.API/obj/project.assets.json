@@ -1681,6 +1681,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "SGM.Cidadao.Domain": "1.0.0",
           "SGM.Shared.Core": "1.0.0"
         },

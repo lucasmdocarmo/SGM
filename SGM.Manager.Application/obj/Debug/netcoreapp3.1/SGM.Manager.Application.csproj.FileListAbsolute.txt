@@ -1,8 +1,12 @@
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\bin\Debug\netcoreapp3.1\SGM.Manager.Application.deps.json
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\bin\Debug\netcoreapp3.1\SGM.Manager.Application.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\bin\Debug\netcoreapp3.1\SGM.Manager.Application.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\bin\Debug\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\bin\Debug\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\obj\Debug\netcoreapp3.1\SGM.Manager.Application.csprojAssemblyReference.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\obj\Debug\netcoreapp3.1\SGM.Manager.Application.AssemblyInfoInputs.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\obj\Debug\netcoreapp3.1\SGM.Manager.Application.AssemblyInfo.cs
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\obj\Debug\netcoreapp3.1\SGM.Manager.Application.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\obj\Debug\netcoreapp3.1\SGM.Manager.Application.csproj.CopyComplete
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\obj\Debug\netcoreapp3.1\SGM.Manager.Application.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.Application\obj\Debug\netcoreapp3.1\SGM.Manager.Application.pdb

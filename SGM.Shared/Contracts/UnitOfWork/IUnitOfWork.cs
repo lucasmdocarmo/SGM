@@ -10,6 +10,6 @@ namespace SGM.Shared.Core.Contracts.UnitOfWork
         Task<bool> Commit();
         void Rollback();
         void Begin();
-        bool CheckDatabaseStatus();
+        bool CheckIfDatabaseExists();
     }
 }

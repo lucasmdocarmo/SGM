@@ -7,3 +7,6 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Debug\ne
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Debug\netcoreapp3.1\SGM.Cidadao.Application.csproj.CoreCompileInputs.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Debug\netcoreapp3.1\SGM.Cidadao.Application.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Debug\netcoreapp3.1\SGM.Cidadao.Application.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Debug\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Debug\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Debug\netcoreapp3.1\SGM.Cidadao.Application.csproj.CopyComplete

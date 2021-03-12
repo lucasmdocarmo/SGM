@@ -10,6 +10,6 @@ namespace SGM.Manager.Infra.Repositories
 {
     public class FuncionarioRepository : BaseRepository<Funcionario, ManagerContext>, IFuncionarioRepository
     {
-        protected FuncionarioRepository(ManagerContext db) : base(db) { }
+        public FuncionarioRepository(ManagerContext db) : base(db) { }
     }
 }

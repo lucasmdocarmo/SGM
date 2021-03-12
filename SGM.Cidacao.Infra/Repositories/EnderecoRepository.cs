@@ -10,6 +10,6 @@ namespace SGM.Cidadao.Infra.Repositories
 {
     public class EnderecoRepository : BaseRepository<Endereco, CidadaoContext>, IEnderecoRepository
     {
-        protected EnderecoRepository(CidadaoContext db) : base(db) { }
+        public EnderecoRepository(CidadaoContext db) : base(db) { }
     }
 }

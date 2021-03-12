@@ -11,6 +11,6 @@ namespace SGM.Cidadao.Infra.Repositories
 {
     public class ImpostosRepository : BaseRepository<Impostos, CidadaoContext>, IImpostosRepository
     {
-        protected ImpostosRepository(CidadaoContext db) : base(db) { }
+        public ImpostosRepository(CidadaoContext db) : base(db) { }
     }
 }

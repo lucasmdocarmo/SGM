@@ -12,7 +12,7 @@ namespace SGM.Cidadao.API.Controllers
     [Produces("application/json")]
     [ApiController]
     [Authorize]
-    public class CidadaoController : Controller
+    public class CidadaoController : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetTodoItems()
@@ -22,6 +22,12 @@ namespace SGM.Cidadao.API.Controllers
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTodoItem(long id)
+        {
+            return NoContent();
+        }
+
+        [HttpGet("{id}/Impostos")]
+        public async Task<IActionResult> GetConsultarImpostosCidadao(long id)
         {
             return NoContent();
         }

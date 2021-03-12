@@ -10,7 +10,7 @@ namespace SGM.Cidadao.Infra.Repositories
 {
     public class ContribuicaoRepository : BaseRepository<Contribuicao, CidadaoContext>, IContribuicaoRepository
     {
-        protected ContribuicaoRepository(CidadaoContext db) : base(db) { }
+        public ContribuicaoRepository(CidadaoContext db) : base(db) { }
 
     }
 }

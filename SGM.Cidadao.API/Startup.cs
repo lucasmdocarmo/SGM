@@ -21,7 +21,6 @@ namespace SGM.Cidadao.API
     public class Startup
     {
         private IConfiguration Configuration { get; }
-        public IUnitOfWork _unitOfWork { get; set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,7 +32,8 @@ namespace SGM.Cidadao.API
                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
 
-            }).AddJsonOptions(json => { json.JsonSerializerOptions.IgnoreNullValues = true; }).SetCompatibilityVersion(CompatibilityVersion.Latest);
+            }).AddJsonOptions(json => { json.JsonSerializerOptions.IgnoreNullValues = true; })
+              .SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             services.AddCors();
             services.AddControllers();
@@ -43,12 +43,11 @@ namespace SGM.Cidadao.API
             services.AddScoped<CidadaoContext>();
             services.AddScoped<IUnitOfWork, CidadaoContext>();
 
-            _unitOfWork = services.BuildServiceProvider().GetRequiredService<IUnitOfWork>();
-
             //Application
             services.AddScoped<ICommandResult, CommandResult>();
 
             //Repos
+            //serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ICidadaoRepository, CidadaoRepository>();
             services.AddScoped<IContribuicaoRepository, ContribuicaoRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();
@@ -57,19 +56,14 @@ namespace SGM.Cidadao.API
 
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, CidadaoContext appContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            if (!_unitOfWork.CheckDatabaseStatus())
-            {
-                appContext.Database.EnsureCreated();
-            }
-            else { appContext.Database.Migrate(); }
-
-
+           
+            app.EnsureMigrationOfContext<CidadaoContext>();
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseRouting();

@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SGM.Auth.Domain\SGM.Manager.Domain.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SGM.Manager.Domain\SGM.Manager.Domain.csproj" />
     <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
   </ItemGroup>

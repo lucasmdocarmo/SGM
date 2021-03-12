@@ -10,6 +10,6 @@ namespace SGM.Manager.Infra.Repositories
 {
     public class UsuarioRepository : BaseRepository<Usuario, ManagerContext>, IUsuarioRepository
     {
-        protected UsuarioRepository(ManagerContext db) : base(db) { }
+        public UsuarioRepository(ManagerContext db) : base(db) { }
     }
 }

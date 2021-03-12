@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SGM.Shared.Core.Repository.Base
 {
-    public abstract class BaseRepository<TEntity, TContext> : IRepository<TEntity,TContext> 
+    public class BaseRepository<TEntity, TContext> : IRepository<TEntity,TContext> 
                                                                                where TEntity : BaseEntity 
                                                                                where TContext : DbContext
     {
