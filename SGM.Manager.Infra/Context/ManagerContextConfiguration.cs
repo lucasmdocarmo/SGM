@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SGM.Manager.Domain.Entities;
+using SGM.Manager.Domain.Entities.Integration;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -51,6 +52,18 @@ namespace SGM.Manager.Infra.Context
 
 
             builder.ToTable("Usuario");
+        }
+    }
+    public class AppIntegrationMapping : IEntityTypeConfiguration<AppIntegration>
+    {
+        public void Configure(EntityTypeBuilder<AppIntegration> builder)
+        {
+            builder.HasKey(c => c.Id);
+            builder.Property(x => x.ApiKey).IsRequired();
+            builder.Property(x => x.AppIntegrationCode).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.Sistema).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+
+            builder.ToTable("AppIntegrations");
         }
     }
 }

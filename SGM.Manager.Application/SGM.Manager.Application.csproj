@@ -5,7 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SGM.Manager.Domain\SGM.Manager.Domain.csproj" />
+    <ProjectReference Include="..\SGM.Manager.Infra\SGM.Manager.Infra.csproj" />
     <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Queries\" />
+    <Folder Include="Presentation\" />
   </ItemGroup>
 
 </Project>

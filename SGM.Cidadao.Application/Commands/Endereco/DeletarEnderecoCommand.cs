@@ -8,6 +8,7 @@ namespace SGM.Cidadao.Application.Commands.Endereco
 {
     public class DeletarEnderecoCommand : Notifiable, ICommand
     {
+        public Guid Id { get; set; }
         public bool Validate()
         {
             throw new NotImplementedException();

@@ -125,6 +125,12 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Manager.Domain\\SGM.Manager.Domain.csproj": {
+                "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Manager.Domain\\SGM.Manager.Domain.csproj"
+              },
+              "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Manager.Infra\\SGM.Manager.Infra.csproj": {
+                "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Manager.Infra\\SGM.Manager.Infra.csproj"
+              },
               "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
                 "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj"
               }

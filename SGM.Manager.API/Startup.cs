@@ -10,10 +10,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SGM.Manager.API.Extensions;
 using SGM.Manager.Application.Commands;
+using SGM.Manager.Application.Commands.Departamento;
+using SGM.Manager.Application.Commands.Funcionario;
+using SGM.Manager.Application.Commands.Usuario;
 using SGM.Manager.Infra.Context;
 using SGM.Manager.Infra.Repositories;
 using SGM.Manager.Infra.Repositories.Contracts;
+using SGM.Shared.Core.Application;
 using SGM.Shared.Core.Commands;
+using SGM.Shared.Core.Commands.Handler;
 using SGM.Shared.Core.Contracts.UnitOfWork;
 using System;
 using System.Collections.Generic;
@@ -49,6 +54,17 @@ namespace SGM.Manager.API
 
             //Application
             services.AddScoped<ICommandResult, CommandResult>();
+            services.AddSingleton<ICommandHandler<CadastrarDepartamentoCommand>, DepartamentoHandler>();
+            services.AddSingleton<ICommandHandler<DeletarDepartamentoCommand>, DepartamentoHandler>();
+            services.AddSingleton<ICommandHandler<EditarDepartamentoCommand>, DepartamentoHandler>();
+            services.AddSingleton<ICommandHandler<CadastrarUsuarioCommand>, UsuarioHandler>();
+            services.AddSingleton<ICommandHandler<DeletarUsuarioCommand>, UsuarioHandler>();
+            services.AddSingleton<ICommandHandler<EditarUsuarioCommand>, UsuarioHandler>();
+            services.AddSingleton<ICommandHandler<CadastrarFuncionarioCommand>, FuncionarioHandler>();
+            services.AddSingleton<ICommandHandler<DeletarFuncionarioCommand>, FuncionarioHandler>();
+            services.AddSingleton<ICommandHandler<EditarFuncionarioCommand>, FuncionarioHandler>();
+
+
 
             //Repos
             //serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));

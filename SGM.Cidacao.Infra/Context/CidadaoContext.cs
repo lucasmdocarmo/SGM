@@ -17,7 +17,7 @@ namespace SGM.Cidadao.Infra.Context
 
         public DbSet<Contribuicao> Contribuicao { get; set; }
         public DbSet<Impostos> Impostos { get; set; }
-        public DbSet<StatusContribuicao> Contribuintes { get; set; }
+        public DbSet<StatusContribuicao> StatusContribuicao { get; set; }
         public DbSet<Domain.Entities.Cidadao> Cidadao { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
 

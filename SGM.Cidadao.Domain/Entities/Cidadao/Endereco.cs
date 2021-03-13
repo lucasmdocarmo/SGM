@@ -34,5 +34,17 @@ namespace SGM.Cidadao.Domain.Entities
 
         public Cidadao Cidadao { get; private set; }
         public Guid CidadaoId { get; private set; }
+
+        public void EditarEndereco(string cEP, string logradouro, string numero, string complemento,
+           string cidade, string estado, Guid cidadaoId)
+        {
+            CEP = cEP;
+            Logradouro = logradouro;
+            Numero = numero;
+            Complemento = complemento;
+            Cidade = cidade;
+            Estado = estado;
+            CidadaoId = cidadaoId;
+        }
     }
 }

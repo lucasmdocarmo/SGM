@@ -1,6 +1,7 @@
 ﻿using Flunt.Notifications;
 using Microsoft.EntityFrameworkCore;
 using SGM.Manager.Domain.Entities;
+using SGM.Manager.Domain.Entities.Integration;
 using SGM.Shared.Core.Contracts.UnitOfWork;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace SGM.Manager.Infra.Context
         public DbSet<Departamento> Departamento { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
+        public DbSet<AppIntegration> AppIntegration { get; set; }
 
         public void Rollback() => Database.RollbackTransaction();
         public void Begin() => Database.BeginTransaction();

@@ -8,6 +8,7 @@ namespace SGM.Cidadao.Application.Commands.Impostos
 {
     public class DeletarImpostosCommand : Notifiable, ICommand
     {
+        public Guid Id { get; set; }
         public bool Validate()
         {
             throw new NotImplementedException();

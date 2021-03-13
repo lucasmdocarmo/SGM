@@ -5,10 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using SGM.Cidadao.Domain.Entities;
+using SGM.Shared.Core.Contracts;
 
 namespace SGM.Cidadao.Domain.Entities
 {
-    public sealed class Cidadao :BaseEntity
+    public sealed class Cidadao :BaseEntity , IAggregateRoot
     {
         internal Cidadao() { }
         public Cidadao(string nome, DateTime dataNascimento, CPF cPF, string identidade, bool sexo, string email, 
@@ -38,6 +39,20 @@ namespace SGM.Cidadao.Domain.Entities
         public string Celular { get; set; }
         public Endereco Endereco { get; set; }
         public IReadOnlyCollection<Contribuicao>Contribuicao { get; set; }
+
+        public void EditarCidadao(string nome, DateTime dataNascimento, CPF CPF, string identidade, bool sexo, string email,
+            string profissao, string telefone, string celular)
+        {
+            this.Nome = nome;
+            this.DataNascimento = dataNascimento;
+            this.CPF = CPF;
+            this.Identidade = identidade;
+            this.Sexo = sexo;
+            this.Email = email;
+            this.Profissao = profissao;
+            this.Telefone = telefone;
+            this.Celular = celular;
+        }
 
     }
     internal static class CodigoGenerator

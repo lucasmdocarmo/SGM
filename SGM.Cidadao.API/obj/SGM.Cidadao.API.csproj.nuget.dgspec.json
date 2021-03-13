@@ -192,6 +192,12 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Cidacao.Infra\\SGM.Cidadao.Infra.csproj": {
+                "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Cidacao.Infra\\SGM.Cidadao.Infra.csproj"
+              },
+              "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Cidadao.Domain\\SGM.Cidadao.Domain.csproj": {
+                "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Cidadao.Domain\\SGM.Cidadao.Domain.csproj"
+              },
               "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
                 "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj"
               }

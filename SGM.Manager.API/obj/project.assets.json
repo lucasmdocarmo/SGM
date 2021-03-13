@@ -1608,6 +1608,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "SGM.Manager.Domain": "1.0.0",
+          "SGM.Manager.Infra": "1.0.0",
           "SGM.Shared.Core": "1.0.0"
         },
         "compile": {
