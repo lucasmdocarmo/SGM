@@ -8,6 +8,8 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\SGM.S
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\ref\SGM.Saude.API.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\SGM.Saude.API.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Flunt.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -20,7 +22,11 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Micro
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -49,6 +55,7 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.S
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.AssemblyInfoInputs.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.AssemblyInfo.cs
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\staticwebassets\SGM.Saude.API.StaticWebAssets.Manifest.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\staticwebassets\SGM.Saude.API.StaticWebAssets.xml
@@ -59,10 +66,3 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.S
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\ref\SGM.Saude.API.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.genruntimeconfig.cache
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.MvcApplicationPartsAssemblyInfo.cs

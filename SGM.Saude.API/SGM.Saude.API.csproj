@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SGM.Saude.Application\SGM.Saude.Application.csproj" />
     <ProjectReference Include="..\SGM.Saude.Infra\SGM.Saude.Infra.csproj" />
     <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
   </ItemGroup>

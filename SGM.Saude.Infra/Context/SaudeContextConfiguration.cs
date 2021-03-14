@@ -108,8 +108,8 @@ namespace SGM.Saude.Infra.Context
             builder.Property(x => x.Email).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Telefone).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.ValorHora).HasColumnType("decimal(10,2)").IsRequired();
-            builder.Property(x => x.HoraInicio).HasColumnType("datetime").IsRequired();
-            builder.Property(x => x.HoraFim).HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.HoraInicio);
+            builder.Property(x => x.HoraFim);
             builder.HasMany(x => x.Consultas).WithOne(x => x.Medico).HasForeignKey(x => x.MedicoId).OnDelete(DeleteBehavior.NoAction);
             builder.ToTable("Medicos");
         }

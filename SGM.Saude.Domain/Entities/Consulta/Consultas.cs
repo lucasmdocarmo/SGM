@@ -10,6 +10,18 @@ namespace SGM.Saude.Domain.Entities
 {
     public class Consultas: BaseEntity, IAggregateRoot
     {
+        public Consultas(string especialidade, string descricao, string informacoesMedicas, DateTime dataConsulta, bool confirmada, 
+                        Guid pacienteId, Guid medicoId)
+        {
+            Especialidade = especialidade;
+            Descricao = descricao;
+            InformacoesMedicas = informacoesMedicas;
+            DataConsulta = dataConsulta;
+            Confirmada = confirmada;
+            PacienteId = pacienteId;
+            MedicoId = medicoId;
+        }
+
         public string Especialidade { get; private set; }
         public string Descricao { get; private set; }
         public string InformacoesMedicas { get; private set; }
@@ -22,5 +34,16 @@ namespace SGM.Saude.Domain.Entities
         public Medicos Medico { get; set; }
         public Guid MedicoId { get; set; }
 
+        public void EditarConsulta(string especialidade, string descricao, string informacoesMedicas, DateTime dataConsulta, bool confirmada,
+                        Guid pacienteId, Guid medicoId)
+        {
+            Especialidade = especialidade;
+            Descricao = descricao;
+            InformacoesMedicas = informacoesMedicas;
+            DataConsulta = dataConsulta;
+            Confirmada = confirmada;
+            PacienteId = pacienteId;
+            MedicoId = medicoId;
+        }
     }
 }

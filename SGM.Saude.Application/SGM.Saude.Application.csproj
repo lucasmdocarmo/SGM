@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <ProjectReference Include="..\SGM.Saude.Domain\SGM.Saude.Domain.csproj" />
+    <ProjectReference Include="..\SGM.Saude.Infra\SGM.Saude.Infra.csproj" />
+    <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
   </ItemGroup>
 
 </Project>

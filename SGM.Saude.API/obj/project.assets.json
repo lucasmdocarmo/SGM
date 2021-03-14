@@ -1604,6 +1604,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "SGM.Saude.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "SGM.Saude.Domain": "1.0.0",
+          "SGM.Saude.Infra": "1.0.0",
+          "SGM.Shared.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SGM.Saude.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SGM.Saude.Application.dll": {}
+        }
+      },
       "SGM.Saude.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -6098,6 +6113,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "SGM.Saude.Application/1.0.0": {
+      "type": "project",
+      "path": "../SGM.Saude.Application/SGM.Saude.Application.csproj",
+      "msbuildProject": "../SGM.Saude.Application/SGM.Saude.Application.csproj"
+    },
     "SGM.Saude.Domain/1.0.0": {
       "type": "project",
       "path": "../SGM.Saude.Domain/SGM.Saude.Domain.csproj",
@@ -6119,6 +6139,7 @@
       "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer >= 5.0.0",
       "Microsoft.OpenApi >= 1.2.3",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.9",
+      "SGM.Saude.Application >= 1.0.0",
       "SGM.Saude.Infra >= 1.0.0",
       "SGM.Shared.Core >= 1.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 6.1.0",
@@ -6153,6 +6174,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Application\\SGM.Saude.Application.csproj": {
+              "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Application\\SGM.Saude.Application.csproj"
+            },
             "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj": {
               "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Saude.Infra\\SGM.Saude.Infra.csproj"
             },

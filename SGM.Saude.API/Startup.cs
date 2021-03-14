@@ -9,10 +9,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SGM.Saude.API.Extensions;
+using SGM.Saude.Application.Commands;
+using SGM.Saude.Application.Commands.Clinicas;
+using SGM.Saude.Application.Commands.Pacientes;
+using SGM.Saude.Application.Commands.Prescricao;
 using SGM.Saude.Infra.Context;
 using SGM.Saude.Infra.Repositories;
 using SGM.Saude.Infra.Repositories.Contracts;
+using SGM.Shared.Core.Application;
 using SGM.Shared.Core.Commands;
+using SGM.Shared.Core.Commands.Handler;
 using SGM.Shared.Core.Contracts.UnitOfWork;
 using System;
 using System.Collections.Generic;
@@ -49,7 +55,25 @@ namespace SGM.Saude.API
             services.AddScoped<IUnitOfWork, SaudeContext>();
 
             //Application
-
+            services.AddSingleton<ICommandResult, CommandResult>();
+            services.AddSingleton<ICommandHandler<CadastrarClinicaCommand>, ClinicaHandler>();
+            services.AddSingleton<ICommandHandler<DeletarClinicaCommand>, ClinicaHandler>();
+            services.AddSingleton<ICommandHandler<EditarClinicaCommand>, ClinicaHandler>();
+            services.AddSingleton<ICommandHandler<CadastrarConsultaCommand>, ConsultaHandler>();
+            services.AddSingleton<ICommandHandler<DeletarConsultaCommand>, ConsultaHandler>();
+            services.AddSingleton<ICommandHandler<EditarConsultaCommand>, ConsultaHandler>();
+            services.AddSingleton<ICommandHandler<CadastrarEnderecoCommand>, EnderecoHandler>();
+            services.AddSingleton<ICommandHandler<DeletarEnderecoCommand>, EnderecoHandler>();
+            services.AddSingleton<ICommandHandler<EditarEnderecoCommand>, EnderecoHandler>();
+            services.AddSingleton<ICommandHandler<CadastrarMedicoCommand>, MedicoHandler>();
+            services.AddSingleton<ICommandHandler<DeletarMedicoCommand>, MedicoHandler>();
+            services.AddSingleton<ICommandHandler<EditarMedicoCommand>, MedicoHandler>();
+            services.AddSingleton<ICommandHandler<CadastrarPacienteCommand>, PacienteHandler>();
+            services.AddSingleton<ICommandHandler<DeletarPacienteCommand>, PacienteHandler>();
+            services.AddSingleton<ICommandHandler<EditarPacienteCommand>, PacienteHandler>();
+            services.AddSingleton<ICommandHandler<CadastrarPrescricaoCommand>, PrescricaoHandler>();
+            services.AddSingleton<ICommandHandler<DeletarPrescricaoCommand>, PrescricaoHandler>();
+            services.AddSingleton<ICommandHandler<EditarPrescricaoCommand>, PrescricaoHandler>();
 
             //Repos
             services.AddScoped<IClinicaRepository, ClinicaRepository>();

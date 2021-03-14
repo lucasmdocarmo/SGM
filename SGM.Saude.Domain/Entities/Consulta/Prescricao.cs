@@ -7,13 +7,34 @@ namespace SGM.Saude.Domain.Entities.Consulta
 {
     public sealed class Prescricao :BaseEntity
     {
-        public string Detalhes { get; set; }
-        public bool Retornar { get; set; }
-        public string Resumo { get; set; }
-        public DateTime DataInicial { get; set; }
-        public DateTime Validade { get; set; }
+        public Prescricao(string detalhes, bool retornar, string resumo, DateTime dataInicial, DateTime validade, Guid consultaId)
+        {
+            Detalhes = detalhes;
+            Retornar = retornar;
+            Resumo = resumo;
+            DataInicial = dataInicial;
+            Validade = validade;
+            ConsultaId = consultaId;
+        }
 
-        public Consultas Consulta { get; set; }
-        public Guid ConsultaId { get; set; }
+        public string Detalhes { get; private set; }
+        public bool Retornar { get; private set; }
+        public string Resumo { get; private set; }
+        public DateTime DataInicial { get; private set; }
+        public DateTime Validade { get; private set; }
+
+        public Consultas Consulta { get; private set; }
+        public Guid ConsultaId { get; private set; }
+
+        public void EditarPrescricao(string detalhes, bool retornar, string resumo, DateTime dataInicial, DateTime validade, Guid consultaId)
+        {
+
+            Detalhes = detalhes;
+            Retornar = retornar;
+            Resumo = resumo;
+            DataInicial = dataInicial;
+            Validade = validade;
+            ConsultaId = consultaId;
+        }
     }
 }
