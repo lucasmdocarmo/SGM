@@ -1,5 +1,4 @@
 ﻿using Flunt.Notifications;
-using SGM.Saude.Application.Commands.Endereco;
 using SGM.Saude.Domain.Entities.Clinicas;
 using SGM.Saude.Infra.Repositories.Contracts;
 using SGM.Shared.Core.Application;

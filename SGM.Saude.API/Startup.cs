@@ -55,25 +55,25 @@ namespace SGM.Saude.API
             services.AddScoped<IUnitOfWork, SaudeContext>();
 
             //Application
-            services.AddSingleton<ICommandResult, CommandResult>();
-            services.AddSingleton<ICommandHandler<CadastrarClinicaCommand>, ClinicaHandler>();
-            services.AddSingleton<ICommandHandler<DeletarClinicaCommand>, ClinicaHandler>();
-            services.AddSingleton<ICommandHandler<EditarClinicaCommand>, ClinicaHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarConsultaCommand>, ConsultaHandler>();
-            services.AddSingleton<ICommandHandler<DeletarConsultaCommand>, ConsultaHandler>();
-            services.AddSingleton<ICommandHandler<EditarConsultaCommand>, ConsultaHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarEnderecoCommand>, EnderecoHandler>();
-            services.AddSingleton<ICommandHandler<DeletarEnderecoCommand>, EnderecoHandler>();
-            services.AddSingleton<ICommandHandler<EditarEnderecoCommand>, EnderecoHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarMedicoCommand>, MedicoHandler>();
-            services.AddSingleton<ICommandHandler<DeletarMedicoCommand>, MedicoHandler>();
-            services.AddSingleton<ICommandHandler<EditarMedicoCommand>, MedicoHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarPacienteCommand>, PacienteHandler>();
-            services.AddSingleton<ICommandHandler<DeletarPacienteCommand>, PacienteHandler>();
-            services.AddSingleton<ICommandHandler<EditarPacienteCommand>, PacienteHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarPrescricaoCommand>, PrescricaoHandler>();
-            services.AddSingleton<ICommandHandler<DeletarPrescricaoCommand>, PrescricaoHandler>();
-            services.AddSingleton<ICommandHandler<EditarPrescricaoCommand>, PrescricaoHandler>();
+            services.AddScoped<ICommandResult, CommandResult>();
+            services.AddScoped<ICommandHandler<CadastrarClinicaCommand>, ClinicaHandler>();
+            services.AddScoped<ICommandHandler<DeletarClinicaCommand>, ClinicaHandler>();
+            services.AddScoped<ICommandHandler<EditarClinicaCommand>, ClinicaHandler>();
+            services.AddScoped<ICommandHandler<CadastrarConsultaCommand>, ConsultaHandler>();
+            services.AddScoped<ICommandHandler<DeletarConsultaCommand>, ConsultaHandler>();
+            services.AddScoped<ICommandHandler<EditarConsultaCommand>, ConsultaHandler>();
+            services.AddScoped<ICommandHandler<CadastrarEnderecoCommand>, EnderecoHandler>();
+            services.AddScoped<ICommandHandler<DeletarEnderecoCommand>, EnderecoHandler>();
+            services.AddScoped<ICommandHandler<EditarEnderecoCommand>, EnderecoHandler>();
+            services.AddScoped<ICommandHandler<CadastrarMedicoCommand>, MedicoHandler>();
+            services.AddScoped<ICommandHandler<DeletarMedicoCommand>, MedicoHandler>();
+            services.AddScoped<ICommandHandler<EditarMedicoCommand>, MedicoHandler>();
+            services.AddScoped<ICommandHandler<CadastrarPacienteCommand>, PacienteHandler>();
+            services.AddScoped<ICommandHandler<DeletarPacienteCommand>, PacienteHandler>();
+            services.AddScoped<ICommandHandler<EditarPacienteCommand>, PacienteHandler>();
+            services.AddScoped<ICommandHandler<CadastrarPrescricaoCommand>, PrescricaoHandler>();
+            services.AddScoped<ICommandHandler<DeletarPrescricaoCommand>, PrescricaoHandler>();
+            services.AddScoped<ICommandHandler<EditarPrescricaoCommand>, PrescricaoHandler>();
 
             //Repos
             services.AddScoped<IClinicaRepository, ClinicaRepository>();

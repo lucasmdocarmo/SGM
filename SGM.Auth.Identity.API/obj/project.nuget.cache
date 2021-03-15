@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "09qbBT163I0gWxEIHVmlXsx5KsQ6LViX6HOMtOtTo4o0DkHhf1q+mNV55SinTIYwOuCTjMNgni966de+h5hSyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Auth.Identity.API\\SGM.Auth.Identity.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}

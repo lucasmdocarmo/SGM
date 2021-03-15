@@ -8,6 +8,7 @@ namespace SGM.Shared.Core.Application
 {
     public class CommandResult : ICommandResult
     {
+        public CommandResult() { }
         public bool Success { get; set; }
         public object Result { get; set; }
         public IReadOnlyCollection<Notification> Messages { get; set; }

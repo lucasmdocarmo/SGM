@@ -1,5 +1,4 @@
 ﻿using Flunt.Notifications;
-using SGM.Saude.Application.Commands.Paciente;
 using SGM.Saude.Infra.Repositories.Contracts;
 using SGM.Shared.Core.Application;
 using SGM.Shared.Core.Commands;

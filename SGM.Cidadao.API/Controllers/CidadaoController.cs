@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SGM.Cidadao.Application.Commands.Cidadao;
+using SGM.Shared.Core.Application;
+using SGM.Shared.Core.Commands.Handler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,38 +18,62 @@ namespace SGM.Cidadao.API.Controllers
     [Authorize]
     public class CidadaoController : ControllerBase
     {
+        private readonly ICommandHandler<CadastrarCidadaoCommand> _commandCadastrar;
+
+        public CidadaoController(ICommandHandler<CadastrarCidadaoCommand> commandCadastrar)
+        {
+            _commandCadastrar = commandCadastrar;
+        }
+
         [HttpGet]
-        public async Task<IActionResult> GetTodoItems()
+        [Authorize]
+        public async Task<IActionResult> GetAll()
         {
             return NoContent();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetTodoItem(long id)
+        public async Task<IActionResult> GetItem(Guid id)
         {
             return NoContent();
         }
 
         [HttpGet("{id}/Impostos")]
-        public async Task<IActionResult> GetConsultarImpostosCidadao(long id)
+        public async Task<IActionResult> GetConsultarImpostosCidadao(Guid id)
         {
             return NoContent();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTodoItem(long id, string todoItemDTO)
+        public async Task<IActionResult> UpdateCidadao(Guid id, [FromBody][Bind] EditarCidadaoCommand command)
         {
             return NoContent();
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateTodoItem(string todoItemDTO)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        //[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        //[ProducesResponseType(typeof(NotFoundResult), StatusCodes.Status404NotFound)]
+        //[ProducesResponseType(typeof(Notificacao), StatusCodes.Status412PreconditionFailed)]
+        //[ProducesResponseType(typeof(string), StatusCodes.Status422UnprocessableEntity)]
+        //[ProducesResponseType(typeof(InternalServerError), StatusCodes.Status500InternalServerError)]
+        //[ProducesResponseType(typeof(string), StatusCodes.Status504GatewayTimeout)]
+        public async Task<IActionResult> CreateTodoItem([FromBody] CadastrarCidadaoCommand command)
         {
-            return NoContent();
+            var result = await _commandCadastrar.Handle(command).ConfigureAwait(true) as CommandResult;
+
+            if (result.Success)
+            {
+                return Ok(result.Result);
+            }
+            else
+            {
+                return UnprocessableEntity();
+            }
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(long id)
+        public async Task<IActionResult> DeleteTodoItem(Guid id)
         {
             return NoContent();
         }

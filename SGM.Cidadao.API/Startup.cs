@@ -52,22 +52,22 @@ namespace SGM.Cidadao.API
             services.AddScoped<IUnitOfWork, CidadaoContext>();
 
             //Application
-            services.AddSingleton<ICommandResult, CommandResult>();
-            services.AddSingleton<ICommandHandler<CadastrarCidadaoCommand>, CidadaoHandler>();
-            services.AddSingleton<ICommandHandler<DeletarCidadaoCommand>, CidadaoHandler>();
-            services.AddSingleton<ICommandHandler<EditarCidadaoCommand>, CidadaoHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarContribuicaoCommand>, ContribuinteHandler>();
-            services.AddSingleton<ICommandHandler<DeletarContribuicaoCommand>, ContribuinteHandler>();
-            services.AddSingleton<ICommandHandler<EditarContribuicaoCommand>, ContribuinteHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarImpostosCommand>, ImpostosHandler>();
-            services.AddSingleton<ICommandHandler<DeletarImpostosCommand>, ImpostosHandler>();
-            services.AddSingleton<ICommandHandler<EditarImpostosCommand>, ImpostosHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarEnderecoCommand>, EnderecoHandler>();
-            services.AddSingleton<ICommandHandler<DeletarEnderecoCommand>, EnderecoHandler>();
-            services.AddSingleton<ICommandHandler<EditarEnderecoCommand>, EnderecoHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarStatusCommand>, StatusContribuinteHandler>();
-            services.AddSingleton<ICommandHandler<DeletarStatusCommand>, StatusContribuinteHandler>();
-            services.AddSingleton<ICommandHandler<EditarStatusCommand>, StatusContribuinteHandler>();
+            services.AddScoped<ICommandResult, CommandResult>();
+            services.AddScoped<ICommandHandler<CadastrarCidadaoCommand>, CidadaoHandler>();
+            services.AddScoped<ICommandHandler<DeletarCidadaoCommand>, CidadaoHandler>();
+            services.AddScoped<ICommandHandler<EditarCidadaoCommand>, CidadaoHandler>();
+            services.AddScoped<ICommandHandler<CadastrarContribuicaoCommand>, ContribuinteHandler>();
+            services.AddScoped<ICommandHandler<DeletarContribuicaoCommand>, ContribuinteHandler>();
+            services.AddScoped<ICommandHandler<EditarContribuicaoCommand>, ContribuinteHandler>();
+            services.AddScoped<ICommandHandler<CadastrarImpostosCommand>, ImpostosHandler>();
+            services.AddScoped<ICommandHandler<DeletarImpostosCommand>, ImpostosHandler>();
+            services.AddScoped<ICommandHandler<EditarImpostosCommand>, ImpostosHandler>();
+            services.AddScoped<ICommandHandler<CadastrarEnderecoCommand>, EnderecoHandler>();
+            services.AddScoped<ICommandHandler<DeletarEnderecoCommand>, EnderecoHandler>();
+            services.AddScoped<ICommandHandler<EditarEnderecoCommand>, EnderecoHandler>();
+            services.AddScoped<ICommandHandler<CadastrarStatusCommand>, StatusContribuinteHandler>();
+            services.AddScoped<ICommandHandler<DeletarStatusCommand>, StatusContribuinteHandler>();
+            services.AddScoped<ICommandHandler<EditarStatusCommand>, StatusContribuinteHandler>();
 
             //Repos
             //serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));

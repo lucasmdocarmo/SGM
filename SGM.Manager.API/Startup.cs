@@ -54,15 +54,15 @@ namespace SGM.Manager.API
 
             //Application
             services.AddScoped<ICommandResult, CommandResult>();
-            services.AddSingleton<ICommandHandler<CadastrarDepartamentoCommand>, DepartamentoHandler>();
-            services.AddSingleton<ICommandHandler<DeletarDepartamentoCommand>, DepartamentoHandler>();
-            services.AddSingleton<ICommandHandler<EditarDepartamentoCommand>, DepartamentoHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarUsuarioCommand>, UsuarioHandler>();
-            services.AddSingleton<ICommandHandler<DeletarUsuarioCommand>, UsuarioHandler>();
-            services.AddSingleton<ICommandHandler<EditarUsuarioCommand>, UsuarioHandler>();
-            services.AddSingleton<ICommandHandler<CadastrarFuncionarioCommand>, FuncionarioHandler>();
-            services.AddSingleton<ICommandHandler<DeletarFuncionarioCommand>, FuncionarioHandler>();
-            services.AddSingleton<ICommandHandler<EditarFuncionarioCommand>, FuncionarioHandler>();
+            services.AddScoped<ICommandHandler<CadastrarDepartamentoCommand>, DepartamentoHandler>();
+            services.AddScoped<ICommandHandler<DeletarDepartamentoCommand>, DepartamentoHandler>();
+            services.AddScoped<ICommandHandler<EditarDepartamentoCommand>, DepartamentoHandler>();
+            services.AddScoped<ICommandHandler<CadastrarUsuarioCommand>, UsuarioHandler>();
+            services.AddScoped<ICommandHandler<DeletarUsuarioCommand>, UsuarioHandler>();
+            services.AddScoped<ICommandHandler<EditarUsuarioCommand>, UsuarioHandler>();
+            services.AddScoped<ICommandHandler<CadastrarFuncionarioCommand>, FuncionarioHandler>();
+            services.AddScoped<ICommandHandler<DeletarFuncionarioCommand>, FuncionarioHandler>();
+            services.AddScoped<ICommandHandler<EditarFuncionarioCommand>, FuncionarioHandler>();
 
 
 
