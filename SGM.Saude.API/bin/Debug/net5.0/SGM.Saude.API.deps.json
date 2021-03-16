@@ -28,6 +28,7 @@
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.0.0",
           "Microsoft.OpenApi": "1.2.3",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.9",
+          "SGM.Saude.Application": "1.0.0",
           "SGM.Saude.Infra": "1.0.0",
           "SGM.Shared.Core": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "6.1.0",
@@ -1389,6 +1390,19 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "SGM.Saude.Application/1.0.0": {
+        "dependencies": {
+          "SGM.Saude.Domain": "1.0.0",
+          "SGM.Saude.Infra": "1.0.0",
+          "SGM.Shared.Core": "1.0.0"
+        },
+        "runtime": {
+          "SGM.Saude.Application.dll": {}
+        },
+        "compile": {
+          "SGM.Saude.Application.dll": {}
         }
       },
       "SGM.Saude.Domain/1.0.0": {
@@ -3859,6 +3873,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "SGM.Saude.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "SGM.Saude.Domain/1.0.0": {
       "type": "project",

@@ -43,6 +43,12 @@ namespace SGM.Cidadao.API
             }).AddJsonOptions(json => { json.JsonSerializerOptions.IgnoreNullValues = true; })
               .SetCompatibilityVersion(CompatibilityVersion.Latest);
 
+            services.AddAuthentication("Bearer").AddIdentityServerAuthentication("Bearer", options =>
+            {
+                options.ApiName = "cidadao";
+                options.Authority = "https://localhost:5006";
+            });
+
             services.AddCors();
             services.AddControllers();
             services.AddSwaggerConfig();

@@ -66,3 +66,5 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.S
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\ref\SGM.Saude.API.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.genruntimeconfig.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\SGM.Saude.Application.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\SGM.Saude.Application.pdb
