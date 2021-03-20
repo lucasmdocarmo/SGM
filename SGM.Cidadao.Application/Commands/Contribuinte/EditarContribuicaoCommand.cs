@@ -19,7 +19,7 @@ namespace SGM.Cidadao.Application.Commands.Contribuinte
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

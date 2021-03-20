@@ -12,7 +12,7 @@ namespace SGM.Saude.Application.Commands.Clinicas
         public string Telefone { get; set; }
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

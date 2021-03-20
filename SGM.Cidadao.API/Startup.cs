@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using SGM.Cidadao.API.Extensions;
 using SGM.Cidadao.Application;
 using SGM.Cidadao.Application.Commands;
@@ -16,6 +18,8 @@ using SGM.Cidadao.Application.Commands.Contribuinte;
 using SGM.Cidadao.Application.Commands.Endereco;
 using SGM.Cidadao.Application.Commands.Impostos;
 using SGM.Cidadao.Application.Commands.StatusContribuinte;
+using SGM.Cidadao.Application.Queries;
+using SGM.Cidadao.Application.Queries.Results.Cidadao;
 using SGM.Cidadao.Infra.Context;
 using SGM.Cidadao.Infra.Repositories;
 using SGM.Cidadao.Infra.Repositories.Contracts;
@@ -23,6 +27,10 @@ using SGM.Shared.Core.Application;
 using SGM.Shared.Core.Commands;
 using SGM.Shared.Core.Commands.Handler;
 using SGM.Shared.Core.Contracts.UnitOfWork;
+using SGM.Shared.Core.Queries;
+using SGM.Shared.Core.Queries.Handler;
+using SGM.Shared.Core.ValueObjects;
+using System.Text;
 
 namespace SGM.Cidadao.API
 {
@@ -40,13 +48,31 @@ namespace SGM.Cidadao.API
                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
 
-            }).AddJsonOptions(json => { json.JsonSerializerOptions.IgnoreNullValues = true; })
-              .SetCompatibilityVersion(CompatibilityVersion.Latest);
+            }).AddJsonOptions(json => { json.JsonSerializerOptions.IgnoreNullValues = true; }).SetCompatibilityVersion(CompatibilityVersion.Latest);
 
-            services.AddAuthentication("Bearer").AddIdentityServerAuthentication("Bearer", options =>
+
+            services.AddAuthorization(options =>
             {
-                options.ApiName = "cidadao";
-                options.Authority = "https://localhost:5006";
+                options.AddPolicy("Clinica", policy => policy.RequireClaim("Clinica", ETipoFuncionario.Clinica.ToString()));
+                options.AddPolicy("Gestao", policy => policy.RequireClaim("Gestao", ETipoFuncionario.Gestao.ToString()));
+            });
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(auth =>
+            {
+                auth.RequireHttpsMetadata = false;
+                auth.SaveToken = true;
+                auth.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("4DFF9B8EBB5314B9A62EFA72DA8B4D7658231C05")),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
             });
 
             services.AddCors();
@@ -74,6 +100,10 @@ namespace SGM.Cidadao.API
             services.AddScoped<ICommandHandler<CadastrarStatusCommand>, StatusContribuinteHandler>();
             services.AddScoped<ICommandHandler<DeletarStatusCommand>, StatusContribuinteHandler>();
             services.AddScoped<ICommandHandler<EditarStatusCommand>, StatusContribuinteHandler>();
+
+            //Queries
+            services.AddScoped<IQueryResult, QueryResult>();
+            services.AddScoped<IQueryHandler<CidadaoQueryResult>, CidadaoQueries>();
 
             //Repos
             //serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));

@@ -10,7 +10,7 @@ namespace SGM.Saude.Infra.Repositories
 {
     public class ConsultaRepository : BaseRepository<Consultas, SaudeContext>, IConsultaRepository
     {
-        protected ConsultaRepository(SaudeContext db) : base(db) { }
+        public ConsultaRepository(SaudeContext db) : base(db) { }
 
     }
 }

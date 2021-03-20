@@ -8,6 +8,7 @@ namespace SGM.Saude.Domain.Entities.Clinicas
 {
     public sealed class Clinica : BaseEntity, IAggregateRoot
     {
+        internal Clinica(){}
         public Clinica(string nome, string telefone)
         {
             Nome = nome;

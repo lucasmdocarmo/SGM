@@ -10,6 +10,6 @@ namespace SGM.Saude.Infra.Repositories
 {
     public class ClinicaRepository : BaseRepository<Clinica, SaudeContext>, IClinicaRepository
     {
-        protected ClinicaRepository(SaudeContext db) : base(db) { }
+        public ClinicaRepository(SaudeContext db) : base(db) { }
     }
 }

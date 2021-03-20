@@ -27,14 +27,14 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
         public decimal TotalImpostos { get; set; }
         public DateTime Pagamento { get; set; }
 
-        public Guid ImpostoId { get; set; }
+        public Guid? ImpostoId { get; set; }
         public Impostos Impostos { get; set; }
 
-        public Guid CidadaoId { get; set; }
+        public Guid? CidadaoId { get; set; }
         public Cidadao Cidadao {get;set;}
 
         public StatusContribuicao Contribuinte { get; set; }
-        public Guid ContribuinteId { get; set; }
+        public Guid? ContribuinteId { get; set; }
 
         public void EditarContribuinte(string codigoGuiaContribuicao, string anoFiscal, decimal totalImpostos, DateTime pagamento,
                             Guid cidadaoId, Guid impostoId, Guid contribuinteId)
@@ -46,6 +46,10 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
             this.CidadaoId = cidadaoId;
             this.ImpostoId = impostoId;
             this.ContribuinteId = contribuinteId;
+        }
+        public void VincularStatus(Guid idContribuicao)
+        {
+            this.ContribuinteId = idContribuicao;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SGM.Cidadao.Application.Commands.Cidadao
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

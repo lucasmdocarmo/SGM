@@ -16,7 +16,7 @@ namespace SGM.Cidadao.Application.Commands.Impostos
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

@@ -68,3 +68,6 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.S
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\obj\Debug\net5.0\SGM.Saude.API.genruntimeconfig.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\SGM.Saude.Application.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\SGM.Saude.Application.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

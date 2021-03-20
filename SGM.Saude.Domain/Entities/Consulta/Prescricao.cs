@@ -7,6 +7,7 @@ namespace SGM.Saude.Domain.Entities.Consulta
 {
     public sealed class Prescricao :BaseEntity
     {
+        internal Prescricao() { }
         public Prescricao(string detalhes, bool retornar, string resumo, DateTime dataInicial, DateTime validade, Guid consultaId)
         {
             Detalhes = detalhes;

@@ -18,9 +18,9 @@ namespace SGM.Cidadao.Infra.Context
             builder.Property(x => x.TotalImpostos).HasMaxLength(250).HasColumnType("decimal(10,2)").IsRequired();
             builder.Property(x => x.Pagamento).HasColumnType("datetime").IsRequired();
 
-            builder.HasOne(x => x.Impostos).WithMany(x => x.Contribuicao).HasForeignKey(x => x.ImpostoId).OnDelete(DeleteBehavior.NoAction);
-            builder.HasOne(x => x.Cidadao).WithMany(x => x.Contribuicao).HasForeignKey(x => x.CidadaoId).OnDelete(DeleteBehavior.NoAction);
-            builder.HasOne(x => x.Contribuinte).WithMany(x => x.Contribuicao).HasForeignKey(x => x.ContribuinteId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Impostos).WithMany(x => x.Contribuicao).HasForeignKey(x => x.ImpostoId).OnDelete(DeleteBehavior.NoAction).IsRequired(false);
+            builder.HasOne(x => x.Cidadao).WithMany(x => x.Contribuicao).HasForeignKey(x => x.CidadaoId).OnDelete(DeleteBehavior.SetNull).IsRequired(false);
+            builder.HasOne(x => x.Contribuinte).WithMany(x => x.Contribuicao).HasForeignKey(x => x.ContribuinteId).OnDelete(DeleteBehavior.SetNull).IsRequired(false);
 
             builder.ToTable("Contribuinte");
         }

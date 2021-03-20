@@ -12,9 +12,6 @@ namespace SGM.Shared.Core.Entity
         public BaseEntity()
         {
             Id = Guid.NewGuid();
-        }
-        public void SetRegistedDatetime()
-        {
             LastUpdated = DateTime.Now;
         }
     }

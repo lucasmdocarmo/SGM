@@ -16,12 +16,7 @@ namespace SGM.Manager.Infra.Context
             using var context = scope.ServiceProvider.GetService<ManagerContext>();
             var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
 
-            if (!unitOfWork.CheckIfDatabaseExists())
-            {
-                context.Database.EnsureCreated();
-            }
-            else { context.Database.Migrate(); }
-
+            context.Database.EnsureCreated();
         }
     }
 }

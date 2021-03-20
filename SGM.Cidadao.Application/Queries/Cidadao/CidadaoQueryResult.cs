@@ -7,5 +7,11 @@ namespace SGM.Cidadao.Application.Queries.Results.Cidadao
 {
     public class CidadaoQueryResult : IQuery
     {
+        public string CPF { get; set; }
+
+        public bool Validate()
+        {
+            return true;
+        }
     }
 }

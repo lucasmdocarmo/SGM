@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SGM.Shared.Core.Excepctions;
+using SGM.Shared.Core.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;

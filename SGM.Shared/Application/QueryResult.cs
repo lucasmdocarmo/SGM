@@ -8,6 +8,7 @@ namespace SGM.Shared.Core.Application
 {
     public class QueryResult : IQueryResult
     {
+        public QueryResult() { }
         public QueryResult(bool success, IReadOnlyCollection<Notification> messages)
         {
             Success = success;

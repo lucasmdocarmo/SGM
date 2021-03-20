@@ -9,6 +9,7 @@ namespace SGM.Saude.Domain.Entities
 {
     public sealed class Medicos :BaseEntity, IAggregateRoot
     {
+        internal Medicos() { }
         public Medicos(string nome, string profissao, string cRM, string especialidade, TimeSpan horaInicio,
             TimeSpan horaFim, bool ativo, string email, string telefone, decimal valorHora, bool atendeTodosOsDias, Guid clinicaId)
         {

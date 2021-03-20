@@ -9,6 +9,7 @@ namespace SGM.Saude.Domain.Entities
 {
     public sealed class Paciente : BaseEntity, IAggregateRoot
     {
+        internal Paciente() { }
         public Paciente(string nome, DateTime dataNascimento, CPF cPF, string identidade, bool sexo, ETipoStatusPaciente status, 
             string detalhesPaciente, string informacoesMedicas)
         {

@@ -10,6 +10,7 @@ namespace SGM.Saude.Domain.Entities
 {
     public class Consultas: BaseEntity, IAggregateRoot
     {
+        internal Consultas() { }
         public Consultas(string especialidade, string descricao, string informacoesMedicas, DateTime dataConsulta, bool confirmada, 
                         Guid pacienteId, Guid medicoId)
         {

@@ -9,6 +9,6 @@ namespace SGM.Saude.Infra.Repositories
 {
     public class PrescricaoRepository : BaseRepository<Prescricao, SaudeContext>, Contracts.IPrescricaoRepository
     {
-        protected PrescricaoRepository(SaudeContext db) : base(db) { }
+        public PrescricaoRepository(SaudeContext db) : base(db) { }
     }
 }

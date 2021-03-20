@@ -4,6 +4,6 @@ using System.Text;
 
 namespace SGM.Shared.Core.Queries
 {
-    public interface IQuery { }
+    public interface IQuery { bool Validate(); }
     public interface IQueryResult { }
 }

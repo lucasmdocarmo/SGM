@@ -19,7 +19,7 @@ namespace SGM.Cidadao.Application.Commands.Endereco
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

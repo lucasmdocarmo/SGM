@@ -14,7 +14,7 @@ namespace SGM.Saude.Application.Commands.Clinicas
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

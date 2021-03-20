@@ -11,7 +11,7 @@ namespace SGM.Saude.Application.Commands.Clinicas
         public Guid Id { get; set; }
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

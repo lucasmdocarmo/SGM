@@ -129,3 +129,8 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\SGM
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\ref\SGM.Manager.API.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\SGM.Manager.API.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\SGM.Manager.API.genruntimeconfig.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\SGM.Identity.Service.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\SGM.Identity.Service.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

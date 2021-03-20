@@ -9,6 +9,6 @@ namespace SGM.Saude.Infra.Repositories
 {
     public class EnderecoRepository : BaseRepository<Endereco, SaudeContext>, Contracts.IEnderecoRepository
     {
-        protected EnderecoRepository(SaudeContext db) : base(db) { }
+        public EnderecoRepository(SaudeContext db) : base(db) { }
     }
 }

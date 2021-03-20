@@ -16,10 +16,12 @@ namespace SGM.Cidadao.Application.Commands
                                                ICommandHandler<EditarStatusCommand>
     {
         private readonly IStatusContribuicaoRepository _statusContribuicaoRepository;
+        private readonly IContribuicaoRepository _contribuicaoRepository;
 
-        public StatusContribuinteHandler(IStatusContribuicaoRepository statusContribuicaoRepository)
+        public StatusContribuinteHandler(IStatusContribuicaoRepository statusContribuicaoRepository, IContribuicaoRepository impostoRepository)
         {
             _statusContribuicaoRepository = statusContribuicaoRepository;
+            _contribuicaoRepository = impostoRepository;
         }
 
         public async ValueTask<ICommandResult> Handle(CadastrarStatusCommand command)
