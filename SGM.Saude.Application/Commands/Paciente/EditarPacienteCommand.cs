@@ -11,7 +11,7 @@ namespace SGM.Saude.Application.Commands.Pacientes
     {
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
-        public CPF CPF { get; set; }
+        public string CPF { get; set; }
         public string Identidade { get; set; }
         public bool Sexo { get; set; }
         public ETipoStatusPaciente Status { get; set; }

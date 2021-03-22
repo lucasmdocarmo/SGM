@@ -17,8 +17,7 @@ namespace SGM.Cidadao.Application.Commands.Cidadao
         [Required]
         public string CPF { get; set; }
         [Required]
-        public string CPF_Estado { get; set; }
-        [Required]
+
         public string Identidade { get; set; }
         [Required]
         public bool Sexo { get; set; }

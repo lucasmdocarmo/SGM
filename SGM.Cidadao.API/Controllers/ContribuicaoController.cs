@@ -54,7 +54,7 @@ namespace SGM.Cidadao.API.Controllers
                 }
                 return StatusCode(412, notifications.ToList());
             }
-
+            command.Id = id;
             var result = await _commandEditarStatus.Handle(command).ConfigureAwait(true) as CommandResult;
 
             if (!result.Success)

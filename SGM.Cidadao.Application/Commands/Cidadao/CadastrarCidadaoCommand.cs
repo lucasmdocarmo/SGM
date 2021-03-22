@@ -11,7 +11,6 @@ namespace SGM.Cidadao.Application.Commands.Cidadao
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public string CPF { get; set; }
-        public string CPF_Estado { get; set; }
         public string Identidade { get; set; }
         public bool Sexo { get; set; }
         public string Email { get; set; }

@@ -33,9 +33,30 @@ namespace SGM.Saude.Infra.Context
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.Cascade;
 
             modelBuilder.Ignore<Notification>();
-            modelBuilder.Entity<Paciente>().OwnsOne(p => p.CPF);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(DbContext).Assembly);
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Seed();
+        }
+        
+    }
+    internal static class ModelBuilderExtensions
+    {
+        public static void Seed(this ModelBuilder modelBuilder)
+        {
+            var paciente1 = new Paciente("Lucas Mariano", DateTime.Now, "11640810633", "13944854", true,
+                Shared.Core.ValueObjects.ETipoStatusPaciente.Aguardando, "paciente teste", "dermatologia");
+
+            var clinica1 = new Clinica("clinica Contagem", "33939393");
+            var medico1 = new Medicos("Dr. Joao", "Medico", "234234234", "dermatologista", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, true, "", "",
+                    300M, true, clinica1.Id);
+
+            var consulta1 = new Consultas("dermatologia", "Consuta", "", Convert.ToDateTime("03-27-2021"), true, paciente1.Id, medico1.Id);
+
+            modelBuilder.Entity<Paciente>().HasData(paciente1);
+            modelBuilder.Entity<Clinica>().HasData(clinica1);
+            modelBuilder.Entity<Medicos>().HasData(medico1);
+            modelBuilder.Entity<Consultas>().HasData(consulta1);
+
         }
     }
 }

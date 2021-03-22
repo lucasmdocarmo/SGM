@@ -35,7 +35,7 @@ namespace SGM.Manager.Infra.Context
             modelBuilder.Seed();
         }
     }
-    public static class ModelBuilderExtensions
+    internal static class ModelBuilderExtensions
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {

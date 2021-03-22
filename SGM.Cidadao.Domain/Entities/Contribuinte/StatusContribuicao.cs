@@ -7,8 +7,8 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
 {
     public sealed class StatusContribuicao : BaseEntity
     {
-        public StatusContribuicao(string codigoGuiaContribuicao, ETipoStatusContribuinte status, DateTime registroInicial, 
-            DateTime registroFinal, bool finalizado)
+        public StatusContribuicao(string codigoGuiaContribuicao, ETipoStatusContribuinte status, DateTime? registroInicial, 
+            DateTime? registroFinal, bool? finalizado)
         {
             CodigoGuiaContribuicao = codigoGuiaContribuicao;
             Status = status;
@@ -20,9 +20,9 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
         internal StatusContribuicao() { }
         public string CodigoGuiaContribuicao { get; set; }
         public ETipoStatusContribuinte Status { get; set; }
-        public DateTime RegistroInicial { get; set; }
-        public DateTime RegistroFinal { get; set; }
-        public bool Finalizado { get; set; }
+        public DateTime? RegistroInicial { get; set; }
+        public DateTime? RegistroFinal { get; set; }
+        public bool? Finalizado { get; set; }
         public IReadOnlyCollection<Contribuicao> Contribuicao { get; set; }
 
         public void EditarStatus(string codigoGuiaContribuicao, ETipoStatusContribuinte status, DateTime registroInicial,

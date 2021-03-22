@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Linq;
 namespace SGM.Saude.API.Controllers
 {
     [ApiVersion("1.0")]
@@ -36,7 +36,7 @@ namespace SGM.Saude.API.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -50,7 +50,7 @@ namespace SGM.Saude.API.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -62,10 +62,24 @@ namespace SGM.Saude.API.Controllers
             if (result is null) { return NoContent(); }
             return Ok(result);
         }
+        [HttpGet("Paciente/{cpf}")]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetTodoItem([FromRoute][Required] string cpf)
+        {
+            var result = await _repository.Search(x=>x.Paciente.CPF == cpf).ConfigureAwait(true);
+            if (result is null) { return NoContent(); }
+            var consultas = result.Where(x => x.DataConsulta > DateTime.Now).ToList();
+            return Ok(consultas);
+        }
 
 
         [HttpPut("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -93,7 +107,7 @@ namespace SGM.Saude.API.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -121,7 +135,7 @@ namespace SGM.Saude.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]

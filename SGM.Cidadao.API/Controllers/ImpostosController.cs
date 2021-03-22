@@ -60,7 +60,9 @@ namespace SGM.Cidadao.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetById(Guid id)
         {
-            return NoContent();
+            var result = await _impostosRepository.GetById(id).ConfigureAwait(true);
+            if (result is null) { return NoContent(); }
+            return Ok(result);
         }
 
         [HttpPut("{id}")]

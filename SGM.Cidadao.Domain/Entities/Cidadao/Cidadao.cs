@@ -12,7 +12,7 @@ namespace SGM.Cidadao.Domain.Entities
     public sealed class Cidadao :BaseEntity , IAggregateRoot
     {
         internal Cidadao() { }
-        public Cidadao(string nome, DateTime dataNascimento, CPF cPF, string identidade, bool sexo, string email, 
+        public Cidadao(string nome, DateTime dataNascimento, string cPF, string identidade, bool sexo, string email, 
             string profissao, string telefone, string celular)
         {
             Nome = nome;
@@ -29,7 +29,7 @@ namespace SGM.Cidadao.Domain.Entities
 
         public string Nome { get; private set; }
         public DateTime DataNascimento { get; private set; }
-        public CPF CPF { get; private set; }
+        public string CPF { get; private set; }
         public string Identidade { get; private set; }
         public bool Sexo { get; private set; }
         public string Email { get; private set; }
@@ -40,7 +40,7 @@ namespace SGM.Cidadao.Domain.Entities
         public Endereco Endereco { get; set; }
         public IReadOnlyCollection<Contribuicao>Contribuicao { get; set; }
 
-        public void EditarCidadao(string nome, DateTime dataNascimento, CPF CPF, string identidade, bool sexo, string email,
+        public void EditarCidadao(string nome, DateTime dataNascimento, string CPF, string identidade, bool sexo, string email,
             string profissao, string telefone, string celular)
         {
             this.Nome = nome;

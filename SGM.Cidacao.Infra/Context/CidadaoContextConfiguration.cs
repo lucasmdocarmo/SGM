@@ -16,7 +16,7 @@ namespace SGM.Cidadao.Infra.Context
             builder.Property(x => x.AnoFiscal).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.CodigoGuiaContribuicao).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.TotalImpostos).HasMaxLength(250).HasColumnType("decimal(10,2)").IsRequired();
-            builder.Property(x => x.Pagamento).HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.Pagamento).HasColumnType("datetime").IsRequired(false);
 
             builder.HasOne(x => x.Impostos).WithMany(x => x.Contribuicao).HasForeignKey(x => x.ImpostoId).OnDelete(DeleteBehavior.NoAction).IsRequired(false);
             builder.HasOne(x => x.Cidadao).WithMany(x => x.Contribuicao).HasForeignKey(x => x.CidadaoId).OnDelete(DeleteBehavior.SetNull).IsRequired(false);
@@ -44,9 +44,9 @@ namespace SGM.Cidadao.Infra.Context
             builder.HasKey(c => c.Id);
             builder.Property(x => x.CodigoGuiaContribuicao).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Status).HasColumnType("int").IsRequired();
-            builder.Property(x => x.RegistroFinal).HasColumnType("datetime").IsRequired();
-            builder.Property(x => x.RegistroInicial).HasColumnType("datetime").IsRequired();
-            builder.Property(x => x.Finalizado);
+            builder.Property(x => x.RegistroFinal).HasColumnType("datetime").IsRequired(false);
+            builder.Property(x => x.RegistroInicial).HasColumnType("datetime").IsRequired(false);
+            builder.Property(x => x.Finalizado).IsRequired(false);
            
         }
     }
@@ -65,7 +65,7 @@ namespace SGM.Cidadao.Infra.Context
             builder.Property(x => x.CodigoCidadao).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Telefone).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Celular).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
-            builder.OwnsOne(X => X.CPF);
+            builder.Property(X => X.CPF).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
 
             builder.ToTable("Cidadaos");
         }

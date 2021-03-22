@@ -31,9 +31,28 @@ namespace SGM.Cidadao.Infra.Context
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.Cascade;
 
             modelBuilder.Ignore<Notification>();
-            modelBuilder.Entity<Domain.Entities.Cidadao>().OwnsOne(p => p.CPF);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(DbContext).Assembly);
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Seed();
+        }
+    }
+    internal static class ModelBuilderExtensions
+    {
+        public static void Seed(this ModelBuilder modelBuilder)
+        {
+            var cidadao = new Domain.Entities.Cidadao("Lucas Mariano", Convert.ToDateTime("03-27-1992"), "11640810633",
+                "13944854", true, "lucas@email.com", "dev", "234234", "234234234");
+
+            var imposto = new Impostos(1000M, Domain.ValueObjects.ETipoImposto.IPTU, Convert.ToDateTime("01-12-2021"), "2021");
+            var StatusContribuicao = new StatusContribuicao("CONTR-001", ETipoStatusContribuinte.EmAndamento, DateTime.Now, null, false);
+
+            var contribuicao = new Contribuicao("TRIB-001", "2021", 30000M, null, cidadao.Id, imposto.Id, StatusContribuicao.Id);
+
+            modelBuilder.Entity<Domain.Entities.Cidadao>().HasData(cidadao);
+            modelBuilder.Entity<Impostos>().HasData(imposto);
+            modelBuilder.Entity<StatusContribuicao>().HasData(StatusContribuicao);
+            modelBuilder.Entity<Contribuicao>().HasData(contribuicao);
+
         }
     }
 }

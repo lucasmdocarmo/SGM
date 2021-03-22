@@ -34,7 +34,7 @@ namespace SGM.Saude.Infra.Context
             builder.Property(x => x.InformacoesMedicas).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.DetalhesPaciente).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Status).HasColumnType("int").IsRequired();
-            builder.OwnsOne(x => x.CPF);
+            builder.Property(x => x.CPF).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Sexo);
 
             builder.HasMany(x => x.Consultas).WithOne(x => x.Paciente).HasForeignKey(x => x.PacienteId).OnDelete(DeleteBehavior.NoAction);

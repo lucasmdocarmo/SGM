@@ -8,7 +8,7 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
 {
     public sealed class Contribuicao : BaseEntity, IAggregateRoot
     {
-        public Contribuicao(string codigoGuiaContribuicao, string anoFiscal, decimal totalImpostos, DateTime pagamento, 
+        public Contribuicao(string codigoGuiaContribuicao, string anoFiscal, decimal totalImpostos, DateTime? pagamento, 
                             Guid cidadaoId, Guid impostoId, Guid contribuinteId)
         {
             CodigoGuiaContribuicao = codigoGuiaContribuicao;
@@ -25,7 +25,7 @@ namespace SGM.Cidadao.Domain.Entities.Contribuinte
         public string CodigoGuiaContribuicao { get; set; }
         public string AnoFiscal { get; set; }
         public decimal TotalImpostos { get; set; }
-        public DateTime Pagamento { get; set; }
+        public DateTime? Pagamento { get; set; }
 
         public Guid? ImpostoId { get; set; }
         public Impostos Impostos { get; set; }

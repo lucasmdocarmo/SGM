@@ -19,6 +19,7 @@ using SGM.Cidadao.Application.Commands.Endereco;
 using SGM.Cidadao.Application.Commands.Impostos;
 using SGM.Cidadao.Application.Commands.StatusContribuinte;
 using SGM.Cidadao.Application.Queries;
+using SGM.Cidadao.Application.Queries.Cidadao;
 using SGM.Cidadao.Application.Queries.Results.Cidadao;
 using SGM.Cidadao.Infra.Context;
 using SGM.Cidadao.Infra.Repositories;
@@ -104,6 +105,7 @@ namespace SGM.Cidadao.API
             //Queries
             services.AddScoped<IQueryResult, QueryResult>();
             services.AddScoped<IQueryHandler<CidadaoQueryResult>, CidadaoQueries>();
+            services.AddScoped<IQueryHandler<ConsultarConsultaMedicaQuery>, CidadaoQueries>();
 
             //Repos
             //serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));

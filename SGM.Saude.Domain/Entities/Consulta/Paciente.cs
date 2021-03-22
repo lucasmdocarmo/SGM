@@ -10,7 +10,7 @@ namespace SGM.Saude.Domain.Entities
     public sealed class Paciente : BaseEntity, IAggregateRoot
     {
         internal Paciente() { }
-        public Paciente(string nome, DateTime dataNascimento, CPF cPF, string identidade, bool sexo, ETipoStatusPaciente status, 
+        public Paciente(string nome, DateTime dataNascimento, string cPF, string identidade, bool sexo, ETipoStatusPaciente status, 
             string detalhesPaciente, string informacoesMedicas)
         {
             Nome = nome;
@@ -25,7 +25,7 @@ namespace SGM.Saude.Domain.Entities
 
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
-        public CPF CPF { get; set; }
+        public string CPF { get; set; }
         public string Identidade { get; set; }
         public bool Sexo { get; set; }
         public ETipoStatusPaciente Status { get; set; }
@@ -33,7 +33,7 @@ namespace SGM.Saude.Domain.Entities
         public string InformacoesMedicas { get; set; }
         public IReadOnlyCollection<Consultas> Consultas { get; set; }
 
-        public void EditarPaciente(string nome, DateTime dataNascimento, CPF cPF, string identidade, bool sexo, ETipoStatusPaciente status,
+        public void EditarPaciente(string nome, DateTime dataNascimento, string cPF, string identidade, bool sexo, ETipoStatusPaciente status,
             string detalhesPaciente, string informacoesMedicas)
         {
             Nome = nome;

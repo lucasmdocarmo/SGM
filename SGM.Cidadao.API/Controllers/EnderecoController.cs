@@ -24,16 +24,17 @@ namespace SGM.Cidadao.API.Controllers
         private readonly ICommandHandler<CadastrarEnderecoCommand> _commandCadastrar;
         private readonly ICommandHandler<EditarEnderecoCommand> _commandEditar;
         private readonly ICommandHandler<DeletarEnderecoCommand> _commandDeletar;
-
+        private readonly ICidadaoRepository _cidadaoRepository;
         private readonly IEnderecoRepository _enderecoRepository;
 
         public EnderecoController(ICommandHandler<CadastrarEnderecoCommand> commandCadastrar, ICommandHandler<EditarEnderecoCommand> commandEditar,
-            ICommandHandler<DeletarEnderecoCommand> commandDeletar, IEnderecoRepository enderecoRepository)
+            ICommandHandler<DeletarEnderecoCommand> commandDeletar, IEnderecoRepository enderecoRepository, ICidadaoRepository cidadaoRepository)
         {
             _commandCadastrar = commandCadastrar;
             _commandEditar = commandEditar;
             _commandDeletar = commandDeletar;
             _enderecoRepository = enderecoRepository;
+            _cidadaoRepository = cidadaoRepository;
         }
 
         [HttpGet]
@@ -57,9 +58,14 @@ namespace SGM.Cidadao.API.Controllers
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetById(string cpf)
+        public async Task<IActionResult> GetById([FromRoute][Required] string cpf)
         {
-            return NoContent();
+            var cidadao = await _cidadaoRepository.Search(x=>x.CPF == cpf).ConfigureAwait(true);
+            if(cidadao == null) { return UnprocessableEntity("Cidadão não encontrado."); }
+            var endereco = await _enderecoRepository.Search(x => x.CidadaoId == cidadao.FirstOrDefault().Id);
+            if (endereco is null) { return UnprocessableEntity("Endereço não encontrado."); }
+
+            return Ok(endereco);
         }
 
         [HttpPut("{id}")]

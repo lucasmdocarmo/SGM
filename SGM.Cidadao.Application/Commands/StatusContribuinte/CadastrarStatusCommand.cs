@@ -13,6 +13,7 @@ namespace SGM.Cidadao.Application.Commands.StatusContribuinte
         public ETipoStatusContribuinte Status { get; set; }
         public DateTime RegistroInicial { get; set; }
         public DateTime RegistroFinal { get; set; }
+
         public bool Validate()
         {
             return true;

@@ -15,6 +15,9 @@ using SGM.Shared.Core.Queries.Handler;
 using SGM.Cidadao.Infra.Repositories.Contracts;
 using SGM.Cidadao.API.Extensions;
 using SGM.Cidadao.Application.Queries.Cidadao;
+using System.Net.Http.Headers;
+using System.Text;
+using SGM.Cidadao.Application.Queries.Status;
 
 namespace SGM.Cidadao.API.Controllers
 {
@@ -53,7 +56,7 @@ namespace SGM.Cidadao.API.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "Cidadao, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -67,7 +70,7 @@ namespace SGM.Cidadao.API.Controllers
         }
 
         [HttpGet("{cpf}")]
-        [Authorize]
+        [Authorize(Roles = "Cidadao, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -84,45 +87,57 @@ namespace SGM.Cidadao.API.Controllers
             return Ok(result.Result);
         }
 
-        [HttpGet("{id}/Impostos")]
-        [Authorize]
+        [HttpGet("{cpf}/Impostos")]
+        [Authorize(Roles = "Cidadao, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetConsultarImpostosCidadao(Guid id)
+        public async Task<IActionResult> GetConsultarImpostosCidadao(string cpf)
         {
-            var result = await _contribuicaoRepository.Search(x => x.CidadaoId == id).ConfigureAwait(true) as QueryResult;
-            if (!result.Success)
+            var result = await _contribuicaoRepository.GetCidadao(cpf).ConfigureAwait(true);
+            if (result == null)
             {
-                return UnprocessableEntity(result.Messages);
+                return UnprocessableEntity("Nenhum Registro de Imposto foi Encontrado");
             }
-            return Ok(result.Result);
+            return Ok(result);
         }
 
-        [HttpGet("{id}/Status")]
-        [Authorize]
+        [HttpGet("{cpf}/Status")]
+        [Authorize(Roles = "Cidadao, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetStatusImpostosCidadao(Guid id)
+        public async Task<IActionResult> GetStatusImpostosCidadao([Bind][FromRoute]string cpf)
         {
-            return null;
-        }
+            if (!string.IsNullOrEmpty(cpf))
+            {
+                var contribuicao = await _contribuicaoRepository.Search(x => x.Cidadao.CPF == cpf).ConfigureAwait(true);
+                if(contribuicao == null) { return UnprocessableEntity("Cliente Não encontrado"); }
+                var contribuinte = contribuicao.Where(x => x.Pagamento == null).FirstOrDefault().ContribuinteId;
+                var result = await _statusRepository.Search(x => x.Id == contribuinte).ConfigureAwait(true);
 
-        [HttpGet("{id}/Consultas")]
-        [Authorize]
+                var query = new StatusImpostoQueryResult(result.ToList());
+
+                return Ok(query.CidadaoStatus);
+            }
+            return UnprocessableEntity("CPF Obrigatório.");
+        }
+        
+        [HttpGet("{cpf}/Consultas")]
+        [Authorize(Roles = "Cidadao, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetConsultarSaudeCidadao(ConsultarConsultaMedicaQuery query)
+        public async Task<IActionResult> GetConsultarSaudeCidadao([Bind][FromRoute] string cpf)
         {
-            var result = await _queryCidadaoConsulta.Handle(query).ConfigureAwait(true) as QueryResult;
+            var authHeader = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
+            var result = await _queryCidadaoConsulta.Handle(new ConsultarConsultaMedicaQuery() { CPF = cpf, Token = authHeader.ToString() }).ConfigureAwait(true) as QueryResult;
 
             if (!result.Success)
             {
@@ -133,7 +148,7 @@ namespace SGM.Cidadao.API.Controllers
 
 
         [HttpPut("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -161,7 +176,7 @@ namespace SGM.Cidadao.API.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -189,7 +204,7 @@ namespace SGM.Cidadao.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]

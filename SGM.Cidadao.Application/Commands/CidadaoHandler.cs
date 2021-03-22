@@ -41,7 +41,7 @@ namespace SGM.Cidadao.Application
                     return new CommandResult(false, "Entidade Nao Encontrada.");
                 }
 
-                entity.EditarCidadao(command.Nome, command.DataNascimento, new CPF(command.CPF, command.CPF_Estado),
+                entity.EditarCidadao(command.Nome, command.DataNascimento,command.CPF,
                     command.Identidade, command.Sexo, command.Email, command.Profissao, command.Telefone, command.Celular);
 
                 await _cidadaoRepository.Update(entity);
@@ -69,8 +69,7 @@ namespace SGM.Cidadao.Application
                     return new CommandResult(false, base.Notifications);
                 }
 
-                var entityCpf = new CPF(command.CPF, command.CPF_Estado);
-                var entity = new Domain.Entities.Cidadao(command.Nome, command.DataNascimento, entityCpf, command.Identidade,
+                var entity = new Domain.Entities.Cidadao(command.Nome, command.DataNascimento, command.CPF, command.Identidade,
                     command.Sexo, command.Email, command.Profissao, command.Telefone, command.Celular);
 
                 await _cidadaoRepository.Add(entity);
