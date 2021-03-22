@@ -37,7 +37,7 @@ namespace SGM.Cidadao.API.Controllers
         private readonly IQueryHandler<ConsultarConsultaMedicaQuery> _queryCidadaoConsulta;
         private readonly ICidadaoRepository _cidadaoRepository;
         private readonly IImpostosRepository _impostosRepository;
-        private readonly IContribuicaoRepository _contribuicaoRepository;
+        private readonly IContribuicaoRepository _contribuicaoRepository; 
         private readonly IStatusContribuicaoRepository _statusRepository;
 
         public CidadaoController(ICommandHandler<CadastrarCidadaoCommand> commandCadastrar, ICommandHandler<EditarCidadaoCommand> commandEditar,
