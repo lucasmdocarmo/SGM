@@ -52,15 +52,5 @@ namespace SGM.Manager.API.Controllers
             var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(usuarioEntity.Nome, usuarioEntity.Login, usuarioEntity.TipoUsuario);
             return Ok(tokenUsuario);
         }
-        [HttpPost]
-        [Route("Login/Cidadao")]
-        [AllowAnonymous]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status202Accepted)]
-        public async Task<IActionResult> Cidadao([Required] string nome, [Required] string cpf)
-        {
-            var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(nome, cpf,Shared.Core.ValueObjects.ETipoUsuario.Comum);
-            return Ok(tokenUsuario);
-        }
     }
 }

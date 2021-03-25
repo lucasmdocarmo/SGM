@@ -40,3 +40,5 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gateway\bin\Debug\net5.0\Ocelot.
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gateway\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gateway\obj\Debug\net5.0\SGM.Gateway.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gateway\obj\Debug\net5.0\SGM.Gateway.csproj.CopyComplete
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gateway\bin\Debug\net5.0\configuration.Development.json
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Gateway\bin\Debug\net5.0\configuration.json

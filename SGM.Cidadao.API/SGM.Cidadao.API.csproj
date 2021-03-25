@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SGM.Cidacao.Infra\SGM.Cidadao.Infra.csproj" />
     <ProjectReference Include="..\SGM.Cidadao.Application\SGM.Cidadao.Application.csproj" />
+    <ProjectReference Include="..\SGM.IdentityService\SGM.Identity.Service.csproj" />
     <ProjectReference Include="..\SGM.Shared\SGM.Shared.Core.csproj" />
   </ItemGroup>
 

@@ -50,12 +50,13 @@ namespace SGM.Manager.Infra.Context
             var user2 = new Usuario("Sebastiao", "123456", "sebastic", Shared.Core.ValueObjects.ETipoUsuario.Comum, departamento2.Id);
             var user3 = new Usuario("Steve Rogers", "123456", "america", Shared.Core.ValueObjects.ETipoUsuario.Gerente, departamento3.Id);
 
-            modelBuilder.Entity<Usuario>().HasData(user, user2);
+            modelBuilder.Entity<Usuario>().HasData(user, user2, user3);
 
             var func = new Funcionario("lucas","lucasm", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Clinica, departamento.Id);
-            var func2 = new Funcionario("sebastiao", "sebasx", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Gestao, departamento3.Id);
+            var func2 = new Funcionario("Sebastiao", "sebasx", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Gestao, departamento2.Id);
+            var func3 = new Funcionario("Steve Rogers", "america", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Gestao, departamento3.Id);
 
-            modelBuilder.Entity<Funcionario>().HasData(func, func2);
+            modelBuilder.Entity<Funcionario>().HasData(func, func2, func3);
 
         }
     }

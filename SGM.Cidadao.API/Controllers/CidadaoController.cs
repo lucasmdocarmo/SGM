@@ -18,6 +18,8 @@ using SGM.Cidadao.Application.Queries.Cidadao;
 using System.Net.Http.Headers;
 using System.Text;
 using SGM.Cidadao.Application.Queries.Status;
+using SGM.Identity.Service;
+using System.Linq;
 
 namespace SGM.Cidadao.API.Controllers
 {
@@ -53,6 +55,21 @@ namespace SGM.Cidadao.API.Controllers
             _contribuicaoRepository = contribuicaoRepository;
             _statusRepository = statusRepository;
             _queryCidadaoConsulta = queryCidadaoConsulta;
+        }
+
+        [HttpGet]
+        [Route("{cpf}/Token")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public async Task<IActionResult> Cidadao([Required] string cpf)
+        {
+            var cidadao = await _cidadaoRepository.Search(x => x.CPF == cpf).ConfigureAwait(true);
+            if (cidadao is null) { return NoContent(); }
+
+            var cidadaoEntity = cidadao.FirstOrDefault();
+            var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(cidadaoEntity.Nome, cidadaoEntity.CPF, Shared.Core.ValueObjects.ETipoUsuario.Comum);
+            return Ok(tokenUsuario);
         }
 
         [HttpGet]

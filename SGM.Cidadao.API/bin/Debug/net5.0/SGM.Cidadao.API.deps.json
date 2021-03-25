@@ -32,6 +32,7 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.9",
           "SGM.Cidadao.Application": "1.0.0",
           "SGM.Cidadao.Infra": "1.0.0",
+          "SGM.Identity.Service": "1.0.0",
           "SGM.Shared.Core": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "6.1.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.1.0",
@@ -1628,6 +1629,17 @@
         },
         "compile": {
           "SGM.Cidadao.Infra.dll": {}
+        }
+      },
+      "SGM.Identity.Service/1.0.0": {
+        "dependencies": {
+          "SGM.Shared.Core": "1.0.0"
+        },
+        "runtime": {
+          "SGM.Identity.Service.dll": {}
+        },
+        "compile": {
+          "SGM.Identity.Service.dll": {}
         }
       },
       "SGM.Shared.Core/1.0.0": {
@@ -4269,6 +4281,11 @@
       "sha512": ""
     },
     "SGM.Cidadao.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SGM.Identity.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

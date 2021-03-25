@@ -1993,6 +1993,19 @@
           "bin/placeholder/SGM.Cidadao.Infra.dll": {}
         }
       },
+      "SGM.Identity.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "SGM.Shared.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SGM.Identity.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SGM.Identity.Service.dll": {}
+        }
+      },
       "SGM.Shared.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -6887,6 +6900,11 @@
       "path": "../SGM.Cidacao.Infra/SGM.Cidadao.Infra.csproj",
       "msbuildProject": "../SGM.Cidacao.Infra/SGM.Cidadao.Infra.csproj"
     },
+    "SGM.Identity.Service/1.0.0": {
+      "type": "project",
+      "path": "../SGM.IdentityService/SGM.Identity.Service.csproj",
+      "msbuildProject": "../SGM.IdentityService/SGM.Identity.Service.csproj"
+    },
     "SGM.Shared.Core/1.0.0": {
       "type": "project",
       "path": "../SGM.Shared/SGM.Shared.Core.csproj",
@@ -6902,6 +6920,7 @@
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.9",
       "SGM.Cidadao.Application >= 1.0.0",
       "SGM.Cidadao.Infra >= 1.0.0",
+      "SGM.Identity.Service >= 1.0.0",
       "SGM.Shared.Core >= 1.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 6.1.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.1.0",
@@ -6940,6 +6959,9 @@
             },
             "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Cidadao.Application\\SGM.Cidadao.Application.csproj": {
               "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Cidadao.Application\\SGM.Cidadao.Application.csproj"
+            },
+            "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.IdentityService\\SGM.Identity.Service.csproj": {
+              "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.IdentityService\\SGM.Identity.Service.csproj"
             },
             "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj": {
               "projectPath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Shared\\SGM.Shared.Core.csproj"

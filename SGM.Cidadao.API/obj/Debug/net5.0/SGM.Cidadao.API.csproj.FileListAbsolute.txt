@@ -74,3 +74,5 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Ide
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\SGM.Identity.Service.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.API\bin\Debug\net5.0\SGM.Identity.Service.pdb

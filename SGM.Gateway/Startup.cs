@@ -30,7 +30,7 @@ namespace SGM.Gateway
 
             services.AddOcelot();
         }
-        public async void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -42,10 +42,13 @@ namespace SGM.Gateway
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapGet("/", async context => 
+                { 
+                    await context.Response.WriteAsync("API Gateway is Running."); 
+                });
             });
 
-            await app.UseOcelot();
+            app.UseOcelot().Wait();
         }
     }
 }

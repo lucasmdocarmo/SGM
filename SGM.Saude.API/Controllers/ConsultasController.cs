@@ -62,6 +62,7 @@ namespace SGM.Saude.API.Controllers
             if (result is null) { return NoContent(); }
             return Ok(result);
         }
+
         [HttpGet("Paciente/{cpf}")]
         [Authorize(Roles = "Clinica, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
