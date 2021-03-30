@@ -165,7 +165,7 @@ namespace SGM.Cidadao.API.Controllers
 
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Gestao, Administrador")]
+        [Authorize(Roles = "Cidadao, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -193,7 +193,7 @@ namespace SGM.Cidadao.API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Gestao, Administrador")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -221,7 +221,7 @@ namespace SGM.Cidadao.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Gestao, Administrador")]
+        [Authorize(Roles = "Cidadao, Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]

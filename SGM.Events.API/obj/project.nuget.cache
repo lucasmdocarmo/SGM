@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ic+ql0LPkYMAm6DbrgQrCxtU9fm8sTaitgBQziMYfqx9rJKAZpn8APP9x3QcZfxps24lB05aMEZ54bc8U3uNxQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Events.API\\SGM.Events.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\confluent.kafka\\1.6.3\\confluent.kafka.1.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\librdkafka.redist\\1.6.1\\librdkafka.redist.1.6.1.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
