@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SGM.Saude.API.Extensions;
 using SGM.Saude.Application.Commands;
 using SGM.Saude.Infra.Repositories.Contracts;
 using SGM.Shared.Core.Application;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace SGM.Saude.API.Controllers
 {
+    [AttributesExtensions]
     [ApiVersion("1.0")]
     [Route("api/v{api-version:apiVersion}/[controller]")]
     [Produces("application/json")]

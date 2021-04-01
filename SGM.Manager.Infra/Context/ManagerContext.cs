@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using SGM.Manager.Domain.Entities;
 using SGM.Manager.Domain.Entities.Integration;
 using SGM.Shared.Core.Contracts.UnitOfWork;
+using SGM.Shared.Core.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace SGM.Manager.Infra.Context
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
         public DbSet<AppIntegration> AppIntegration { get; set; }
+        public DbSet<CidadaoUser> UserCidadao { get; set; }
 
         public void Rollback() => Database.RollbackTransaction();
         public void Begin() => Database.BeginTransaction();

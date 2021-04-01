@@ -87,70 +87,72 @@ namespace SGM.Saude.Infra.Context
 
             modelBuilder.Entity<Medicos>().HasData(medico1, medico2, medico3, medico4, medico5, medico6, medico7, medico8, medico9);
 
-            var consulta_a = new Consultas("Dermatologia", "Consuta Médica", "", Convert.ToDateTime("04-29-2021"), true, paciente1.Id, medico1.Id);
-            var consulta_n = new Consultas("Dermatologia", "Consuta Médica", "", Convert.ToDateTime("04-25-2021"), true, paciente1.Id, medico7.Id);
-            var consulta_o = new Consultas("Dermatologia", "Consuta Médica", "", Convert.ToDateTime("04-27-2021"), true, paciente1.Id, medico7.Id);
+            //var consulta_a = new Consultas("Dermatologia", "Consuta Médica", "", Convert.ToDateTime("04-29-2021"), paciente1.Id, medico1.Id);
+            //var consulta_n = new Consultas("Dermatologia", "Consuta Médica", "", Convert.ToDateTime("04-25-2021"), paciente1.Id, medico7.Id);
+            //var consulta_o = new Consultas("Dermatologia", "Consuta Médica", "", Convert.ToDateTime("2021-04-27"), paciente1.Id, medico7.Id);
 
-            var consulta_r = new Consultas("Pscicologo", "Retorno", "", Convert.ToDateTime("04-29-2021"), true, paciente1.Id, medico5.Id);
-            var consulta_c = new Consultas("Pscicologo", "Retorno", "", Convert.ToDateTime("04-2021"), true, paciente1.Id, medico5.Id);
-            var consulta_k = new Consultas("Pscicologo", "Análise", "", Convert.ToDateTime("04-22-2021"), true, paciente1.Id, medico5.Id);
+            //var consulta_r = new Consultas("Pscicologo", "Retorno", "", Convert.ToDateTime("2021-04-29"), paciente1.Id, medico5.Id);
+            //var consulta_c = new Consultas("Pscicologo", "Retorno", "", Convert.ToDateTime("2021-04-26"),  paciente1.Id, medico5.Id);
+            //var consulta_k = new Consultas("Pscicologo", "Análise", "", Convert.ToDateTime("2021-04-22"), paciente1.Id, medico5.Id);
 
-            var consulta_l = new Consultas("Cardiologista", "Checkup", "", Convert.ToDateTime("04-23-2021"), true, paciente1.Id, medico8.Id);
-            var consulta_d = new Consultas("Cardiologista", "Pós Operatorio", "", Convert.ToDateTime("04-17-2021"), true, paciente1.Id, medico8.Id);
+            //var consulta_l = new Consultas("Cardiologista", "Checkup", "", Convert.ToDateTime("2021-04-23"),  paciente1.Id, medico8.Id);
+            //var consulta_d = new Consultas("Cardiologista", "Pós Operatorio", "", Convert.ToDateTime("2021-04-17"), paciente1.Id, medico8.Id);
 
-            var consulta_e = new Consultas("Oftamologista", "Checkup", "", Convert.ToDateTime("04-15-2021"), true, paciente1.Id, medico9.Id);
-            var consulta_m = new Consultas("Oftamologista", "Consuta Médica", "", Convert.ToDateTime("04-24-2021"), true, paciente1.Id, medico9.Id);
+            //var consulta_e = new Consultas("Oftamologista", "Checkup", "", Convert.ToDateTime("2021-04-15"), paciente1.Id, medico9.Id);
+            //var consulta_m = new Consultas("Oftamologista", "Consuta Médica", "", Convert.ToDateTime("2021-04-24"),  paciente1.Id, medico9.Id);
 
-            var consulta_f = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("04-16-2021"), true, paciente1.Id, medico2.Id);
-            var consulta_g = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("04-18-2021"), true, paciente1.Id, medico2.Id);
-            var consulta_h = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("04-19-2021"), true, paciente1.Id, medico2.Id);
-            var consulta_i = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("04-20-2021"), true, paciente1.Id, medico2.Id);
+            //var consulta_f = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("2021-04-16"), paciente1.Id, medico2.Id);
+            //var consulta_g = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("2021-04-18"),  paciente1.Id, medico2.Id);
+            //var consulta_h = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("2021-04-19"),  paciente1.Id, medico2.Id);
+            //var consulta_i = new Consultas("Urologia", "Consuta Médica", "", Convert.ToDateTime("2021-04-20"),  paciente1.Id, medico2.Id);
 
-            var consulta_p = new Consultas("Geral", "Consuta", "", Convert.ToDateTime("04-27-2021"), true, paciente1.Id, medico3.Id);
-            var consulta_q = new Consultas("Cardiologista", "Consuta Médica", "", Convert.ToDateTime("04-29-2021"), true, paciente1.Id, medico8.Id);
+            //var consulta_p = new Consultas("Geral", "Consuta", "", Convert.ToDateTime("2021-04-27"),  paciente1.Id, medico3.Id);
+            //var consulta_q = new Consultas("Cardiologista", "Consuta Médica", "", Convert.ToDateTime("2021-04-29"),  paciente1.Id, medico8.Id);
 
-            var consulta_b = new Consultas("Geral", "Checkup", "", Convert.ToDateTime("04-29-2021"), true, paciente1.Id, medico6.Id);
-            var consulta_s = new Consultas("Geral", "Retorno", "", Convert.ToDateTime("04-27-2021"), true, paciente1.Id, medico6.Id);
-            var consulta_t = new Consultas("Geral", "Retorno", "", Convert.ToDateTime("04-27-2021"), true, paciente1.Id, medico6.Id);
-            var consulta_j = new Consultas("Geral", "Checkup", "", Convert.ToDateTime("04-21-2021"), true, paciente1.Id, medico6.Id);
+            //var consulta_b = new Consultas("Geral", "Checkup", "", Convert.ToDateTime("2021-04-29"),  paciente1.Id, medico6.Id);
+            //var consulta_s = new Consultas("Geral", "Retorno", "", Convert.ToDateTime("2021-04-27"),  paciente1.Id, medico6.Id);
+            //var consulta_t = new Consultas("Geral", "Retorno", "", Convert.ToDateTime("2021-04-27"),  paciente1.Id, medico6.Id);
+            //var consulta_j = new Consultas("Geral", "Checkup", "", Convert.ToDateTime("2021-04-21"),  paciente1.Id, medico6.Id);
 
-            var consulta_u = new Consultas("Dentista", "Consuta Médica", "", Convert.ToDateTime("04-30-2021"), true, paciente1.Id, medico4.Id);
-            var consulta_v = new Consultas("Dentista", "Consuta Médica", "", Convert.ToDateTime("04-30-2021"), true, paciente1.Id, medico4.Id);
-            var consulta_x = new Consultas("Dentista", "Consuta Médica", "", Convert.ToDateTime("04-30-2021"), true, paciente1.Id, medico4.Id);
-
-
-            modelBuilder.Entity<Consultas>().HasData(consulta_a, consulta_n, consulta_o, consulta_r, consulta_c, consulta_k, consulta_l, consulta_d, consulta_e,
-                                                     consulta_f, consulta_g, consulta_h, consulta_i, consulta_p, consulta_q, consulta_b, consulta_s, consulta_t,
-                                                     consulta_j, consulta_u, consulta_v, consulta_x, consulta_m);
+            //var consulta_u = new Consultas("Dentista", "Consuta Médica", "", Convert.ToDateTime("2021-04-30"), paciente1.Id, medico4.Id);
+            //var consulta_v = new Consultas("Dentista", "Consuta Médica", "", Convert.ToDateTime("2021-04-30"),  paciente1.Id, medico4.Id);
+            //var consulta_x = new Consultas("Dentista", "Consuta Médica", "", Convert.ToDateTime("2021-04-30"),  paciente1.Id, medico4.Id);
 
 
-            var presc_1 = new Prescricao("Prescricao Consulta Para Paciente ", true, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_a.Id);
-            var presc_2 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_n.Id);
-            var presc_3 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_o.Id);
-            var presc_4 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_r.Id);
-            var presc_5 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_c.Id);
-            var presc_6 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_k.Id);
-            var presc_7 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_l.Id);
-            var presc_8 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_e.Id);
-            var presc_9 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_f.Id);
-            var presc_10 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_g.Id);
-            var presc_11 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_h.Id);
-            var presc_12 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_i.Id);
+            //modelBuilder.Entity<Consultas>().HasData(consulta_a, consulta_n);
+            //    //, consulta_o, consulta_r, consulta_c, consulta_k, consulta_l, consulta_d, consulta_e,
+            //    //                                     consulta_f, consulta_g, consulta_h, consulta_i, consulta_p, consulta_q, consulta_b, consulta_s, consulta_t,
+            //    //                                     consulta_j, consulta_u, consulta_v, consulta_x, consulta_m);
 
-            var presc_13 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_p.Id);
-            var presc_14 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_q.Id);
-            var presc_15 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_s.Id);
-            var presc_16 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_t.Id);
-            var presc_17 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_j.Id);
-            var presc_18 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_u.Id);
-            var presc_19 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_v.Id);
-            var presc_20 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_x.Id);
-            var presc_21 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_m.Id);
-            var presc_22 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_b.Id);
-            var presc_24 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_d.Id);
 
-            modelBuilder.Entity<Consultas>().HasData(presc_1, presc_2, presc_3, presc_4, presc_5, presc_6, presc_7, presc_8, presc_9, presc_10, presc_11, presc_12,
-                                                    presc_13, presc_14, presc_15, presc_16, presc_17, presc_18, presc_19, presc_20, presc_21, presc_22, presc_23, presc_24);
+            //var presc_1 = new Prescricao("Prescricao Consulta Para Paciente ", true, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_a.Id);
+            //var presc_2 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_n.Id);
+            //var presc_3 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_o.Id);
+            //var presc_4 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_r.Id);
+            //var presc_5 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_c.Id);
+            //var presc_6 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_k.Id);
+            //var presc_7 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_l.Id);
+            //var presc_8 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_e.Id);
+            //var presc_9 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_f.Id);
+            //var presc_10 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_g.Id);
+            //var presc_11 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_h.Id);
+            //var presc_12 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_i.Id);
+
+            //var presc_13 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_p.Id);
+            //var presc_14 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_q.Id);
+            //var presc_15 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_s.Id);
+            //var presc_16 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_t.Id);
+            //var presc_17 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_j.Id);
+            //var presc_18 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_u.Id);
+            //var presc_19 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_v.Id);
+            //var presc_20 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_x.Id);
+            //var presc_21 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_m.Id);
+            //var presc_22 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_b.Id);
+            //var presc_24 = new Prescricao("Prescricao Consulta Para Paciente ", false, "Consulta Teste", DateTime.Now, Convert.ToDateTime("05-29-2021"), consulta_d.Id);
+
+            //modelBuilder.Entity<Consultas>().HasData(presc_1, presc_2);
+                //, presc_3, presc_4, presc_5, presc_6, presc_7, presc_8, presc_9, presc_10, presc_11, presc_12,
+                //                                    presc_13, presc_14, presc_15, presc_16, presc_17, presc_18, presc_19, presc_20, presc_21, presc_22, presc_24);
 
         }
     }

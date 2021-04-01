@@ -19,11 +19,13 @@ namespace SGM.Manager.API.Controllers
     {
         private readonly IFuncionarioRepository _funcionarioRepository;
         private readonly IUsuarioRepository _usuarioRepository;
+        private readonly ICidadaoUserRepository _cidadaoRepository;
 
-        public AutenticacaoController(IFuncionarioRepository funcionarioRepository, IUsuarioRepository usuarioRepository)
+        public AutenticacaoController(IFuncionarioRepository funcionarioRepository, IUsuarioRepository usuarioRepository, ICidadaoUserRepository cidadaoRepository)
         {
             _funcionarioRepository = funcionarioRepository;
             _usuarioRepository = usuarioRepository;
+            _cidadaoRepository = cidadaoRepository;
         }
 
         [HttpPost]
@@ -50,6 +52,20 @@ namespace SGM.Manager.API.Controllers
             if (usuarioEntity is null) { return NotFound("Usuário Não encontrado."); }
 
             var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(usuarioEntity.Nome, usuarioEntity.Login, usuarioEntity.TipoUsuario);
+            return Ok(tokenUsuario);
+        }
+
+        [HttpPost]
+        [Route("Login/Cidadao")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public async Task<IActionResult> Cidadao([Required] string login, [Required] string senha)
+        {
+            var usuarioEntity = await _cidadaoRepository.GetCidadaoUser(login, senha).ConfigureAwait(true);
+            if (usuarioEntity is null) { return NotFound("Usuário Não encontrado."); }
+
+            var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(usuarioEntity.Nome, usuarioEntity.Login, Shared.Core.ValueObjects.ETipoUsuario.Comum);
             return Ok(tokenUsuario);
         }
     }

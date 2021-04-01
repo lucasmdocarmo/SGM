@@ -18,6 +18,7 @@ namespace SGM.Cidadao.Application.Commands.Cidadao
         public string CodigoCidadao { get; set; }
         public string Telefone { get; set; }
         public string Celular { get; set; }
+        public string Senha { get; set; }
 
         public bool Validate()
         {

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SGM.Cidadao.API.Extensions;
 using SGM.Cidadao.Application.Commands.Endereco;
 using SGM.Cidadao.Infra.Repositories.Contracts;
 using SGM.Shared.Core.Application;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace SGM.Cidadao.API.Controllers
 {
+    [AttributesExtensions]
     [ApiVersion("1.0")]
     [Route("api/v{api-version:apiVersion}/[controller]")]
     [Produces("application/json")]

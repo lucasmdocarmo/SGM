@@ -24,14 +24,18 @@ namespace SGM.Manager.API.Controllers
         private readonly ICommandHandler<CadastrarUsuarioCommand> _commandCadastrar;
         private readonly ICommandHandler<EditarUsuarioCommand> _commandEditar;
         private readonly ICommandHandler<DeletarUsuarioCommand> _commandDeletar;
+        private readonly ICommandHandler<CadastrarUsuarioCidadoCommand> _commandCidadaoUsuario;
         private readonly IUsuarioRepository _usuarioRepository;
+        private readonly ICidadaoUserRepository _cidadaoRepository;
 
-        public UsuarioController(ICommandHandler<CadastrarUsuarioCommand> commandCadastrar, ICommandHandler<EditarUsuarioCommand> commandEditar, ICommandHandler<DeletarUsuarioCommand> commandDeletar, IUsuarioRepository usuarioRepository)
+        public UsuarioController(ICommandHandler<CadastrarUsuarioCommand> commandCadastrar, ICommandHandler<EditarUsuarioCommand> commandEditar, ICommandHandler<DeletarUsuarioCommand> commandDeletar, IUsuarioRepository usuarioRepository, ICommandHandler<CadastrarUsuarioCidadoCommand> commandCidadaoUsuario, ICidadaoUserRepository cidadaoRepository)
         {
             _commandCadastrar = commandCadastrar;
             _commandEditar = commandEditar;
             _commandDeletar = commandDeletar;
             _usuarioRepository = usuarioRepository;
+            _commandCidadaoUsuario = commandCidadaoUsuario;
+            _cidadaoRepository = cidadaoRepository;
         }
 
         [HttpGet]
@@ -87,9 +91,52 @@ namespace SGM.Manager.API.Controllers
             }
             return NoContent();
         }
+        [HttpPost("Cidadao")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> CreateUsuarioCidadao([FromBody] CadastrarUsuarioCidadoCommand command)
+        {
+            if (!ModelState.IsValid)
+            {
+                var notifications = new List<Notification>();
+                foreach (var erro in ModelState.Where(a => a.Value.Errors.Count > 0).SelectMany(x => x.Value.Errors).ToList())
+                {
+                    notifications.Add(new Notification("invalidModel", erro.ErrorMessage));
+                }
+                return StatusCode(412, notifications.ToList());
+            }
+
+            var result = await _commandCidadaoUsuario.Handle(command).ConfigureAwait(true) as CommandResult;
+
+            if (!result.Success)
+            {
+                return UnprocessableEntity(result.Messages);
+            }
+            return Ok(result.Result);
+        }
+
+        [HttpGet("Cidadao")]
+        public async Task<IActionResult> GetTodoItemsCidadao()
+        {
+            var result = await _cidadaoRepository.GetAll().ConfigureAwait(true);
+            if (result is null) { return NoContent(); }
+            return Ok(result);
+        }
+
+        [HttpGet("Cidadao/{login}")]
+        public async Task<IActionResult> GetTodoItemsCidadao([Required]string login)
+        {
+            var result = await _cidadaoRepository.Search(x => x.Login == login).ConfigureAwait(true);
+            if (result is null) { return NoContent(); }
+            return Ok(result);
+        }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Gestao, Administrador")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]

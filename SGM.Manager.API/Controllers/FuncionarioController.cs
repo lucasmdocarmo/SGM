@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SGM.Manager.API.Extensions;
 using SGM.Manager.Application.Commands.Funcionario;
 using SGM.Manager.Infra.Repositories.Contracts;
 using SGM.Shared.Core.Application;
@@ -14,11 +15,12 @@ using System.Threading.Tasks;
 
 namespace SGM.Manager.API.Controllers
 {
+    [AttributesExtensions]
     [ApiVersion("1.0")]
     [Route("api/v{api-version:apiVersion}/[controller]")]
     [Produces("application/json")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class FuncionarioController : ControllerBase
     {
         private readonly ICommandHandler<CadastrarFuncionarioCommand> _commandCadastrar;
@@ -95,7 +97,7 @@ namespace SGM.Manager.API.Controllers
         }
 
         [HttpPost]
-        //[Authorize]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]

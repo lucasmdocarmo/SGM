@@ -9,5 +9,6 @@ namespace SGM.Shared.Core.ValueObjects
         Administrador = 1,
         Comum = 2,
         Gerente = 3,
+        Cidadao = 4
     }
 }

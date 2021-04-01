@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SGM.Manager.Domain.Entities;
 using SGM.Manager.Domain.Entities.Integration;
+using SGM.Shared.Core.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,7 +21,7 @@ namespace SGM.Manager.Infra.Context
                 .HasForeignKey(p => p.DepartamentoId);
 
             builder.HasMany(c => c.Usuario).WithOne(p => p.Departamento)
-                .HasForeignKey(p => p.DepartamentoId);
+                .HasForeignKey(p => p.DepartamentoId).IsRequired(false);
 
             builder.ToTable("Departamento");
         }
@@ -54,6 +55,18 @@ namespace SGM.Manager.Infra.Context
             builder.ToTable("Usuario");
         }
     }
+    public class CidadaoUserMapping : IEntityTypeConfiguration<CidadaoUser>
+    {
+        public void Configure(EntityTypeBuilder<CidadaoUser> builder)
+        {
+            builder.HasKey(c => c.Id);
+            builder.Property(x => x.Nome).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.Login).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.Senha).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+
+            builder.ToTable("CidadaoUser");
+        }
+    }
     public class AppIntegrationMapping : IEntityTypeConfiguration<AppIntegration>
     {
         public void Configure(EntityTypeBuilder<AppIntegration> builder)
@@ -62,6 +75,7 @@ namespace SGM.Manager.Infra.Context
             builder.Property(x => x.ApiKey).IsRequired();
             builder.Property(x => x.AppIntegrationCode).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Sistema).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.SistemaRaiz);
 
             builder.ToTable("AppIntegrations");
         }

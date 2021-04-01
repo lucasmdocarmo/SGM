@@ -95,6 +95,7 @@ namespace SGM.Manager.API
             services.AddScoped<ICommandHandler<CadastrarIntegracaoCommand>, IntegracaoHandler>();
             services.AddScoped<ICommandHandler<DeletarIntegracoesCommand>, IntegracaoHandler>();
             services.AddScoped<ICommandHandler<EditarIntegracoesCommand>, IntegracaoHandler>();
+            services.AddScoped<ICommandHandler<CadastrarUsuarioCidadoCommand>, UsuarioHandler>();
 
             //Repos
             //serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
@@ -102,6 +103,7 @@ namespace SGM.Manager.API
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IIntegracaoRepository, IntegracaoRepository>();
+            services.AddScoped<ICidadaoUserRepository, CidadaoUserRepository>();
         }
 
 

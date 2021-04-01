@@ -4,6 +4,7 @@ using SGM.Manager.Infra.Repositories.Contracts;
 using SGM.Shared.Core.Application;
 using SGM.Shared.Core.Commands;
 using SGM.Shared.Core.Commands.Handler;
+using SGM.Shared.Core.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,15 +13,17 @@ using System.Threading.Tasks;
 namespace SGM.Manager.Application.Commands
 {
     public class UsuarioHandler : Notifiable, ICommandHandler<CadastrarUsuarioCommand>, ICommandHandler<DeletarUsuarioCommand>,
-                                            ICommandHandler<EditarUsuarioCommand>
+                                            ICommandHandler<EditarUsuarioCommand>, ICommandHandler<CadastrarUsuarioCidadoCommand>
     {
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IDepartamentoRepository _departamentoRepository;
+        private readonly ICidadaoUserRepository _cidadao;
 
-        public UsuarioHandler(IUsuarioRepository usuarioRepository, IDepartamentoRepository departamentoRepository)
+        public UsuarioHandler(IUsuarioRepository usuarioRepository, IDepartamentoRepository departamentoRepository, ICidadaoUserRepository cidadao)
         {
             _usuarioRepository = usuarioRepository;
             _departamentoRepository = departamentoRepository;
+            _cidadao = cidadao;
         }
 
         public async ValueTask<ICommandResult> Handle(CadastrarUsuarioCommand command)
@@ -30,6 +33,7 @@ namespace SGM.Manager.Application.Commands
                 AddNotifications(command);
                 return new CommandResult(false, base.Notifications);
             }
+
             var entityDepartamento = await _departamentoRepository.GetById(command.DepartamentoId).ConfigureAwait(true);
             if (entityDepartamento is null)
             {
@@ -93,6 +97,23 @@ namespace SGM.Manager.Application.Commands
                 return new CommandResult(true);
             }
             return new CommandResult(false, "Entidade Nao Encontrada.");
+        }
+
+        public async ValueTask<ICommandResult> Handle(CadastrarUsuarioCidadoCommand command)
+        {
+            if (!command.Validate())
+            {
+                AddNotifications(command);
+                return new CommandResult(false, base.Notifications);
+            }
+            var entity = new CidadaoUser(command.Nome, command.Senha,command.Login);
+
+            await _cidadao.Add(entity);
+            var result = await _cidadao.SaveChanges().ConfigureAwait(true);
+
+            if (!result) { return new CommandResult(false); }
+
+            return new CommandResult(true);
         }
     }
 }

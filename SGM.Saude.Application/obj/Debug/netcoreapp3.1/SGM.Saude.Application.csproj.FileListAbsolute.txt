@@ -1,12 +1,10 @@
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Application.deps.json
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Application.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Application.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.csprojAssemblyReference.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.AssemblyInfoInputs.cache
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.AssemblyInfo.cs
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.csproj.CoreCompileInputs.cache
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.dll
-C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Application.deps.json
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Application.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Application.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Domain.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Infra.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Shared.Core.dll
@@ -14,3 +12,5 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netc
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Saude.Infra.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\bin\Debug\netcoreapp3.1\SGM.Shared.Core.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.csproj.CopyComplete
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Application\obj\Debug\netcoreapp3.1\SGM.Saude.Application.pdb

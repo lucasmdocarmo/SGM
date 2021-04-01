@@ -13,6 +13,9 @@ using SGM.Cidadao.Domain.Entities;
 using SGM.Shared.Core.Application;
 using SGM.Shared.Core.Exceptions;
 using SGM.Shared.Core.Excepctions;
+using System.Net.Http;
+using Newtonsoft.Json;
+using SGM.Shared.Core.Entity;
 
 namespace SGM.Cidadao.Application
 {
@@ -20,10 +23,11 @@ namespace SGM.Cidadao.Application
                                             ICommandHandler<EditarCidadaoCommand>
     {
         private readonly ICidadaoRepository _cidadaoRepository;
-
+        public static HttpClient _Client;
         public CidadaoHandler(ICidadaoRepository cidadaoRepository)
         {
             _cidadaoRepository = cidadaoRepository;
+            _Client = new HttpClient();
         }
 
         public async ValueTask<ICommandResult> Handle(EditarCidadaoCommand command)
@@ -75,6 +79,8 @@ namespace SGM.Cidadao.Application
                 await _cidadaoRepository.Add(entity);
                 var result = await _cidadaoRepository.SaveChanges().ConfigureAwait(true);
 
+                ReplicarUsuario(command);
+
                 if (!result) { return new CommandResult(false); }
 
                 return new CommandResult(true);
@@ -84,6 +90,15 @@ namespace SGM.Cidadao.Application
                 throw new InternalAppException(ex.Message);
             }
 
+        }
+        private void ReplicarUsuario(CadastrarCidadaoCommand command)
+        {
+            var cidadaoUsuario = new CidadaoUser(command.Nome, command.Senha, command.Email);
+
+            var json = JsonConvert.SerializeObject(cidadaoUsuario);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            _Client.PostAsync("https://localhost:44393/api/v1/Usuario/Cidadao", data).ConfigureAwait(true);
         }
 
         public async ValueTask<ICommandResult> Handle(DeletarCidadaoCommand command)

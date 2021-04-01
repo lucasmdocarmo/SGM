@@ -7,16 +7,24 @@ namespace SGM.Manager.Domain.Entities.Integration
 {
     public sealed class AppIntegration :BaseEntity
     {
-        public AppIntegration(string sistema)
+        public AppIntegration(string sistema, ESistema sistemaRaiz)
         {
             Sistema = sistema;
             ApiKey = Guid.NewGuid();
+            SistemaRaiz = sistemaRaiz;
             AppIntegrationCode = CodigoGenerator.GenerateCode();
         }
 
         public string Sistema { get; set; }
         public Guid ApiKey { get; set; }
         public string AppIntegrationCode { get; set; }
+        public ESistema SistemaRaiz { get; set; }
+    }
+    public enum ESistema
+    {
+        Cidadao = 1,
+        Manager = 2,
+        Saude = 3
     }
     internal static class CodigoGenerator
     {

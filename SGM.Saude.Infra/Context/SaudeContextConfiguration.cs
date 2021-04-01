@@ -16,7 +16,7 @@ namespace SGM.Saude.Infra.Context
             builder.HasKey(c => c.Id);
             builder.Property(x => x.Especialidade).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Descricao).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
-            builder.Property(x => x.Confirmada);
+            builder.Property(x => x.Reservado);
             builder.Property(x => x.InformacoesMedicas).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.DataConsulta).HasColumnType("datetime").IsRequired();
 

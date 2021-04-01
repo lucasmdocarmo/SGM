@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Linq;
+
 namespace SGM.Saude.API.Controllers
 {
     [ApiVersion("1.0")]

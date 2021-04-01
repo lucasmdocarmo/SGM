@@ -29,7 +29,7 @@ namespace SGM.Manager.Application.Commands
                 return new CommandResult(false, base.Notifications);
             }
 
-            var entity = new Domain.Entities.Integration.AppIntegration(command.Sistema);
+            var entity = new Domain.Entities.Integration.AppIntegration(command.Sistema,command.SistemaRaiz);
 
             await _integracaoRepository.Add(entity);
             var result = await _integracaoRepository.SaveChanges().ConfigureAwait(true);
@@ -68,6 +68,7 @@ namespace SGM.Manager.Application.Commands
             var result = await _integracaoRepository.GetById(command.Id).ConfigureAwait(true);
 
             result.Sistema = command.Sistema;
+            result.SistemaRaiz = command.SistemaRaiz;
 
             await _integracaoRepository.Update(result);
             await _integracaoRepository.SaveChanges().ConfigureAwait(true);

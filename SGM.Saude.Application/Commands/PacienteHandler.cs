@@ -30,8 +30,7 @@ namespace SGM.Saude.Application.Commands
                 return new CommandResult(false, base.Notifications);
             }
 
-            var entity = new Paciente(command.Nome, command.DataNascimento, command.CPF, command.Identidade, command.Sexo, 
-                command.Status, command.DetalhesPaciente, command.InformacoesMedicas);
+            var entity = new Paciente(command.Nome, command.DataNascimento, command.CPF, command.Identidade, command.Sexo, command.DetalhesPaciente, command.InformacoesMedicas);
 
             await _pacienteRepository.Add(entity);
             var result = await _pacienteRepository.SaveChanges().ConfigureAwait(true);

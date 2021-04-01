@@ -75,25 +75,6 @@ namespace SGM.Cidadao.API
                     ValidateAudience = false
                 };
             });
-            //Identiy
-            //services.AddAuthentication("Bearer").AddIdentityServerAuthentication("Bearer", options =>
-            //{
-            //    options.ApiName = "cidadao";
-            //    options.Authority = "https://localhost:5006";
-            //});
-
-            // services.AddAuthentication(options =>
-            // {
-            //     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-
-            // }).AddIdentityServerAuthentication(options =>
-            // {
-            //    options.ApiName = "cidadao";
-            //    options.ApiSecret = "cidadao-secret";
-            //    options.Authority = "https://localhost:5006";
-            //    options.RequireHttpsMetadata = false;
-            //});
 
             services.AddCors();
             services.AddControllers();

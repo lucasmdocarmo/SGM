@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SGM.Manager.Application.Commands.Integracoes;
 using SGM.Manager.Application.Commands.Usuario;
 using SGM.Manager.Infra.Repositories.Contracts;
 using SGM.Shared.Core.Application;
@@ -21,12 +22,13 @@ namespace SGM.Manager.API.Controllers
     [Authorize]
     public class IntegracoesController : ControllerBase
     {
-        private readonly ICommandHandler<CadastrarUsuarioCommand> _commandCadastrar;
-        private readonly ICommandHandler<EditarUsuarioCommand> _commandEditar;
-        private readonly ICommandHandler<DeletarUsuarioCommand> _commandDeletar;
+        private readonly ICommandHandler<CadastrarIntegracaoCommand> _commandCadastrar;
+        private readonly ICommandHandler<EditarIntegracoesCommand> _commandEditar;
+        private readonly ICommandHandler<DeletarIntegracoesCommand> _commandDeletar;
         private readonly IIntegracaoRepository _appRepository;
 
-        public IntegracoesController(ICommandHandler<CadastrarUsuarioCommand> commandCadastrar, ICommandHandler<EditarUsuarioCommand> commandEditar, ICommandHandler<DeletarUsuarioCommand> commandDeletar, IIntegracaoRepository appRepository)
+        public IntegracoesController(ICommandHandler<CadastrarIntegracaoCommand> commandCadastrar, ICommandHandler<EditarIntegracoesCommand> commandEditar,
+            ICommandHandler<DeletarIntegracoesCommand> commandDeletar, IIntegracaoRepository appRepository)
         {
             _commandCadastrar = commandCadastrar;
             _commandEditar = commandEditar;
@@ -35,7 +37,7 @@ namespace SGM.Manager.API.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
@@ -55,7 +57,7 @@ namespace SGM.Manager.API.Controllers
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> UpdateItem([FromRoute][Bind] Guid id, [FromBody][Bind] EditarUsuarioCommand command)
+        public async Task<IActionResult> UpdateItem([FromRoute][Bind] Guid id, [FromBody][Bind] EditarIntegracoesCommand command)
         {
             if (!ModelState.IsValid)
             {
@@ -82,7 +84,7 @@ namespace SGM.Manager.API.Controllers
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> CreateItem([FromBody] CadastrarUsuarioCommand command)
+        public async Task<IActionResult> CreateItem([FromBody] CadastrarIntegracaoCommand command)
         {
             if (!ModelState.IsValid)
             {
@@ -112,7 +114,7 @@ namespace SGM.Manager.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> DeleteItem([FromRoute][Required][Bind] Guid id)
         {
-            var command = new DeletarUsuarioCommand() { Id = id };
+            var command = new DeletarIntegracoesCommand() { Id = id };
             var result = await _commandDeletar.Handle(command).ConfigureAwait(true) as CommandResult;
 
             if (!result.Success)

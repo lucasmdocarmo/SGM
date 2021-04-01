@@ -61,8 +61,7 @@ namespace SGM.Saude.Application.Commands
             {
                 return new CommandResult(false, "Paciente Nao Encontrada.");
             }
-            var entity = new Consultas(command.Especialidade, command.Descricao, command.InformacoesMedicas, command.DataConsulta,
-                                command.Confirmada, command.PacienteId, command.MedicoId);
+            var entity = new Consultas(command.Especialidade, command.Descricao, command.InformacoesMedicas, command.DataConsulta, command.PacienteId, command.MedicoId);
 
             await _consultaRepository.Add(entity);
             var result = await _consultaRepository.SaveChanges().ConfigureAwait(true);
