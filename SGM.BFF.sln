@@ -45,11 +45,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGM.Manager.Application", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{99960C69-3441-4B5E-82F4-89A99AB248BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGM.Identity.Service", "SGM.IdentityService\SGM.Identity.Service.csproj", "{736A6089-8932-47D3-960B-DCCF42BFAC04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGM.Identity.Service", "SGM.IdentityService\SGM.Identity.Service.csproj", "{736A6089-8932-47D3-960B-DCCF42BFAC04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventSourcing", "EventSourcing", "{70819688-2B57-4F30-AB4B-DA931E66B809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGM.Events.API", "SGM.Events.API\SGM.Events.API.csproj", "{F4F98FED-C8ED-491C-A342-1F38524FB295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGM.Events.API", "SGM.Events.API\SGM.Events.API.csproj", "{F4F98FED-C8ED-491C-A342-1F38524FB295}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
