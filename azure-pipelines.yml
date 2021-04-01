@@ -12,7 +12,7 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: Build
+- stage: Build-cidadao
   displayName: Build image
   jobs:
   - job: Build
@@ -25,5 +25,35 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/SGM.Cidadao.API/Dockerfile'
+        tags: |
+          $(tag)
+- stage: Build-manager
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        command: build
+        dockerfile: '$(Build.SourcesDirectory)/SGM.Manager.API/Dockerfile'
+        tags: |
+          $(tag)
+- stage: Build-saude
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        command: build
+        dockerfile: '$(Build.SourcesDirectory)/SGM.Saude.API/Dockerfile'
         tags: |
           $(tag)
