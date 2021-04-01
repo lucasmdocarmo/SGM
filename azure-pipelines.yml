@@ -12,7 +12,7 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: Build-cidadao
+- stage: Build
   displayName: Build image
   jobs:
   - job: Build
@@ -27,7 +27,7 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/SGM.Cidadao.API/Dockerfile'
         tags: |
           $(tag)
-- stage: Build-manager
+- stage: Build
   displayName: Build image
   jobs:
   - job: Build
@@ -42,7 +42,7 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/SGM.Manager.API/Dockerfile'
         tags: |
           $(tag)
-- stage: Build-saude
+- stage: Build
   displayName: Build image
   jobs:
   - job: Build
