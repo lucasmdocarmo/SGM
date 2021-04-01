@@ -8,6 +8,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["SGM.Cidadao.API/SGM.Cidadao.API.csproj", "SGM.Cidadao.API/"]
+COPY ["SGM.Cidadao.API/SGM.Cidadao.Application.csproj", "SGM.Cidadao.Application/"]
+COPY ["SGM.Cidadao.API/SGM.Cidadao.Domain.csproj", "SGM.Cidadao.Domain/"]
+COPY ["SGM.Cidadao.API/SGM.Cidadao.Infra.csproj", "SGM.Cidadao.Infra/"]
 RUN dotnet restore "SGM.Cidadao.API/SGM.Cidadao.API.csproj"
 COPY . .
 WORKDIR "/src/SGM.Cidadao.API"
