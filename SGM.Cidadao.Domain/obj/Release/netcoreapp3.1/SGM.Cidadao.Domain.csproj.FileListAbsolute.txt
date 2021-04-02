@@ -1,0 +1,12 @@
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\bin\Release\netcoreapp3.1\SGM.Cidadao.Domain.deps.json
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\bin\Release\netcoreapp3.1\SGM.Cidadao.Domain.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\bin\Release\netcoreapp3.1\SGM.Cidadao.Domain.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\bin\Release\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\bin\Release\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\obj\Release\netcoreapp3.1\SGM.Cidadao.Domain.csprojAssemblyReference.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\obj\Release\netcoreapp3.1\SGM.Cidadao.Domain.AssemblyInfoInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\obj\Release\netcoreapp3.1\SGM.Cidadao.Domain.AssemblyInfo.cs
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\obj\Release\netcoreapp3.1\SGM.Cidadao.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\obj\Release\netcoreapp3.1\SGM.Cidadao.Domain.csproj.CopyComplete
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\obj\Release\netcoreapp3.1\SGM.Cidadao.Domain.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Domain\obj\Release\netcoreapp3.1\SGM.Cidadao.Domain.pdb

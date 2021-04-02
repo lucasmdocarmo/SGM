@@ -1,0 +1,16 @@
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Cidadao.Application.deps.json
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Cidadao.Application.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Cidadao.Application.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Cidadao.Domain.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Cidadao.Infra.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Shared.Core.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Cidadao.Infra.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Cidadao.Domain.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\bin\Release\netcoreapp3.1\SGM.Shared.Core.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Release\netcoreapp3.1\SGM.Cidadao.Application.csprojAssemblyReference.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Release\netcoreapp3.1\SGM.Cidadao.Application.AssemblyInfoInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Release\netcoreapp3.1\SGM.Cidadao.Application.AssemblyInfo.cs
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Release\netcoreapp3.1\SGM.Cidadao.Application.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Release\netcoreapp3.1\SGM.Cidadao.Application.csproj.CopyComplete
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Release\netcoreapp3.1\SGM.Cidadao.Application.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Cidadao.Application\obj\Release\netcoreapp3.1\SGM.Cidadao.Application.pdb
