@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SGM.Saude.Application.Queries
+{
+    public class ConsultasSemPacientesQuery
+    {
+        public string Especialidade { get; set; }
+        public DateTime? DataConsulta { get; set; }
+        public string Descricaco { get; set; }
+        public string Medico { get; set; }
+    }
+}

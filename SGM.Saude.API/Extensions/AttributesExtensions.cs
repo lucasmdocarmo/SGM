@@ -48,7 +48,7 @@ namespace SGM.Saude.API.Extensions
 
                 foreach (var item in result)
                 {
-                    if (item.AppIntegrationCode != key && item.SistemaRaiz != ESistema.Manager)
+                    if (item.ApiKey != key && item.SistemaRaiz != ESistema.Saude)
                     {
                         return true;
                     }

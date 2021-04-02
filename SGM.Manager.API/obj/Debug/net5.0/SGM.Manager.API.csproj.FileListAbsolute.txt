@@ -134,3 +134,6 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\SGM
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\ref\SGM.Manager.API.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\SGM.Manager.API.pdb
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\obj\Debug\net5.0\SGM.Manager.API.genruntimeconfig.cache
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\Scrutor.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Manager.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll

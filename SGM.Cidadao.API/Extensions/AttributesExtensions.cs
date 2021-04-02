@@ -51,7 +51,7 @@ namespace SGM.Cidadao.API.Extensions
 
                 foreach (var item in result)
                 {
-                    if(item.AppIntegrationCode != key && item.SistemaRaiz != ESistema.Cidadao)
+                    if(item.ApiKey != key && item.SistemaRaiz != ESistema.Cidadao)
                     {
                         return true;
                     }

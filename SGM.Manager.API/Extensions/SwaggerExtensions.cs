@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +39,16 @@ namespace SGM.Manager.API.Extensions
                     Scheme = "Bearer"
                 });
 
+                //options.AddSecurityDefinition("apikey", new OpenApiSecurityScheme
+                //{
+                //    Description = "API KEY",
+                //    In = ParameterLocation.Header,
+                //    Name = "Apikey",
+                //    Type = SecuritySchemeType.ApiKey,
+                //});
+
+                //options.OperationFilter<SecurityRequirementsOperationFilter>();
+
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement {
                     {
                         new OpenApiSecurityScheme{ Reference = new OpenApiReference
@@ -50,6 +62,8 @@ namespace SGM.Manager.API.Extensions
                     }
                 });
 
+               
+
                 var apiVersionDescriptionProvider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
 
 
@@ -58,7 +72,6 @@ namespace SGM.Manager.API.Extensions
                 {
                     options.SwaggerDoc(description.GroupName, CreateSwaggerInfoForApiVersion(description));
                 }
-
             });
 
             return services;

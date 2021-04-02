@@ -131,6 +131,10 @@
               "target": "Package",
               "version": "[1.10.9, )"
             },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[6.1.0, )"

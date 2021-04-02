@@ -60,6 +60,11 @@ namespace SGM.Manager.Infra.Context
 
             modelBuilder.Entity<Funcionario>().HasData(func, func2, func3);
 
+            var integration1 = new AppIntegration("chave-cidadao", ESistema.Cidadao);
+            var integration2 = new AppIntegration("chave-manager", ESistema.Manager);
+            var integration3 = new AppIntegration("chave-saude", ESistema.Saude);
+
+            modelBuilder.Entity<AppIntegration>().HasData(integration1, integration2, integration3);
         }
     }
 }

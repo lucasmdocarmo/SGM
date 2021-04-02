@@ -18,9 +18,20 @@ namespace SGM.Saude.Infra.Context
             builder.Property(x => x.Descricao).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Reservado);
             builder.Property(x => x.InformacoesMedicas).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
-            builder.Property(x => x.DataConsulta).HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.DataConsulta).HasColumnType("datetime").IsRequired(false);
 
             builder.ToTable("Consultas");
+        }
+    }
+    public class AgendamentosMapping : IEntityTypeConfiguration<Agendamentos>
+    {
+        public void Configure(EntityTypeBuilder<Agendamentos> builder)
+        {
+            builder.HasKey(c => c.Id);
+            builder.Property(x => x.Reservado);
+            builder.Property(x => x.DataConsulta).HasColumnType("datetime").IsRequired(false);
+            builder.HasOne(x => x.Medico).WithMany(x => x.Agendamentos).IsRequired();
+            builder.ToTable("Agendamentos");
         }
     }
     public class PacienteMapping : IEntityTypeConfiguration<Paciente>

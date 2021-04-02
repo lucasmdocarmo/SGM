@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Linq;
+using SGM.Saude.Application.Queries;
 
 namespace SGM.Saude.API.Controllers
 {
@@ -25,14 +27,43 @@ namespace SGM.Saude.API.Controllers
         private readonly ICommandHandler<EditarConsultaCommand> _commandEditar;
         private readonly ICommandHandler<DeletarConsultaCommand> _commandDeletar;
         private readonly IConsultaRepository _repository;
+        private readonly IMedicosRepository _repositoryMedico;
 
-        public ConsultasController(ICommandHandler<CadastrarConsultaCommand> commandCadastrar, ICommandHandler<EditarConsultaCommand> commandEditar, 
-            ICommandHandler<DeletarConsultaCommand> commandDeletar, IConsultaRepository repository)
+        public ConsultasController(ICommandHandler<CadastrarConsultaCommand> commandCadastrar, ICommandHandler<EditarConsultaCommand> commandEditar,
+            ICommandHandler<DeletarConsultaCommand> commandDeletar, IConsultaRepository repository, IMedicosRepository repositoryMedico)
         {
             _commandCadastrar = commandCadastrar;
             _commandEditar = commandEditar;
             _commandDeletar = commandDeletar;
             _repository = repository;
+            _repositoryMedico = repositoryMedico;
+        }
+
+        [HttpGet("Agendas")]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetItemsConsultas()
+        {
+            var result = await _repository.Search(x => x.PacienteId == null && !x.Reservado).ConfigureAwait(true);
+
+            if (result is null) { return NoContent(); }
+
+            var listMedicos = new List<ConsultasSemPacientesQuery>();
+            foreach (var item in result.ToList())
+            {
+                listMedicos.Add(new ConsultasSemPacientesQuery()
+                {
+                    Especialidade = item.Especialidade,
+                    DataConsulta = item.DataConsulta,
+                    Descricaco = item.Descricao,
+                    Medico = _repositoryMedico.GetById(item.MedicoId).Result.Nome
+                });
+            }
+            return Ok(listMedicos);
         }
 
         [HttpGet]

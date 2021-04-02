@@ -1,4 +1,5 @@
 ﻿using SGM.Saude.Domain.Entities.Clinicas;
+using SGM.Saude.Domain.Entities.Consulta;
 using SGM.Shared.Core.Contracts;
 using SGM.Shared.Core.Entity;
 using System;
@@ -80,8 +81,8 @@ namespace SGM.Saude.Domain.Entities
         public Clinica Clinica { get; set; }
         public Endereco Endereco { get; set; }
         public Guid ClinicaId { get; set; }
-        public IReadOnlyCollection<Consultas> Consultas { get; set; }
-
+        public IList<Consultas> Consultas { get; set; }
+        public IList<Agendamentos> Agendamentos { get; set; }
         public void EditarMedico(string nome, string profissao, string cRM, string especialidade, TimeSpan horaInicio,
            TimeSpan horaFim, bool ativo, string email, string telefone, decimal valorHora, bool atendeSegunda, bool atendeTerca,
            bool atendeQuarta, bool atendeQuinta, bool atendeSexta, bool atendeSabado)
