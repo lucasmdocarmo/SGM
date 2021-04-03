@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4ec6nHWGEWQosSu5IiETR7z8vOqLDeSjf0qawfR/co/5M/JjkycBP3K7Zbvpgpwq01OXMtcDOj2KHnE+i6eYAA==",
+  "dgSpecHash": "E0DPt2Lq45/af96WhacO2paLvPXacS9INcdeGTXvbtvIDUKwoJhNnweLjTHDSlfgFHjNLH9Rb56HBgRIdNHosQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Cidadao.API\\SGM.Cidadao.API.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.visualstudio.azure.kubernetes.tools.targets\\1.1.0\\microsoft.visualstudio.azure.kubernetes.tools.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",

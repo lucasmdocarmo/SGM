@@ -1,0 +1,23 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0
+ARG BUILD_CONFIGURATION=Debug
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_URLS=http://+:80
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+EXPOSE 80
+
+WORKDIR /src
+COPY ["SGM.Cidacao.Infra/SGM.Cidadao.Infra.csproj", "SGM.Cidacao.Infra/"]
+COPY ["SGM.Cidadao.API/SGM.Cidadao.API.csproj", "SGM.Cidadao.API/"]
+COPY ["SGM.Cidadao.Application/SGM.Cidadao.Application.csproj", "SGM.Cidadao.Application/"]
+COPY ["SGM.Cidadao.Domain/SGM.Cidadao.Domain.csproj", "SGM.Cidadao.Domain/"]
+COPY ["SGM.IdentityService/SGM.Identity.Service.csproj", "SGM.IdentityService/"]
+COPY ["SGM.Shared/SGM.Shared.Core.csproj", "SGM.Shared/"]
+
+RUN dotnet restore "SGM.Cidadao.API/SGM.Cidadao.API.csproj"
+COPY . .
+WORKDIR "/src/SGM.Cidadao.API"
+RUN dotnet build --no-restore "SGM.Cidadao.API.csproj" -c $BUILD_CONFIGURATION
+
+RUN echo "exec dotnet run --no-build --no-launch-profile -c $BUILD_CONFIGURATION --" > /entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
