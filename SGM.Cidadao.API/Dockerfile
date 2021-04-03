@@ -16,10 +16,10 @@ COPY ["SGM.IdentityService/SGM.Identity.Service.csproj", "SGM.IdentityService/"]
 RUN dotnet restore "SGM.Cidadao.API/SGM.Cidadao.API.csproj"
 COPY . .
 WORKDIR "/src/SGM.Cidadao.API"
-RUN dotnet build "SGM.Cidadao.API.csproj" -c Release -o /app/build
+RUN dotnet build "SGM.Cidadao.API.sln" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "SGM.Cidadao.API.csproj" -c Release -o /app/publish
+RUN dotnet publish "SGM.Cidadao.API.sln" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
