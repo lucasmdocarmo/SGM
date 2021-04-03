@@ -13,7 +13,7 @@ COPY ["SGM.Cidadao.Application/SGM.Cidadao.Application.csproj", "SGM.Cidadao.App
 COPY ["SGM.Cidadao.Domain/SGM.Cidadao.Domain.csproj", "SGM.Cidadao.Domain/"]
 COPY ["SGM.Cidacao.Infra/SGM.Cidadao.Infra.csproj", "SGM.Cidacao.Infra/"]
 COPY ["SGM.IdentityService/SGM.Identity.Service.csproj", "SGM.IdentityService/"]
-RUN dotnet restore "SGM.Cidadao.API/SGM.Cidadao.API.csproj"
+RUN dotnet restore "SGM.Cidadao.API/SGM.Cidadao.API.sln"
 COPY . .
 WORKDIR "/src/SGM.Cidadao.API"
 RUN dotnet build "SGM.Cidadao.API.sln" -c Release -o /app/build
