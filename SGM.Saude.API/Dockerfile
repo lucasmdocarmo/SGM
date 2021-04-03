@@ -7,18 +7,18 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["SGM.Saude.API/SGM.Saude.API.csproj", "SGM.Saude.API/"]
+COPY ["SGM.Saude.API/SGM.Saude.API.sln", "SGM.Saude.API/"]
 COPY ["SGM.Shared/SGM.Shared.Core.csproj", "SGM.Shared/"]
 COPY ["SGM.Saude.Infra/SGM.Saude.Infra.csproj", "SGM.Saude.Infra/"]
 COPY ["SGM.Saude.Domain/SGM.Saude.Domain.csproj", "SGM.Saude.Domain/"]
 COPY ["SGM.Saude.Application/SGM.Saude.Application.csproj", "SGM.Saude.Application/"]
-RUN dotnet restore "SGM.Saude.API/SGM.Saude.API.csproj"
+RUN dotnet restore "SGM.Saude.API/SGM.Saude.API.sln"
 COPY . .
 WORKDIR "/src/SGM.Saude.API"
-RUN dotnet build "SGM.Saude.API.csproj" -c Release -o /app/build
+RUN dotnet build "SGM.Saude.API.sln" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "SGM.Saude.API.csproj" -c Release -o /app/publish
+RUN dotnet publish "SGM.Saude.API.sln" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
