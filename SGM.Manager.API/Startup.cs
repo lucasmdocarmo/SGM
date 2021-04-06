@@ -52,7 +52,6 @@ namespace SGM.Manager.API
             services.AddCors();
             services.AddControllers();
             services.AddSwaggerConfig();
-
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("Clinica", policy => policy.RequireClaim("Clinica", ETipoFuncionario.Clinica.ToString()));

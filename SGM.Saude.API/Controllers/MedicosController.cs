@@ -77,7 +77,7 @@ namespace SGM.Saude.API.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(Roles = "Clinica, Administrador")]
+        [Authorize(Roles = "Clinica, Administrador, Gestao")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]

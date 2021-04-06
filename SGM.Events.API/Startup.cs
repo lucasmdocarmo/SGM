@@ -1,3 +1,4 @@
+using Confluent.Kafka;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,14 @@ namespace SGM.Events.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SGM.Events.API", Version = "v1" });
             });
+
+            var producerConfig = new ProducerConfig();
+            var consumerConfig = new ConsumerConfig();
+            Configuration.Bind("producer", producerConfig);
+            Configuration.Bind("consumer", consumerConfig);
+
+            services.AddSingleton<ProducerConfig>(producerConfig);
+            services.AddSingleton<ConsumerConfig>(consumerConfig);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

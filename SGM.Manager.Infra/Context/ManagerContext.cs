@@ -48,9 +48,9 @@ namespace SGM.Manager.Infra.Context
 
             modelBuilder.Entity<Departamento>().HasData(departamento, departamento1, departamento2, departamento3);
 
-            var user = new Usuario("Lucas Mariano", "123456", "lucasmdc", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento.Id);
-            var user2 = new Usuario("Sebastiao", "123456", "sebastic", Shared.Core.ValueObjects.ETipoUsuario.Comum, departamento2.Id);
-            var user3 = new Usuario("Steve Rogers", "123456", "america", Shared.Core.ValueObjects.ETipoUsuario.Gerente, departamento3.Id);
+            var user = new Usuario("Lucas Mariano", "123456", "lucasmdc@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento.Id);
+            var user2 = new Usuario("Sebastiao", "123456", "sebastic@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento2.Id);
+            var user3 = new Usuario("Steve Rogers", "123456", "america@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento3.Id);
 
             modelBuilder.Entity<Usuario>().HasData(user, user2, user3);
 

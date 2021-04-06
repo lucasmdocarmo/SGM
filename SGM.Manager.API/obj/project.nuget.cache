@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ul/tDkYshv0HVEz9HzzixqCUBBM95fTIVnrd5sklsZgO2jrpBzKUMQjIYJfp29UUv9vB8/cfqPaAbBRdsc1+kw==",
+  "dgSpecHash": "o0wRIV/UighvzTn3OWCiCjL4dGOgwcwfnWj2tD58OxTDYWwEz1NwLnX3yQGUt8WOJ0WGErETT3Lr0WiVbc6sAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucas Mariano\\source\\repos\\SGM.BFF\\SGM.Manager.API\\SGM.Manager.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\confluent.kafka\\1.6.3\\confluent.kafka.1.6.3.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\librdkafka.redist\\1.6.1\\librdkafka.redist.1.6.1.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.4\\microsoft.aspnetcore.authentication.jwtbearer.5.0.4.nupkg.sha512",
@@ -96,6 +98,7 @@
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
+    "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Lucas Mariano\\.nuget\\packages\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",

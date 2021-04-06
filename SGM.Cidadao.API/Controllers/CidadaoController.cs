@@ -152,7 +152,12 @@ namespace SGM.Cidadao.API.Controllers
         public async Task<IActionResult> GetConsultarSaudeCidadao([Bind][FromRoute] string cpf)
         {
             var authHeader = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
-            var result = await _queryCidadaoConsulta.Handle(new ConsultarConsultaMedicaQuery() { CPF = cpf, Token = authHeader.ToString() }).ConfigureAwait(true) as QueryResult;
+            var apikey = AuthenticationHeaderValue.Parse(Request.Headers["Apikey"]);
+            if(string.IsNullOrEmpty(apikey.ToString()))
+            {
+                return UnprocessableEntity("API key não informada.");
+            }
+            var result = await _queryCidadaoConsulta.Handle(new ConsultarConsultaMedicaQuery() { CPF = cpf, Token = authHeader.ToString(),Apikey = apikey.ToString() }).ConfigureAwait(true) as QueryResult;
 
             if (!result.Success)
             {
