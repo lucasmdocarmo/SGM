@@ -15,10 +15,25 @@ namespace SGM.Cidadao.Application.Queries.Cidadao
             return true;
         }
     }
+    public class Consulta
+    {
+        public string especialidade { get; set; }
+        public string descricao { get; set; }
+        public string informacoesMedicas { get; set; }
+        public DateTime dataConsulta { get; set; }
+        public bool confirmada { get; set; }
+        public string pacienteId { get; set; }
+        public string medico { get; set; }
+        public string crm { get; set; }
+        public string medicoId { get; set; }
+    }
+
     public class ConsultarConsultaMedicaQueryResponse
     {
-        public List<PacienteConsultas> Consultas { get; set; }
+       
+        public List<Consulta> consultas { get; set; }
     }
+
     public class PacienteConsultas
     {
         public string Especialidade { get; set; }

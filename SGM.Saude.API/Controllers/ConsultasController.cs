@@ -60,7 +60,8 @@ namespace SGM.Saude.API.Controllers
                     Especialidade = item.Especialidade,
                     DataConsulta = item.DataConsulta,
                     Descricaco = item.Descricao,
-                    Medico = _repositoryMedico.GetById(item.MedicoId).Result.Nome
+                    Medico = _repositoryMedico.GetById(item.MedicoId).Result.Nome,
+                    CRM = _repositoryMedico.GetById(item.MedicoId).Result.CRM,
                 });
             }
             return Ok(listMedicos);
@@ -103,10 +104,30 @@ namespace SGM.Saude.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetTodoItem([FromRoute][Required] string cpf)
         {
+            var resultado = new PacienteQuery();
             var result = await _repository.Search(x=>x.Paciente.CPF == cpf).ConfigureAwait(true);
             if (result is null) { return NoContent(); }
+
             var consultas = result.Where(x => x.DataConsulta > DateTime.Now).ToList();
-            return Ok(consultas);
+            foreach (var item in consultas)
+            {
+                var medico = await _repositoryMedico.GetById(item.MedicoId).ConfigureAwait(true);
+
+                resultado.Consultas.Add(new PacienteConsultas()
+                {
+                    Medico = medico.Nome,
+                    CRM = medico.CRM,
+                    DataConsulta = item.DataConsulta,
+                    Confirmada = item.Reservado,
+                    Descricao = item.Descricao,
+                    Especialidade = item.Especialidade,
+                    InformacoesMedicas = item.InformacoesMedicas,
+                    MedicoId = item.MedicoId,
+                    PacienteId = item.PacienteId
+                });
+            }
+
+            return Ok(resultado);
         }
 
 

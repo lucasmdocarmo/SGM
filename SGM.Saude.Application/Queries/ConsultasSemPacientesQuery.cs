@@ -10,5 +10,6 @@ namespace SGM.Saude.Application.Queries
         public DateTime? DataConsulta { get; set; }
         public string Descricaco { get; set; }
         public string Medico { get; set; }
+        public string CRM { get; set; }
     }
 }

@@ -14,4 +14,9 @@ namespace SGM.Cidadao.Application.Queries.Results.Cidadao
             return true;
         }
     }
+    public class CidadoTokenCpf
+    {
+        public string Token { get; set; }
+        public string CPF { get; set; }
+    }
 }

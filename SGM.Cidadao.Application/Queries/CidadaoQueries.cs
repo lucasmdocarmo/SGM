@@ -50,16 +50,10 @@ namespace SGM.Cidadao.Application.Queries
 
             if (result.IsSuccessStatusCode)
             {
-                var res = JsonConvert.DeserializeObject<List<PacienteConsultas>>(result.Content.ReadAsStringAsync().Result);
+                var resultado = new ConsultarConsultaMedicaQueryResponse();
 
-                foreach (var item in res.ToList())
-                {
-                    var medico = await _Client.GetAsync("https://localhost:44397/api/v1/Medicos/" + item.MedicoId);
-                    var resultMedico = JsonConvert.DeserializeObject<MedicoQuery>(medico.Content.ReadAsStringAsync().Result);
+                var res = JsonConvert.DeserializeObject<ConsultarConsultaMedicaQueryResponse>(result.Content.ReadAsStringAsync().Result);
 
-                    item.Medico = resultMedico.nome;
-                    item.CRM = resultMedico.crm;
-                }
                 return new QueryResult(true, res);
             }
             return new QueryResult(false,"Paciente Não Encontrado.");

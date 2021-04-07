@@ -67,7 +67,7 @@ namespace SGM.Cidadao.API.Controllers
 
             var cidadaoEntity = cidadao.FirstOrDefault();
             var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(cidadaoEntity.Nome, cidadaoEntity.CPF, Shared.Core.ValueObjects.ETipoUsuario.Comum);
-            return Ok(tokenUsuario);
+            return Ok(new CidadoTokenCpf() { CPF = cidadaoEntity.CPF, Token = tokenUsuario });
         }
 
         [HttpGet]
