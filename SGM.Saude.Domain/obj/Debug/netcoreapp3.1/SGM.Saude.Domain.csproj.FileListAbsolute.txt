@@ -9,3 +9,4 @@ C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreap
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.csproj.CopyComplete
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.dll
 C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.pdb
+C:\Users\Lucas Mariano\source\repos\SGM.BFF\SGM.Saude.Domain\obj\Debug\netcoreapp3.1\SGM.Saude.Domain.csprojAssemblyReference.cache

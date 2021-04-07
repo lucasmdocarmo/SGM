@@ -14,6 +14,7 @@ namespace SGM.Manager.Application.Commands.Usuario
         public string Login { get; set; }
         public ETipoUsuario TipoUsuario { get; set; }
         public Guid DepartamentoId { get; set; }
+        public string CPF { get; set; }
         public bool Validate()
         {
             throw new NotImplementedException();

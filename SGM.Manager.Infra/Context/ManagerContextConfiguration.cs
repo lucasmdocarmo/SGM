@@ -35,7 +35,7 @@ namespace SGM.Manager.Infra.Context
             builder.Property(x => x.Login).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Senha).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.TipoFuncionario).HasColumnType("int").IsRequired();
-
+            builder.Property(x => x.CPF).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
 
             builder.ToTable("Funcionario");
         }
@@ -49,7 +49,7 @@ namespace SGM.Manager.Infra.Context
             builder.Property(x => x.Login).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Senha).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.TipoUsuario).HasColumnType("int").IsRequired();
-
+            builder.Property(x => x.CPF).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
 
 
             builder.ToTable("Usuario");
@@ -63,6 +63,7 @@ namespace SGM.Manager.Infra.Context
             builder.Property(x => x.Nome).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Login).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
             builder.Property(x => x.Senha).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
+            builder.Property(x => x.CPF).HasMaxLength(250).HasColumnType("varchar(250)").IsRequired();
 
             builder.ToTable("CidadaoUser");
         }

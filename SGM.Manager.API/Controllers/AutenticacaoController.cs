@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SGM.Identity.Service;
+using SGM.Manager.Application.Queries;
 using SGM.Manager.Infra.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace SGM.Manager.API.Controllers
             if(funcionarioEntity is null) { return NotFound("Funcionário/Senha Não encontrado."); }
 
             var token = IdentityTokenService.GenerateTokenFuncionario(funcionarioEntity.Nome, funcionarioEntity.Login, funcionarioEntity.TipoFuncionario);
-            return Ok(token);
+            return Ok(new AutenticacaoTokenCpf() { CPF = funcionarioEntity.CPF, Token = token });
         }
         [HttpPost]
         [Route("Login/Usuario")]
@@ -52,7 +53,7 @@ namespace SGM.Manager.API.Controllers
             if (usuarioEntity is null) { return NotFound("Usuário Não encontrado."); }
 
             var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(usuarioEntity.Nome, usuarioEntity.Login, usuarioEntity.TipoUsuario);
-            return Ok(tokenUsuario);
+            return Ok(new AutenticacaoTokenCpf() { CPF = usuarioEntity.CPF, Token = tokenUsuario });
         }
 
         [HttpPost]
@@ -66,7 +67,7 @@ namespace SGM.Manager.API.Controllers
             if (usuarioEntity is null) { return NotFound("Usuário Não encontrado."); }
 
             var tokenUsuario = IdentityTokenService.GenerateTokenUsuario(usuarioEntity.Nome, usuarioEntity.Login, Shared.Core.ValueObjects.ETipoUsuario.Comum);
-            return Ok(tokenUsuario);
+            return Ok(new AutenticacaoTokenCpf() { CPF = usuarioEntity.CPF, Token = tokenUsuario });
         }
     }
 }

@@ -40,7 +40,7 @@ namespace SGM.Manager.Application.Commands
                 return new CommandResult(false, "Departamento Não Encontrado.");
             }
 
-            var entity = new Domain.Entities.Usuario(command.Nome, command.Senha, command.Login, command.TipoUsuario, command.DepartamentoId);
+            var entity = new Domain.Entities.Usuario(command.Nome, command.Senha, command.Login, command.TipoUsuario, command.DepartamentoId,command.CPF);
 
             await _usuarioRepository.Add(entity);
             var result = await _usuarioRepository.SaveChanges().ConfigureAwait(true);
@@ -106,7 +106,7 @@ namespace SGM.Manager.Application.Commands
                 AddNotifications(command);
                 return new CommandResult(false, base.Notifications);
             }
-            var entity = new CidadaoUser(command.Nome, command.Senha,command.Login);
+            var entity = new CidadaoUser(command.Nome, command.Senha,command.Login, command.CPF);
 
             await _cidadao.Add(entity);
             var result = await _cidadao.SaveChanges().ConfigureAwait(true);

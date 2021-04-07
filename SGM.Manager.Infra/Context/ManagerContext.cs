@@ -48,15 +48,15 @@ namespace SGM.Manager.Infra.Context
 
             modelBuilder.Entity<Departamento>().HasData(departamento, departamento1, departamento2, departamento3);
 
-            var user = new Usuario("Lucas Mariano", "123456", "lucasmdc@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento.Id);
-            var user2 = new Usuario("Sebastiao", "123456", "sebastic@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento2.Id);
-            var user3 = new Usuario("Steve Rogers", "123456", "america@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento3.Id);
+            var user = new Usuario("Lucas Mariano", "123456", "lucasmdc@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento.Id,"11640810633");
+            var user2 = new Usuario("Sebastiao", "123456", "sebastic@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento2.Id, "12345678991");
+            var user3 = new Usuario("Steve Rogers", "123456", "america@gmail.com", Shared.Core.ValueObjects.ETipoUsuario.Administrador, departamento3.Id, "14474729192");
 
             modelBuilder.Entity<Usuario>().HasData(user, user2, user3);
 
-            var func = new Funcionario("lucas","lucasm", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Clinica, departamento.Id);
-            var func2 = new Funcionario("Sebastiao", "sebasx", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Gestao, departamento2.Id);
-            var func3 = new Funcionario("Steve Rogers", "america", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Gestao, departamento3.Id);
+            var func = new Funcionario("lucas","lucasm", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Clinica, departamento.Id, "11640810633");
+            var func2 = new Funcionario("Sebastiao", "sebasx", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Gestao, departamento2.Id, "12345678991");
+            var func3 = new Funcionario("Steve Rogers", "america", "123456", Shared.Core.ValueObjects.ETipoFuncionario.Gestao, departamento3.Id, "14474729192");
 
             modelBuilder.Entity<Funcionario>().HasData(func, func2, func3);
 

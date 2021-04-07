@@ -12,6 +12,7 @@ namespace SGM.Manager.Application.Commands.Usuario
         public string Nome { get; set; }
         public string Senha { get; set; }
         public string Login { get; set; }
+        public string CPF { get; set; }
 
         public bool Validate()
         {

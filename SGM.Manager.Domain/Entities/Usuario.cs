@@ -8,13 +8,14 @@ namespace SGM.Manager.Domain.Entities
 {
     public sealed class Usuario : BaseEntity
     {
-        public Usuario(string nome, string senha, string login, ETipoUsuario tipoUsuario, Guid departamentoId)
+        public Usuario(string nome, string senha, string login, ETipoUsuario tipoUsuario, Guid departamentoId, string cPF)
         {
             Nome = nome;
             Senha = senha;
             Login = login;
             TipoUsuario = tipoUsuario;
             DepartamentoId = departamentoId;
+            CPF = cPF;
         }
 
         public string Nome { get; private set; }
@@ -22,7 +23,7 @@ namespace SGM.Manager.Domain.Entities
         public string Login { get; private set; }
         public ETipoUsuario TipoUsuario { get; private set; }
         public Guid DepartamentoId { get; private set; }
-
+        public string CPF { get; set; }
         public Departamento Departamento { get; set; }
 
         public void EditarUsuario(string nome, string senha, string login, ETipoUsuario tipoUsuario, Guid departamentoId)

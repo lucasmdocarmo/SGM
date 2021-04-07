@@ -93,7 +93,7 @@ namespace SGM.Cidadao.Application
         }
         private void ReplicarUsuario(CadastrarCidadaoCommand command)
         {
-            var cidadaoUsuario = new CidadaoUser(command.Nome, command.Senha, command.Email);
+            var cidadaoUsuario = new CidadaoUser(command.Nome, command.Senha, command.Email,command.CPF);
 
             var json = JsonConvert.SerializeObject(cidadaoUsuario);
             var data = new StringContent(json, Encoding.UTF8, "application/json");

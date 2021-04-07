@@ -36,8 +36,8 @@ namespace SGM.Manager.Application.Commands
             {
                 return new CommandResult(false, "Departamento Não Encontrado.");
             }
-            var entity = new Domain.Entities.Funcionario(command.Nome, command.Login, command.Senha, 
-                                                        command.TipoFuncionario, command.DepartamentoId);
+            var entity = new Domain.Entities.Funcionario(command.Nome, command.Login, command.Senha,
+                                                        command.TipoFuncionario, command.DepartamentoId,command.CPF);
 
             await _funcionarioRepository.Add(entity);
             var result = await _funcionarioRepository.SaveChanges().ConfigureAwait(true);

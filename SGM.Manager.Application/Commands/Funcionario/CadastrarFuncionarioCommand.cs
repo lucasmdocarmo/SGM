@@ -14,7 +14,7 @@ namespace SGM.Manager.Application.Commands.Funcionario
         public string Senha { get; set; }
         public ETipoFuncionario TipoFuncionario { get; set; }
         public Guid DepartamentoId { get;  set; }
-
+        public string CPF { get; set; }
         public bool Validate()
         {
             throw new NotImplementedException();
