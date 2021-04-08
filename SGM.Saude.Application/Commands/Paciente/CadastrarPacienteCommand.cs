@@ -20,7 +20,7 @@ namespace SGM.Saude.Application.Commands.Pacientes
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

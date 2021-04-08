@@ -28,15 +28,17 @@ namespace SGM.Saude.API.Controllers
         private readonly ICommandHandler<DeletarConsultaCommand> _commandDeletar;
         private readonly IConsultaRepository _repository;
         private readonly IMedicosRepository _repositoryMedico;
+        private readonly IPacienteRepository _pacienteRepository;
 
         public ConsultasController(ICommandHandler<CadastrarConsultaCommand> commandCadastrar, ICommandHandler<EditarConsultaCommand> commandEditar,
-            ICommandHandler<DeletarConsultaCommand> commandDeletar, IConsultaRepository repository, IMedicosRepository repositoryMedico)
+            ICommandHandler<DeletarConsultaCommand> commandDeletar, IConsultaRepository repository, IMedicosRepository repositoryMedico, IPacienteRepository pacienteRepository)
         {
             _commandCadastrar = commandCadastrar;
             _commandEditar = commandEditar;
             _commandDeletar = commandDeletar;
             _repository = repository;
             _repositoryMedico = repositoryMedico;
+            _pacienteRepository = pacienteRepository;
         }
 
         [HttpGet("Agendas")]
@@ -157,6 +159,69 @@ namespace SGM.Saude.API.Controllers
                 return UnprocessableEntity();
             }
             return NoContent();
+        }
+        [HttpPut("{id}/Desmarcar")]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> DesmarcarUpdateTodoItem([FromRoute][Bind] Guid id)
+        {
+            if (!ModelState.IsValid)
+            {
+                var notifications = new List<Notification>();
+                foreach (var erro in ModelState.Where(a => a.Value.Errors.Count > 0).SelectMany(x => x.Value.Errors).ToList())
+                {
+                    notifications.Add(new Notification("invalidModel", erro.ErrorMessage));
+                }
+                return StatusCode(412, notifications.ToList());
+            }
+           
+            var consulta = await _repository.GetById(id).ConfigureAwait(true);
+
+            consulta.PacienteId = null;
+            consulta.Reservado = false;
+
+            await _repository.Update(consulta);
+            await _repository.SaveChanges();
+
+            return NoContent();
+        }
+        [HttpPut("{id}/Marcar")]
+        [Authorize(Roles = "Clinica, Gestao, Administrador")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
+        [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> MarcarUpdateTodoItem([FromRoute][Bind] Guid id, [FromBody][Bind] string cpf)
+        {
+            if (!ModelState.IsValid)
+            {
+                var notifications = new List<Notification>();
+                foreach (var erro in ModelState.Where(a => a.Value.Errors.Count > 0).SelectMany(x => x.Value.Errors).ToList())
+                {
+                    notifications.Add(new Notification("invalidModel", erro.ErrorMessage));
+                }
+                return StatusCode(412, notifications.ToList());
+            }
+            var paciente = await _pacienteRepository.Search(x => x.CPF == cpf).ConfigureAwait(true);
+            if (paciente is null) { return UnprocessableEntity("Paciente não encontrado."); }
+
+            var entityPaciente = paciente.FirstOrDefault();
+
+            var consulta = await _repository.GetById(id).ConfigureAwait(true);
+
+            consulta.PacienteId = entityPaciente.Id;
+            consulta.Reservado = true;
+
+            await _repository.Update(consulta);
+            await _repository.SaveChanges();
+
+            return NoContent();
+
         }
 
         [HttpPost]

@@ -80,6 +80,7 @@ namespace SGM.Cidadao.Application
                 var result = await _cidadaoRepository.SaveChanges().ConfigureAwait(true);
 
                 ReplicarUsuario(command);
+                ReplicarPaciente(command);
 
                 if (!result) { return new CommandResult(false); }
 
@@ -99,6 +100,16 @@ namespace SGM.Cidadao.Application
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
             _Client.PostAsync("https://localhost:44393/api/v1/Usuario/Cidadao", data).ConfigureAwait(true);
+        }
+        public void ReplicarPaciente(CadastrarCidadaoCommand command)
+        {
+            var cidadaoUsuario = new CadastrarPaciente(command.Nome, command.DataNascimento, command.CPF, command.Identidade, command.Sexo,
+                                    ETipoStatusPaciente.Aguardando, "Paciente Criado com Sucesso", " ");
+
+            var json = JsonConvert.SerializeObject(cidadaoUsuario);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            _Client.PostAsync("https://localhost:44397/api/v1/Paciente", data).ConfigureAwait(true);
         }
 
         public async ValueTask<ICommandResult> Handle(DeletarCidadaoCommand command)

@@ -18,7 +18,7 @@ namespace SGM.Saude.Application.Commands
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

@@ -39,7 +39,7 @@ namespace SGM.Saude.Domain.Entities
 
         public Prescricao Prescricao { get; set; }
         public Paciente Paciente { get; private set; }
-        public Guid? PacienteId { get; private set; }
+        public Guid? PacienteId { get;  set; }
         public Medicos Medico { get; set; }
         public Guid MedicoId { get; set; }
 
