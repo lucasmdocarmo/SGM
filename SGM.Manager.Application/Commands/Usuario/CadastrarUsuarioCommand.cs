@@ -17,7 +17,7 @@ namespace SGM.Manager.Application.Commands.Usuario
         public string CPF { get; set; }
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

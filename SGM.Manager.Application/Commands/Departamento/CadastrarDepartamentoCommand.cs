@@ -13,7 +13,7 @@ namespace SGM.Manager.Application.Commands.Departamento
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

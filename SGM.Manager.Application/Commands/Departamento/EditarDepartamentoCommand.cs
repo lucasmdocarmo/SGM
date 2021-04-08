@@ -13,7 +13,7 @@ namespace SGM.Manager.Application.Commands.Departamento
         public Guid Id { get; set; }
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

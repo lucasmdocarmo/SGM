@@ -11,7 +11,7 @@ namespace SGM.Manager.Application.Commands.Funcionario
         public Guid Id { get; set; }
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace SGM.Manager.Application.Commands.Usuario
 
         public bool Validate()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
