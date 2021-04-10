@@ -59,6 +59,7 @@ namespace SGM.Saude.API.Controllers
             {
                 listMedicos.Add(new ConsultasSemPacientesQuery()
                 {
+                    ConsultaId = item.Id,
                     Especialidade = item.Especialidade,
                     DataConsulta = item.DataConsulta,
                     Descricaco = item.Descricao,
@@ -125,7 +126,8 @@ namespace SGM.Saude.API.Controllers
                     Especialidade = item.Especialidade,
                     InformacoesMedicas = item.InformacoesMedicas,
                     MedicoId = item.MedicoId,
-                    PacienteId = item.PacienteId
+                    PacienteId = item.PacienteId,
+                    ConsultaId = item.Id
                 });
             }
 
@@ -196,7 +198,7 @@ namespace SGM.Saude.API.Controllers
         [ProducesResponseType(typeof(Notification), StatusCodes.Status412PreconditionFailed)]
         [ProducesResponseType(typeof(Notification), StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> MarcarUpdateTodoItem([FromRoute][Bind] Guid id, [FromBody][Bind] string cpf)
+        public async Task<IActionResult> MarcarUpdateTodoItem([FromRoute][Bind] Guid id, [FromBody][Bind] MarcarConsultaQuery query)
         {
             if (!ModelState.IsValid)
             {
@@ -207,7 +209,9 @@ namespace SGM.Saude.API.Controllers
                 }
                 return StatusCode(412, notifications.ToList());
             }
-            var paciente = await _pacienteRepository.Search(x => x.CPF == cpf).ConfigureAwait(true);
+            if (string.IsNullOrEmpty(query.CPF)) { return UnprocessableEntity("CPF é Obrigatório."); }
+
+            var paciente = await _pacienteRepository.Search(x => x.CPF == query.CPF).ConfigureAwait(true);
             if (paciente is null) { return UnprocessableEntity("Paciente não encontrado."); }
 
             var entityPaciente = paciente.FirstOrDefault();

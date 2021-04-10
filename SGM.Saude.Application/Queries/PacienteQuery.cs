@@ -23,5 +23,10 @@ namespace SGM.Saude.Application.Queries
         public string Medico { get; set; }
         public string CRM { get; set; }
         public Guid MedicoId { get; set; }
+        public Guid ConsultaId { get; set; }
+    }
+    public class MarcarConsultaQuery
+    {
+        public string CPF { get; set; }
     }
 }

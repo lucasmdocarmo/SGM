@@ -6,6 +6,7 @@ namespace SGM.Saude.Application.Queries
 {
     public class ConsultasSemPacientesQuery
     {
+        public Guid ConsultaId { get; set; }
         public string Especialidade { get; set; }
         public DateTime? DataConsulta { get; set; }
         public string Descricaco { get; set; }
