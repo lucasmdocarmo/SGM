@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SGM.Events.Consumer.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,9 @@ namespace SGM.Events.Consumer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHostedService, CidadaoHandler>();
+            services.AddSingleton<IHostedService, ConsultaHandler>();
+            services.AddSingleton<IHostedService, PacienteHandler>();
+            services.AddSingleton<IHostedService, UsuarioHandler>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
         }

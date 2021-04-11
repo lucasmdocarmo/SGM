@@ -12,8 +12,12 @@ using System.Threading.Tasks;
 
 namespace SGM.Saude.Infra.Context
 {
-    public sealed class SaudeContext :DbContext, IUnitOfWork
+    public class SaudeContext :DbContext, IUnitOfWork
     {
+        public SaudeContext()
+        {
+
+        }
         public SaudeContext(DbContextOptions<SaudeContext> options) : base(options) { }
 
         public DbSet<Consultas> Consultas { get; set; } //ok

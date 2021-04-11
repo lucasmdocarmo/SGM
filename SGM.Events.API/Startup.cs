@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SGM.Events.API.Producers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,7 @@ namespace SGM.Events.API
 
             services.AddSingleton<ProducerConfig>(producerConfig);
             services.AddSingleton<ConsumerConfig>(consumerConfig);
+            services.AddSingleton<IServicesProducer, ServicesProducer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

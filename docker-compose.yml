@@ -1,36 +1,5 @@
-version: '3.4'
-
+version: '3'
 services:
-  sgm.events.api:
-    image: ${DOCKER_REGISTRY-}sgmeventsapi
-    build:
-      context: .
-      dockerfile: SGM.Events.API/Dockerfile
-  sgm.consumer.api:
-    image: ${DOCKER_REGISTRY-}sgmeventsconsumer
-    build:
-      context: .
-      dockerfile: SGM.Events.Consumer/Dockerfile
-  sgm.cidadao.api:
-    image: ${DOCKER_REGISTRY-}sgmcidadaoapi
-    build:
-      context: .
-      dockerfile: SGM.Cidadao.API/Dockerfile
-    depends_on:
-      - db
-    networks:
-      - dockersql-network
-  db:
-    container_name: dockersql.database
-    image: "mcr.microsoft.com/mssql/server:2019-latest"
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=SGM123456
-    ports:
-      - "5434:1433"
-    networks:
-      - dockersql-network
-
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     networks: 
@@ -48,14 +17,12 @@ services:
     ports:
       - 9092:9092
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: 127.0.0.1
-      KAFKA_CREATE_TOPICS: "cidadao_topic:1:1"
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      
 
   kafdrop:
     image: obsidiandynamics/kafdrop:latest
@@ -71,5 +38,3 @@ services:
 networks: 
   broker-kafka:
     driver: bridge  
-  dockersql-network:
-    driver: bridge

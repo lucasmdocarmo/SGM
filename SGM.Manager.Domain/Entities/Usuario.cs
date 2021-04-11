@@ -6,8 +6,12 @@ using System.Text;
 
 namespace SGM.Manager.Domain.Entities
 {
-    public sealed class Usuario : BaseEntity
+    public class Usuario : BaseEntity
     {
+        public Usuario()
+        {
+
+        }
         public Usuario(string nome, string senha, string login, ETipoUsuario tipoUsuario, Guid departamentoId, string cPF)
         {
             Nome = nome;
@@ -18,11 +22,11 @@ namespace SGM.Manager.Domain.Entities
             CPF = cPF;
         }
 
-        public string Nome { get; private set; }
-        public string Senha { get; private set; }
-        public string Login { get; private set; }
-        public ETipoUsuario TipoUsuario { get; private set; }
-        public Guid DepartamentoId { get; private set; }
+        public string Nome { get; set; }
+        public string Senha { get; set; }
+        public string Login { get; set; }
+        public ETipoUsuario TipoUsuario { get; set; }
+        public Guid DepartamentoId { get; set; }
         public string CPF { get; set; }
         public Departamento Departamento { get; set; }
 

@@ -9,9 +9,9 @@ using SGM.Shared.Core.Contracts;
 
 namespace SGM.Cidadao.Domain.Entities
 {
-    public sealed class Cidadao :BaseEntity , IAggregateRoot
+    public class Cidadao :BaseEntity , IAggregateRoot
     {
-        internal Cidadao() { }
+        public Cidadao() { }
         public Cidadao(string nome, DateTime dataNascimento, string cPF, string identidade, bool sexo, string email, 
             string profissao, string telefone, string celular)
         {
@@ -27,14 +27,14 @@ namespace SGM.Cidadao.Domain.Entities
             Celular = celular;
         }
 
-        public string Nome { get; private set; }
-        public DateTime DataNascimento { get; private set; }
-        public string CPF { get; private set; }
-        public string Identidade { get; private set; }
-        public bool Sexo { get; private set; }
-        public string Email { get; private set; }
-        public string Profissao { get; private set; }
-        public string CodigoCidadao { get; private set; }
+        public string Nome { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public string CPF { get; set; }
+        public string Identidade { get; set; }
+        public bool Sexo { get; set; }
+        public string Email { get; set; }
+        public string Profissao { get; set; }
+        public string CodigoCidadao { get; set; }
         public string Telefone { get; set; }
         public string Celular { get; set; }
         public Endereco Endereco { get; set; }
