@@ -6,3 +6,6 @@
 *Nos arquivos dos SERVICOS/(Cidadao,Manager e Saude)/ appsettings.json, use o seu banco de dados SQL server para o projeto criar automaticamente o schema de todas as tabelas e replicagem de dados(SEED).
     ex: "AppConnString": "Server=localhost\\SEUSQLSERVER;Database=SGM.Cidadao;Trusted_Connection=True;MultipleActiveResultSets=true"
 Para rodar o projeto, apenas execute o VS Studio com todas as APIS simultaneamente.
+
+
+- Projeto segue arquitetura Clean baseada em conceito de services layer, DDD e EventSourcing, usando Notification Pattern, CQRS, Solid, Fail-Fast Validations, Repository e Dominio Compartilhado. 
