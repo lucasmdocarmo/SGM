@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SGM.Manager.API.Controllers
+namespace SGM.Manager.API.Controllers 
 {
     [ApiVersion("1.0")]
     [Route("api/v{api-version:apiVersion}/[controller]")]
