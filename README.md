@@ -9,3 +9,6 @@
 
 ## Como usar
 * Apenas execute o VS Studio com todas as APIS simultaneamente.
+
+## Arquitetura
+* Projeto segue arquitetura CLEAN, com conceitos baseados em DDD, Service Layer, CQRS, Solid, Command Handler, Fail-Fast Validations, Notification Pattern, Repository, Event Sourcing(Kafka) e Dominio Compartilhado.
