@@ -30,7 +30,7 @@ namespace SGM.Events.API.Controllers
 
             return Created("Cidadao Criado", payload);
         }
-        [HttpPost("Paciente")]
+        [HttpPost("Paciente")] 
         [ProducesResponseType(typeof(string), 201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
